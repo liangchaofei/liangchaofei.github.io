@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://liangchaofei.github.io/friends/index.html</loc>
+    
+    <lastmod>2020-02-05T13:17:45.574Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liangchaofei.github.io/about/index.html</loc>
+    
+    <lastmod>2020-02-05T13:16:43.542Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://liangchaofei.github.io/2020/01/22/2017-conclusion/</loc>
     
     <lastmod>2020-02-05T13:04:13.046Z</lastmod>
@@ -26,20 +40,6 @@
     <loc>https://liangchaofei.github.io/contact/index.html</loc>
     
     <lastmod>2020-02-05T12:59:31.429Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liangchaofei.github.io/about/index.html</loc>
-    
-    <lastmod>2020-02-05T12:59:08.301Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liangchaofei.github.io/friends/index.html</loc>
-    
-    <lastmod>2020-02-05T12:58:58.994Z</lastmod>
     
   </url>
   
