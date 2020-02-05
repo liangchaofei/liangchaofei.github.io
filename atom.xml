@@ -5,9 +5,9 @@
   <subtitle>godweiyang</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="https://godweiyang.com/"/>
+  <link href="https://liangchaofei.github.io/"/>
   <updated>2020-02-05T08:23:25.212Z</updated>
-  <id>https://godweiyang.com/</id>
+  <id>https://liangchaofei.github.io/</id>
   
   <author>
     <name>韦阳</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>二零一七年终总结</title>
-    <link href="https://godweiyang.com/2018/01/22/2017-conclusion/"/>
-    <id>https://godweiyang.com/2018/01/22/2017-conclusion/</id>
+    <link href="https://liangchaofei.github.io/2018/01/22/2017-conclusion/"/>
+    <id>https://liangchaofei.github.io/2018/01/22/2017-conclusion/</id>
     <published>2018-01-22T04:32:09.000Z</published>
     <updated>2020-02-05T08:23:25.212Z</updated>
     
@@ -35,43 +35,17 @@
     
     </summary>
     
-      <category term="随笔" scheme="https://godweiyang.com/categories/%E9%9A%8F%E7%AC%94/"/>
+      <category term="随笔" scheme="https://liangchaofei.github.io/categories/%E9%9A%8F%E7%AC%94/"/>
     
     
-      <category term="随笔" scheme="https://godweiyang.com/tags/%E9%9A%8F%E7%AC%94/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>二零一七年终总结</title>
-    <link href="https://godweiyang.com/2018/01/22/article-title2/"/>
-    <id>https://godweiyang.com/2018/01/22/article-title2/</id>
-    <published>2018-01-22T04:32:09.000Z</published>
-    <updated>2020-02-05T09:07:51.270Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;div align=&quot;middle&quot;&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;330&quot; height=&quot;86&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="随笔" scheme="https://godweiyang.com/categories/%E9%9A%8F%E7%AC%94/"/>
-    
-    
-      <category term="随笔" scheme="https://godweiyang.com/tags/%E9%9A%8F%E7%AC%94/"/>
+      <category term="随笔" scheme="https://liangchaofei.github.io/tags/%E9%9A%8F%E7%AC%94/"/>
     
   </entry>
   
   <entry>
     <title>二零一七年终总结</title>
-    <link href="https://godweiyang.com/2018/01/22/article-title/"/>
-    <id>https://godweiyang.com/2018/01/22/article-title/</id>
+    <link href="https://liangchaofei.github.io/2018/01/22/article-title/"/>
+    <id>https://liangchaofei.github.io/2018/01/22/article-title/</id>
     <published>2018-01-22T04:32:09.000Z</published>
     <updated>2020-02-05T08:38:15.869Z</updated>
     
@@ -87,10 +61,36 @@
     
     </summary>
     
-      <category term="随笔" scheme="https://godweiyang.com/categories/%E9%9A%8F%E7%AC%94/"/>
+      <category term="随笔" scheme="https://liangchaofei.github.io/categories/%E9%9A%8F%E7%AC%94/"/>
     
     
-      <category term="随笔" scheme="https://godweiyang.com/tags/%E9%9A%8F%E7%AC%94/"/>
+      <category term="随笔" scheme="https://liangchaofei.github.io/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>二零一七年终总结</title>
+    <link href="https://liangchaofei.github.io/2018/01/22/article-title2/"/>
+    <id>https://liangchaofei.github.io/2018/01/22/article-title2/</id>
+    <published>2018-01-22T04:32:09.000Z</published>
+    <updated>2020-02-05T09:07:51.270Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;div align=&quot;middle&quot;&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;330&quot; height=&quot;86&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="随笔" scheme="https://liangchaofei.github.io/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+      <category term="随笔" scheme="https://liangchaofei.github.io/tags/%E9%9A%8F%E7%AC%94/"/>
     
   </entry>
   
