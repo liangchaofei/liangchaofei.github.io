@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>curry的博客</title>
+  <title>朝飞的博客</title>
   
-  <subtitle>godweiyang</subtitle>
+  <subtitle>梁朝飞</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://liangchaofei.github.io/"/>
@@ -10,7 +10,7 @@
   <id>https://liangchaofei.github.io/</id>
   
   <author>
-    <name>韦阳</name>
+    <name>朝飞</name>
     
   </author>
   
