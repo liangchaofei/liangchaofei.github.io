@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://liangchaofei.github.io/"/>
-  <updated>2020-02-05T13:04:13.046Z</updated>
+  <updated>2020-02-19T14:04:49.090Z</updated>
   <id>https://liangchaofei.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>promise.all并发限制</title>
+    <link href="https://liangchaofei.github.io/2020/02/19/promise-all-bing-fa-xian-zhi/"/>
+    <id>https://liangchaofei.github.io/2020/02/19/promise-all-bing-fa-xian-zhi/</id>
+    <published>2020-02-19T13:19:53.000Z</published>
+    <updated>2020-02-19T14:04:49.090Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;下面通过3篇讲解promise-all并发限制&quot;&gt;&lt;a href=&quot;#下面通过3篇讲解promise-all并发限制&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="js" scheme="https://liangchaofei.github.io/categories/js/"/>
+    
+    
+      <category term="js" scheme="https://liangchaofei.github.io/tags/js/"/>
+    
+  </entry>
   
   <entry>
     <title>二零一七年终总结</title>
