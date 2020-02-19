@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://liangchaofei.github.io/"/>
-  <updated>2020-02-19T14:04:49.090Z</updated>
+  <updated>2020-02-19T14:20:30.741Z</updated>
   <id>https://liangchaofei.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>理解和使用Promise.all和Promise.race</title>
+    <link href="https://liangchaofei.github.io/2020/02/19/li-jie-he-shi-yong-promise-all-he-promise-race/"/>
+    <id>https://liangchaofei.github.io/2020/02/19/li-jie-he-shi-yong-promise-all-he-promise-race/</id>
+    <published>2020-02-19T14:18:36.000Z</published>
+    <updated>2020-02-19T14:20:30.741Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;一、Pomise-all的使用&quot;&gt;&lt;a href=&quot;#一、Pomise-all的使用&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="ES6" scheme="https://liangchaofei.github.io/categories/ES6/"/>
+    
+    
+      <category term="js" scheme="https://liangchaofei.github.io/tags/js/"/>
+    
+  </entry>
   
   <entry>
     <title>promise.all并发限制</title>

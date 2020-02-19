@@ -1,2 +1,3 @@
+https://liangchaofei.github.io/2020/02/19/li-jie-he-shi-yong-promise-all-he-promise-race/
 https://liangchaofei.github.io/2020/02/19/promise-all-bing-fa-xian-zhi/
 https://liangchaofei.github.io/2020/01/22/2017-conclusion/
