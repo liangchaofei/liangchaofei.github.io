@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://liangchaofei.github.io/"/>
-  <updated>2020-02-22T07:30:11.883Z</updated>
+  <updated>2020-02-22T08:16:44.217Z</updated>
   <id>https://liangchaofei.github.io/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>封装fetch请求函数</title>
+    <link href="https://liangchaofei.github.io/2020/02/22/feng-zhuang-fetch-qing-qiu-han-shu/"/>
+    <id>https://liangchaofei.github.io/2020/02/22/feng-zhuang-fetch-qing-qiu-han-shu/</id>
+    <published>2020-02-22T08:11:24.000Z</published>
+    <updated>2020-02-22T08:16:44.217Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;ul&gt;
+&lt;li&gt;手动封装一个请求函数，可以设置最大请求次数，请求成功则不再请求，请求失败则继续请求直到超过最大次数(流利说)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class=&quot;line-numbers language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;
+        
+      
+    
+    </summary>
+    
+      <category term="js" scheme="https://liangchaofei.github.io/categories/js/"/>
+    
+    
+      <category term="js" scheme="https://liangchaofei.github.io/tags/js/"/>
+    
+  </entry>
   
   <entry>
     <title>js数组去重方法(史上最全?)</title>

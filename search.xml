@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>封装fetch请求函数</title>
+      <link href="/2020/02/22/feng-zhuang-fetch-qing-qiu-han-shu/"/>
+      <url>/2020/02/22/feng-zhuang-fetch-qing-qiu-han-shu/</url>
+      
+        <content type="html"><![CDATA[<ul><li>手动封装一个请求函数，可以设置最大请求次数，请求成功则不再请求，请求失败则继续请求直到超过最大次数(流利说)</li></ul><pre class="line-numbers language-js"><code class="language-js">    <span class="token keyword">import</span> fetch <span class="token keyword">from</span> <span class="token string">'fetch'</span><span class="token punctuation">;</span>    <span class="token keyword">function</span> <span class="token function">request</span><span class="token punctuation">(</span>url<span class="token punctuation">,</span>body<span class="token punctuation">,</span>successCb<span class="token punctuation">,</span>errorCv<span class="token punctuation">,</span>maxCount <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">{</span>        <span class="token keyword">return</span> <span class="token function">fetch</span><span class="token punctuation">(</span>url<span class="token punctuation">,</span>body<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>res <span class="token operator">=</span><span class="token operator">></span> <span class="token function">successCb</span><span class="token punctuation">(</span>res<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token keyword">catch</span><span class="token punctuation">(</span>err <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>            <span class="token keyword">if</span><span class="token punctuation">(</span>maxCount <span class="token operator">===</span> <span class="token number">0</span> <span class="token punctuation">)</span><span class="token punctuation">{</span>                <span class="token function">errorCb</span><span class="token punctuation">(</span><span class="token string">'请求超市'</span><span class="token punctuation">)</span>            <span class="token punctuation">}</span>            <span class="token keyword">return</span> <span class="token function">request</span><span class="token punctuation">(</span>url<span class="token punctuation">,</span>body<span class="token punctuation">,</span>successCb<span class="token punctuation">,</span>errorCb<span class="token punctuation">,</span><span class="token operator">--</span>maxCount<span class="token punctuation">)</span>        <span class="token punctuation">}</span><span class="token punctuation">)</span>    <span class="token punctuation">}</span>    <span class="token comment" spellcheck="true">// 用法</span>    <span class="token function">request</span><span class="token punctuation">(</span><span class="token string">'/api'</span><span class="token punctuation">,</span><span class="token punctuation">{</span>methos<span class="token punctuation">:</span><span class="token string">'get'</span><span class="token punctuation">,</span>headers<span class="token punctuation">:</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>res <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>err <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> js </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> js </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>js数组去重方法(史上最全?)</title>
       <link href="/2020/02/22/js-shu-zu-qu-chong-fang-fa/"/>
       <url>/2020/02/22/js-shu-zu-qu-chong-fang-fa/</url>
