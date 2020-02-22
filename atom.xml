@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://liangchaofei.github.io/"/>
-  <updated>2020-02-21T14:04:00.847Z</updated>
+  <updated>2020-02-22T07:19:23.065Z</updated>
   <id>https://liangchaofei.github.io/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>js数组去重方法</title>
+    <link href="https://liangchaofei.github.io/2020/02/22/js-shu-zu-qu-chong-fang-fa/"/>
+    <id>https://liangchaofei.github.io/2020/02/22/js-shu-zu-qu-chong-fang-fa/</id>
+    <published>2020-02-22T06:45:04.000Z</published>
+    <updated>2020-02-22T07:19:23.065Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;ul&gt;
+&lt;li&gt;下面介绍下对象数组去重和普通数组去重&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;适用于普通数组&quot;&gt;&lt;a href=&quot;#适用于普通数组&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="数组" scheme="https://liangchaofei.github.io/categories/%E6%95%B0%E7%BB%84/"/>
+    
+    
+      <category term="js" scheme="https://liangchaofei.github.io/tags/js/"/>
+    
+  </entry>
   
   <entry>
     <title>leetcode-数组-35-搜索插入位置</title>
