@@ -498,7 +498,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 </li>
 </ul>
-<h3 id="第三种：利用for嵌套for，然后splice去重"><a href="#第三种：利用for嵌套for，然后splice去重" class="headerlink" title="第三种：利用for嵌套for，然后splice去重"></a>第三种：利用for嵌套for，然后splice去重</h3><ul>
+<h3 id="第三种：splice去重"><a href="#第三种：splice去重" class="headerlink" title="第三种：splice去重"></a>第三种：splice去重</h3><ul>
 <li>双层循环，外层循环元素，内层循环时比较值。值相同时，则删去这个值。<pre class="line-numbers language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">unique</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span class="token punctuation">{</span>
     <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">var</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span> i<span class="token operator">&lt;</span>arr<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
         <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">var</span> j<span class="token operator">=</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">;</span> j<span class="token operator">&lt;</span>arr<span class="token punctuation">.</span>length<span class="token punctuation">;</span> j<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
@@ -630,7 +630,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <h3 id="第十二种：-…new-Set-arr"><a href="#第十二种：-…new-Set-arr" class="headerlink" title="第十二种：[…new Set(arr)]"></a>第十二种：[…new Set(arr)]</h3><pre class="line-numbers language-js"><code class="language-js">    <span class="token keyword">function</span> <span class="token function">unique</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span class="token punctuation">{</span>
         <span class="token keyword">return</span> <span class="token punctuation">[</span><span class="token operator">...</span><span class="token keyword">new</span> <span class="token class-name">Set</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span class="token punctuation">]</span>
     <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<h3 id="对象数组去重"><a href="#对象数组去重" class="headerlink" title="对象数组去重"></a>对象数组去重</h3><h3 id="第一种：使用reduce方法将对象数组中name属性相同的项去重"><a href="#第一种：使用reduce方法将对象数组中name属性相同的项去重" class="headerlink" title="第一种：使用reduce方法将对象数组中name属性相同的项去重"></a>第一种：使用reduce方法将对象数组中name属性相同的项去重</h3><pre class="line-numbers language-js"><code class="language-js">    <span class="token keyword">var</span> arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+<h2 id="对象数组去重"><a href="#对象数组去重" class="headerlink" title="对象数组去重"></a>对象数组去重</h2><h3 id="第一种：reduce方法"><a href="#第一种：reduce方法" class="headerlink" title="第一种：reduce方法"></a>第一种：reduce方法</h3><pre class="line-numbers language-js"><code class="language-js">    <span class="token keyword">var</span> arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
         <span class="token string">"name"</span><span class="token punctuation">:</span> <span class="token string">"aaa"</span><span class="token punctuation">,</span>
         <span class="token string">"age"</span><span class="token punctuation">:</span> <span class="token number">12</span><span class="token punctuation">,</span>
         <span class="token string">"gender"</span><span class="token punctuation">:</span> <span class="token string">"男"</span>
@@ -658,7 +658,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
         <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//初始值是一个空对象，使用reduce方法返回的是空对象通过叠加执行之后的结果</span>
         <span class="token keyword">return</span> objArray<span class="token punctuation">;</span>
     <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="第二种：将对象数组中name属性相同的项去重"><a href="#第二种：将对象数组中name属性相同的项去重" class="headerlink" title="第二种：将对象数组中name属性相同的项去重"></a>第二种：将对象数组中name属性相同的项去重</h3><pre class="line-numbers language-js"><code class="language-js">    <span class="token keyword">var</span> arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+<h3 id="第二种：临时对象方法"><a href="#第二种：临时对象方法" class="headerlink" title="第二种：临时对象方法"></a>第二种：临时对象方法</h3><pre class="line-numbers language-js"><code class="language-js">    <span class="token keyword">var</span> arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
         <span class="token string">"name"</span><span class="token punctuation">:</span> <span class="token string">"aaa"</span><span class="token punctuation">,</span>
         <span class="token string">"age"</span><span class="token punctuation">:</span> <span class="token number">12</span><span class="token punctuation">,</span>
         <span class="token string">"gender"</span><span class="token punctuation">:</span> <span class="token string">"男"</span>
@@ -1444,7 +1444,7 @@ let arr = [1,1,'true','true',true,true,1
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">5.3k</span>
+            <span class="white-color">5.2k</span>
             
 
             <br>
