@@ -4,15 +4,16 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="promise.all并发限制, 前端">
+    <meta name="keywords" content="leetcode-数组-88-合并两个有序数组, 前端">
     <meta name="baidu-site-verification" content>
     <meta name="google-site-verification" content>
     <meta name="360-site-verification" content>
-    <meta name="description" content="下面通过3篇讲解promise.all并发限制Promise.all并发限制背景
-通常，我们在需要保证代码在多个异步处理之后执行，会用到：
-  Promise.all(promises: []).then(fun: function);
+    <meta name="description" content="题目描述（难度：简单）
+给定两个有序整数数组 nums1 和 nums2，将 nums2 合并到 nums1 中，使得 num1 成为一个有序数组。
 
-">
+说明
+初始化 nums1 和 nums2 的元素数量分别为 m 和 n。
+你可以假设 n">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -20,7 +21,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>promise.all并发限制 | 朝飞的博客</title>
+    <title>leetcode-数组-88-合并两个有序数组 | 朝飞的博客</title>
     <link rel="icon" type="image/jpeg" href="/kb.jpg">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -294,13 +295,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/16.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/19.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        promise.all并发限制
+                        leetcode-数组-88-合并两个有序数组
                     </div>
                 </div>
             </div>
@@ -411,8 +412,8 @@
                     
                     <div class="article-tag">
                         
-                        <a href="/tags/js/" target="_blank">
-                            <span class="chip bg-color">js</span>
+                        <a href="/tags/leetcode/" target="_blank">
+                            <span class="chip bg-color">leetcode</span>
                         </a>
                         
                     </div>
@@ -423,8 +424,8 @@
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                        <a href="/categories/js/" class="post-category" target="_blank">
-                            js
+                        <a href="/categories/算法/" class="post-category" target="_blank">
+                            算法
                         </a>
                         
                     </div>
@@ -435,7 +436,7 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-02-19
+                    2020-02-24
                 </div>
 
                 <div class="post-author info-break-policy">
@@ -449,14 +450,14 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.2k
+                    475
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    4 分
+                    2 分
                 </div>
                 
                 
@@ -472,134 +473,90 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="下面通过3篇讲解promise-all并发限制"><a href="#下面通过3篇讲解promise-all并发限制" class="headerlink" title="下面通过3篇讲解promise.all并发限制"></a>下面通过3篇讲解promise.all并发限制</h1><h2 id="Promise-all并发限制"><a href="#Promise-all并发限制" class="headerlink" title="Promise.all并发限制"></a>Promise.all并发限制</h2><h3 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h3><ul>
-<li><p>通常，我们在需要保证代码在多个异步处理之后执行，会用到：</p>
-<pre class="line-numbers language-js"><code class="language-js">  Promise<span class="token punctuation">.</span><span class="token function">all</span><span class="token punctuation">(</span>promises<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>fun<span class="token punctuation">:</span> <span class="token keyword">function</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-</li>
-<li><p>Promise.all可以保证，promises数组中所有promise对象都达到resolve状态，才执行then回调。</p>
-</li>
-<li><p>这时候考虑一个场景：如果你的promises数组中每个对象都是http请求，或者说每个对象包含了复杂的调用处理。而这样的对象有几十万个。</p>
-</li>
-<li><p>那么会出现的情况是，你在瞬间发出几十万http请求（tcp连接数不足可能造成等待），或者堆积了无数调用栈导致内存溢出。</p>
-</li>
-<li><p>这时候，我们就需要考虑对Promise.all做并发限制。</p>
-</li>
-<li><p>Promise.all并发限制指的是，每个时刻并发执行的promise数量是固定的，最终的执行结果还是保持与原来的Promise.all一致。</p>
-</li>
+                <h3 id="题目描述（难度：简单）"><a href="#题目描述（难度：简单）" class="headerlink" title="题目描述（难度：简单）"></a>题目描述（难度：简单）</h3><ul>
+<li>给定两个有序整数数组 nums1 和 nums2，将 nums2 合并到 nums1 中，使得 num1 成为一个有序数组。</li>
 </ul>
-<h3 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h3><ul>
-<li><p>我们知道，promise并不是因为调用Promise.all才执行，而是在实例化promise对象的时候就执行了，在理解这一点的基础上，要实现并发限制，只能从promise实例化上下手。</p>
-</li>
-<li><p>换句话说，就是把生成promises数组的控制权，交给并发控制逻辑。</p>
-</li>
-<li><p>这里我并不打算一步步实现这个这个功能，npm中有很多实现这个功能的第三方包，比如async-pool、es6-promise-pool、p-limit，这里我直接拿async-pool的代码来分析一下实现原理。</p>
-</li>
-<li><p>代码很简单，去掉不必要的代码，加上自己的注释，大概内容如下：</p>
-<pre class="line-numbers language-js"><code class="language-js">  <span class="token keyword">function</span> <span class="token function">asyncPool</span><span class="token punctuation">(</span>poolLimit<span class="token punctuation">,</span> array<span class="token punctuation">,</span> iteratorFn<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-      <span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
-      <span class="token keyword">const</span> ret <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-      <span class="token keyword">const</span> executing <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-      <span class="token keyword">const</span> enqueue <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-          <span class="token comment" spellcheck="true">// 边界处理，array为空数组</span>
-          <span class="token keyword">if</span> <span class="token punctuation">(</span>i <span class="token operator">===</span> array<span class="token punctuation">.</span>length<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-              <span class="token keyword">return</span> Promise<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-          <span class="token punctuation">}</span>
-          <span class="token comment" spellcheck="true">// 每调一次enqueue，初始化一个promise</span>
-          <span class="token keyword">const</span> item <span class="token operator">=</span> array<span class="token punctuation">[</span>i<span class="token operator">++</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-          <span class="token keyword">const</span> p <span class="token operator">=</span> Promise<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token function">iteratorFn</span><span class="token punctuation">(</span>item<span class="token punctuation">,</span> array<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-          <span class="token comment" spellcheck="true">// 放入promises数组</span>
-          ret<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>p<span class="token punctuation">)</span><span class="token punctuation">;</span>
-          <span class="token comment" spellcheck="true">// promise执行完毕，从executing数组中删除</span>
-          <span class="token keyword">const</span> e <span class="token operator">=</span> p<span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> executing<span class="token punctuation">.</span><span class="token function">splice</span><span class="token punctuation">(</span>executing<span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-          <span class="token comment" spellcheck="true">// 插入executing数字，表示正在执行的promise</span>
-          executing<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token punctuation">;</span>
-          <span class="token comment" spellcheck="true">// 使用Promise.rece，每当executing数组中promise数量低于poolLimit，就实例化新的promise并执行</span>
-          <span class="token keyword">let</span> r <span class="token operator">=</span> Promise<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-          <span class="token keyword">if</span> <span class="token punctuation">(</span>executing<span class="token punctuation">.</span>length <span class="token operator">>=</span> poolLimit<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-              r <span class="token operator">=</span> Promise<span class="token punctuation">.</span><span class="token function">race</span><span class="token punctuation">(</span>executing<span class="token punctuation">)</span><span class="token punctuation">;</span>
-          <span class="token punctuation">}</span>
-          <span class="token comment" spellcheck="true">// 递归，直到遍历完array</span>
-          <span class="token keyword">return</span> r<span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token function">enqueue</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-      <span class="token punctuation">}</span><span class="token punctuation">;</span>
-      <span class="token keyword">return</span> <span class="token function">enqueue</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> Promise<span class="token punctuation">.</span><span class="token function">all</span><span class="token punctuation">(</span>ret<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-</li>
-<li><p>因为是promise加上递归，所以在代码注释上不太好标注执行顺序，但是大概的逻辑可以总结为：</p>
-<ul>
-<li>1.从array第1个元素开始，初始化promise对象，同时用一个executing数组保存正在执行的promise</li>
-<li>2.不断初始化promise，直到达到poolLimt</li>
-<li>3.使用Promise.race，获得executing中promise的执行情况，当有一个promise执行完毕，继续初始化promise并放入executing中</li>
-<li>4.所有promise都执行完了，调用Promise.all返回</li>
+<h3 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h3><ul>
+<li>初始化 nums1 和 nums2 的元素数量分别为 m 和 n。</li>
+<li>你可以假设 nums1 有足够的空间（空间大小大于或等于 m + n）来保存 nums2 中的元素。</li>
 </ul>
-</li>
-<li><p>使用方式就是：</p>
-<pre class="line-numbers language-js"><code class="language-js">  <span class="token keyword">const</span> timeout <span class="token operator">=</span> i <span class="token operator">=</span><span class="token operator">></span> <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span>resolve <span class="token operator">=</span><span class="token operator">></span> <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token function">resolve</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">,</span> i<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token keyword">return</span> <span class="token function">asyncPool</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">1000</span><span class="token punctuation">,</span> <span class="token number">5000</span><span class="token punctuation">,</span> <span class="token number">3000</span><span class="token punctuation">,</span> <span class="token number">2000</span><span class="token punctuation">]</span><span class="token punctuation">,</span> timeout<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>results <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
-      <span class="token operator">...</span>
-  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-</li>
-</ul>
-<h2 id="面试题"><a href="#面试题" class="headerlink" title="面试题:"></a>面试题:</h2><ul>
-<li>有 8 个图片资源的 url，已经存储在数组 urls 中（即urls = [‘<a href="http://example.com/1.jpg’" target="_blank" rel="noopener">http://example.com/1.jpg’</a>, …., ‘<a href="http://example.com/8.jpg’]），而且已经有一个函数" target="_blank" rel="noopener">http://example.com/8.jpg’]），而且已经有一个函数</a> function loadImg，输入一个 url 链接，返回一个 Promise，该 Promise 在图片下载完成的时候 resolve，下载失败则 reject。但是我们要求，任意时刻，同时下载的链接数量不可以超过 3 个。请写一段代码实现这个需求，要求尽可能快速地将所有图片下载完成。</li>
-<li>已有代码如下：<pre class="line-numbers language-js"><code class="language-js">  <span class="token keyword">var</span> urls <span class="token operator">=</span> <span class="token punctuation">[</span>
-  <span class="token string">'https://www.kkkk1000.com/images/getImgData/getImgDatadata.jpg'</span><span class="token punctuation">,</span> 
-  <span class="token string">'https://www.kkkk1000.com/images/getImgData/gray.gif'</span><span class="token punctuation">,</span> 
-  <span class="token string">'https://www.kkkk1000.com/images/getImgData/Particle.gif'</span><span class="token punctuation">,</span> 
-  <span class="token string">'https://www.kkkk1000.com/images/getImgData/arithmetic.png'</span><span class="token punctuation">,</span> 
-  <span class="token string">'https://www.kkkk1000.com/images/getImgData/arithmetic2.gif'</span><span class="token punctuation">,</span> 
-  <span class="token string">'https://www.kkkk1000.com/images/getImgData/getImgDataError.jpg'</span><span class="token punctuation">,</span> 
-  <span class="token string">'https://www.kkkk1000.com/images/getImgData/arithmetic.gif'</span><span class="token punctuation">,</span> 
-  <span class="token string">'https://www.kkkk1000.com/images/wxQrCode2.png'</span>
-  <span class="token punctuation">]</span><span class="token punctuation">;</span>
-  <span class="token keyword">function</span> <span class="token function">loadImg</span><span class="token punctuation">(</span>url<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-      <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token punctuation">(</span>resolve<span class="token punctuation">,</span> reject<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
-          <span class="token keyword">const</span> img <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Image</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-          img<span class="token punctuation">.</span>onload <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-              console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'一张图片加载完成'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-              <span class="token function">resolve</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-          <span class="token punctuation">}</span>
-          img<span class="token punctuation">.</span>onerror <span class="token operator">=</span> reject
-          img<span class="token punctuation">.</span>src <span class="token operator">=</span> url
-      <span class="token punctuation">}</span><span class="token punctuation">)</span>
-  <span class="token punctuation">}</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-</li>
-</ul>
-<h3 id="思路："><a href="#思路：" class="headerlink" title="思路："></a>思路：</h3><ul>
-<li><p>用 Promise.race来实现，先并发请求3个图片资源，这样可以得到 3 个 Promise实例，组成一个数组promises ，然后不断的调用 Promise.race 来返回最快改变状态的 Promise，然后从数组（promises ）中删掉这个 Promise 对象实例，再加入一个新的 Promise实例，直到全部的 url 被取完。</p>
-<pre class="line-numbers language-js"><code class="language-js">  <span class="token comment" spellcheck="true">//省略代码</span>
-  <span class="token keyword">function</span> <span class="token function">limitLoad</span><span class="token punctuation">(</span>urls<span class="token punctuation">,</span> handler<span class="token punctuation">,</span> limit<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-      <span class="token comment" spellcheck="true">// 对数组做一个拷贝</span>
-      <span class="token keyword">const</span> sequence <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">concat</span><span class="token punctuation">(</span>urls<span class="token punctuation">)</span>
-      <span class="token keyword">let</span> promises <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<h3 id="示例"><a href="#示例" class="headerlink" title="示例:"></a>示例:</h3><pre><code>    输入:
+    nums1 = [1,2,3,0,0,0], m = 3
+    nums2 = [2,5,6],       n = 3
 
-      <span class="token comment" spellcheck="true">//并发请求到最大数</span>
-      promises <span class="token operator">=</span> sequence<span class="token punctuation">.</span><span class="token function">splice</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> limit<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token punctuation">(</span>url<span class="token punctuation">,</span> index<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
-          <span class="token comment" spellcheck="true">// 这里返回的 index 是任务在 promises 的脚标，</span>
-          <span class="token comment" spellcheck="true">//用于在 Promise.race 之后找到完成的任务脚标</span>
-          <span class="token keyword">return</span> <span class="token function">handler</span><span class="token punctuation">(</span>url<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
-              <span class="token keyword">return</span> index
-          <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-      <span class="token punctuation">(</span><span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token function">loop</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-          <span class="token keyword">let</span> p <span class="token operator">=</span> Promise<span class="token punctuation">.</span><span class="token function">race</span><span class="token punctuation">(</span>promises<span class="token punctuation">)</span><span class="token punctuation">;</span>
-          <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> sequence<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-              p <span class="token operator">=</span> p<span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span>res<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
-                  promises<span class="token punctuation">[</span>res<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">handler</span><span class="token punctuation">(</span>sequence<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
-                      <span class="token keyword">return</span> res
-                  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-                  <span class="token keyword">return</span> Promise<span class="token punctuation">.</span><span class="token function">race</span><span class="token punctuation">(</span>promises<span class="token punctuation">)</span>
-              <span class="token punctuation">}</span><span class="token punctuation">)</span>
-          <span class="token punctuation">}</span>
-      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    输出: [1,2,2,3,5,6]</code></pre><h3 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h3><ul>
+<li>暴力法：从前往后一个个对比，将 nums2 中的数逐个插入 nums1 中</li>
+<li>排序法：合并两个数组再排序，API 直接完成</li>
+<li>递减法：从后往前对比，将较大值放入 nums1 的空值位置</li>
+</ul>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><ul>
+<li><p>暴力法</p>
+<pre class="line-numbers language-js"><code class="language-js">  <span class="token comment" spellcheck="true">/**
+* 暴力法
+* @param {number[]} nums1
+* @param {number} m
+* @param {number[]} nums2
+* @param {number} n
+* @return {void} Do not return anything, modify nums1 in-place instead.
+*/</span>
+<span class="token keyword">var</span> merge <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span>nums1<span class="token punctuation">,</span> m<span class="token punctuation">,</span> nums2<span class="token punctuation">,</span> n<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span>
+      j <span class="token operator">=</span> <span class="token number">0</span>
+  <span class="token comment" spellcheck="true">// 去0</span>
+  nums1<span class="token punctuation">.</span><span class="token function">splice</span><span class="token punctuation">(</span>m<span class="token punctuation">,</span> n<span class="token punctuation">)</span>
+  <span class="token comment" spellcheck="true">// 如果 nums1 没值，直接把 nums2 放入</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>m<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      nums1<span class="token punctuation">.</span><span class="token function">splice</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token operator">...</span>nums2<span class="token punctuation">.</span><span class="token function">splice</span><span class="token punctuation">(</span>j<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">return</span> nums1<span class="token punctuation">;</span>
   <span class="token punctuation">}</span>
-  <span class="token function">limitLoad</span><span class="token punctuation">(</span>urls<span class="token punctuation">,</span> loadImg<span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+  <span class="token keyword">while</span><span class="token punctuation">(</span>i <span class="token operator">&lt;</span> m <span class="token operator">||</span> j <span class="token operator">&lt;</span> n<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token comment" spellcheck="true">// 对比将小值插入 nums1 中</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>nums2<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">&lt;=</span> nums1<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          nums1<span class="token punctuation">.</span><span class="token function">splice</span><span class="token punctuation">(</span>i<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> nums2<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          j<span class="token operator">++</span><span class="token punctuation">;</span>
+          m<span class="token operator">++</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+          i<span class="token operator">++</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+      <span class="token comment" spellcheck="true">// 当 i 等于 m 代表从 j 开始的 nums2 元素都比 nums1 大，直接插入</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>i <span class="token operator">===</span> m<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          nums1<span class="token punctuation">.</span><span class="token function">splice</span><span class="token punctuation">(</span>i<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token operator">...</span>nums2<span class="token punctuation">.</span><span class="token function">splice</span><span class="token punctuation">(</span>j<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token keyword">break</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> nums1<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 </li>
-<li><p>参考</p>
-<ul>
-<li><a href="https://blog.csdn.net/tonghonglei/article/details/88054116" target="_blank" rel="noopener">https://blog.csdn.net/tonghonglei/article/details/88054116</a></li>
-<li><a href="https://segmentfault.com/a/1190000016389127" target="_blank" rel="noopener">https://segmentfault.com/a/1190000016389127</a></li>
-</ul>
+<li><p>排序法</p>
+<pre class="line-numbers language-js"><code class="language-js">  <span class="token keyword">function</span> <span class="token function">merge</span><span class="token punctuation">(</span>nums1<span class="token punctuation">,</span> m<span class="token punctuation">,</span> nums2<span class="token punctuation">,</span> n<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> nums2<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> nums1<span class="token punctuation">[</span>m <span class="token operator">+</span> i<span class="token punctuation">]</span> <span class="token operator">=</span> nums2<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+      nums1<span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token keyword">return</span> a <span class="token operator">-</span> b
+      <span class="token punctuation">}</span><span class="token punctuation">)</span>
+      <span class="token keyword">return</span> nums1<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li><p>递减法</p>
+<pre class="line-numbers language-js"><code class="language-js">  <span class="token comment" spellcheck="true">/**
+  * 递减法
+  * @param {number[]} nums1
+  * @param {number} m
+  * @param {number[]} nums2
+  * @param {number} n
+  * @return {void} Do not return anything, modify nums1 in-place instead.
+  */</span>
+  <span class="token keyword">var</span> merge <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span>nums1<span class="token punctuation">,</span> m<span class="token punctuation">,</span> nums2<span class="token punctuation">,</span> n<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">let</span> p <span class="token operator">=</span> m<span class="token operator">--</span> <span class="token operator">+</span> n<span class="token operator">--</span> <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// nums1 总长度</span>
+      <span class="token keyword">while</span> <span class="token punctuation">(</span>m <span class="token operator">>=</span> <span class="token number">0</span> <span class="token operator">&amp;&amp;</span> n <span class="token operator">>=</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token comment" spellcheck="true">// 对比有序数组中的最大值，结果为所有元素最大值，放入 nums1 数组最后</span>
+          nums1<span class="token punctuation">[</span>p<span class="token operator">--</span><span class="token punctuation">]</span> <span class="token operator">=</span> nums1<span class="token punctuation">[</span>m<span class="token punctuation">]</span> <span class="token operator">></span> nums2<span class="token punctuation">[</span>n<span class="token punctuation">]</span> <span class="token operator">?</span> nums1<span class="token punctuation">[</span>m<span class="token operator">--</span><span class="token punctuation">]</span> <span class="token punctuation">:</span> nums2<span class="token punctuation">[</span>n<span class="token operator">--</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+      <span class="token comment" spellcheck="true">// n 大于零，即有比原 nums1 所有元素小的值，直接将其放入 nums1</span>
+      <span class="token keyword">while</span> <span class="token punctuation">(</span>n <span class="token operator">>=</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          nums1<span class="token punctuation">[</span>p<span class="token operator">--</span><span class="token punctuation">]</span> <span class="token operator">=</span> nums2<span class="token punctuation">[</span>n<span class="token operator">--</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+      <span class="token keyword">return</span> nums1<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 </li>
 </ul>
 
@@ -760,9 +717,9 @@
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《promise.all并发限制》
+                    《leetcode-数组-88-合并两个有序数组》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/2020/02/19/promise-all-bing-fa-xian-zhi/" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2020/02/24/leetcode-shu-zu-88-he-bing-liang-ge-you-xu-shu-zu/" property="cc:attributionName"
                rel="cc:attributionURL">
                 朝飞
             </a> 采用
@@ -803,7 +760,7 @@
         repo: 'liangchaofei.github.io',
         owner: 'liangchaofei',
         admin: "liangchaofei",
-        id: '2020/02/19/promise-all-bing-fa-xian-zhi/',
+        id: '2020/02/24/leetcode-shu-zu-88-he-bing-liang-ge-you-xu-shu-zu/',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -1086,49 +1043,53 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2020/02/19/li-jie-he-shi-yong-promise-all-he-promise-race/">
+                <a href="/2020/02/24/leetcode-shu-zu-88-he-bing-liang-ge-you-xu-shu-zu/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="理解和使用Promise.all和Promise.race">
+                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="leetcode-数组-88-合并两个有序数组">
                         
-                        <span class="card-title">理解和使用Promise.all和Promise.race</span>
+                        <span class="card-title">leetcode-数组-88-合并两个有序数组</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            一、Pomise.all的使用
-Promise.all可以将多个Promise实例包装成一个新的Promise实例。同时，成功和失败的返回值是不同的，成功的时候返回的是一个结果数组，而失败的时候则返回最先被reject失败状态的值。
+                            题目描述（难度：简单）
+给定两个有序整数数组 nums1 和 nums2，将 nums2 合并到 nums1 中，使得 num1 成为一个有序数组。
 
-具体
+说明
+初始化 nums1 和 nums2 的元素数量分别为 m 和 n。
+你可以假设 n
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2020-02-19
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-02-24
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/ES6/" class="post-category" target="_blank">
-                                    ES6
+                            <a href="/categories/算法/" class="post-category" target="_blank">
+                                    算法
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/js/" target="_blank">
-                        <span class="chip bg-color">js</span>
+                    <a href="/tags/leetcode/" target="_blank">
+                        <span class="chip bg-color">leetcode</span>
                     </a>
                     
                 </div>
@@ -1139,45 +1100,44 @@ Promise.all可以将多个Promise实例包装成一个新的Promise实例。同�
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="fa fa-dot-circle-o"></i>
+                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/02/19/promise-all-bing-fa-xian-zhi/">
+                <a href="/2020/02/22/shou-xie-shu-zu-map-filter-deng-fang-fa/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="promise.all并发限制">
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="手写数组map,filter等方法">
                         
-                        <span class="card-title">promise.all并发限制</span>
+                        <span class="card-title">手写数组map,filter等方法</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            下面通过3篇讲解promise.all并发限制Promise.all并发限制背景
-通常，我们在需要保证代码在多个异步处理之后执行，会用到：
-  Promise.all(promises: []).then(fun: function);
+                            本文自己动手实现数组常用方法，包括filter,map,some,reduce,every等方法filter
+功能：过滤,filter()使用指定的函数测试所有元素，并创建一个包含所有通过测试的元素的新数组。
 
-
+用法:
+  let arr 
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-02-19
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-02-22
                             </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/js/" class="post-category" target="_blank">
-                                    js
+                            <a href="/categories/数组/" class="post-category" target="_blank">
+                                    数组
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
