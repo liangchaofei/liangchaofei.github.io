@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://liangchaofei.github.io/"/>
-  <updated>2020-02-24T15:19:54.367Z</updated>
+  <updated>2020-02-25T13:44:27.412Z</updated>
   <id>https://liangchaofei.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>leetcode-数组-118-杨辉三角</title>
+    <link href="https://liangchaofei.github.io/2020/02/25/leetcode-shu-zu-118-yang-hui-san-jiao/"/>
+    <id>https://liangchaofei.github.io/2020/02/25/leetcode-shu-zu-118-yang-hui-san-jiao/</id>
+    <published>2020-02-25T13:42:38.000Z</published>
+    <updated>2020-02-25T13:44:27.412Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;描述&quot;&gt;&lt;a href=&quot;#描述&quot; class=&quot;headerlink&quot; title=&quot;描述&quot;&gt;&lt;/a&gt;描述&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;给定一个非负整数 numRows，生成杨辉三角的前 numRows
+        
+      
+    
+    </summary>
+    
+      <category term="算法" scheme="https://liangchaofei.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+      <category term="leetcode" scheme="https://liangchaofei.github.io/tags/leetcode/"/>
+    
+  </entry>
   
   <entry>
     <title>leetcode-数组-88-合并两个有序数组</title>
