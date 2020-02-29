@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://liangchaofei.github.io/"/>
-  <updated>2020-02-28T15:13:06.094Z</updated>
+  <updated>2020-02-29T02:56:30.801Z</updated>
   <id>https://liangchaofei.github.io/</id>
   
   <author>
@@ -21,12 +21,25 @@
     <link href="https://liangchaofei.github.io/2020/02/28/leetcode-shu-zu-219-cun-zai-chong-fu-yuan-su-2/"/>
     <id>https://liangchaofei.github.io/2020/02/28/leetcode-shu-zu-219-cun-zai-chong-fu-yuan-su-2/</id>
     <published>2020-02-28T15:13:06.000Z</published>
-    <updated>2020-02-28T15:13:06.094Z</updated>
+    <updated>2020-02-29T02:56:30.801Z</updated>
     
     <summary type="html">
     
+      
+      
+        
+        
+          &lt;h3 id=&quot;描述&quot;&gt;&lt;a href=&quot;#描述&quot; class=&quot;headerlink&quot; title=&quot;描述&quot;&gt;&lt;/a&gt;描述&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;给定一个整数数组和一个整数 k，判断数组中是否存在两个不同的索引 i 和 j，使得 nums [i] = nums
+        
+      
+    
     </summary>
     
+      <category term="算法" scheme="https://liangchaofei.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+      <category term="leetcode" scheme="https://liangchaofei.github.io/tags/leetcode/"/>
     
   </entry>
   
