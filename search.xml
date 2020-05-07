@@ -8,7 +8,7 @@
       <link href="/2020/05/07/git/"/>
       <url>/2020/05/07/git/</url>
       
-        <content type="html"><![CDATA[<h3 id="git总结"><a href="#git总结" class="headerlink" title="git总结"></a>git总结</h3>]]></content>
+        <content type="html"><![CDATA[<h3 id="git总结"><a href="#git总结" class="headerlink" title="git总结"></a>git总结</h3><ul><li>全局配置<pre class="line-numbers language-git"><code class="language-git">  git config --global user.name <span class="token string">'你的名字'</span>  git config --global user.email <span class="token string">'你的邮箱'</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></li></ul>]]></content>
       
       
       <categories>
