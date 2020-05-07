@@ -8,12 +8,18 @@
     <meta name="baidu-site-verification" content>
     <meta name="google-site-verification" content>
     <meta name="360-site-verification" content>
-    <meta name="description" content="git总结
-全局配置  git config --global user.name &#39;你的名字&#39;
-  git config --global user.email &#39;你的邮箱&#39;
+    <meta name="description" content="git总结本地操作
+查看变更情况
+  git status
 
+将当前目录及其子目录下所有变更都加入到暂存区
+  git add .
 
-">
+比较工作区和暂存区的所有差异
+  git diff 
+
+比较某文件工作区和暂存区的差异
+  git dif">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -450,14 +456,14 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    25
+                    701
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
                 
@@ -473,9 +479,139 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="git总结"><a href="#git总结" class="headerlink" title="git总结"></a>git总结</h3><ul>
-<li>全局配置<pre class="line-numbers language-git"><code class="language-git">  git config --global user.name <span class="token string">'你的名字'</span>
-  git config --global user.email <span class="token string">'你的邮箱'</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+                <h2 id="git总结"><a href="#git总结" class="headerlink" title="git总结"></a>git总结</h2><h3 id="本地操作"><a href="#本地操作" class="headerlink" title="本地操作"></a>本地操作</h3><ul>
+<li><p>查看变更情况</p>
+<pre class="line-numbers language-git"><code class="language-git">  git status<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li><p>将当前目录及其子目录下所有变更都加入到暂存区</p>
+<pre class="line-numbers language-git"><code class="language-git">  git add .<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li><p>比较工作区和暂存区的所有差异</p>
+<pre class="line-numbers language-git"><code class="language-git">  git diff <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li><p>比较某文件工作区和暂存区的差异</p>
+<pre class="line-numbers language-git"><code class="language-git">  git diff 文件名<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li><p>比较暂存区和 HEAD 的所有差异</p>
+<pre class="line-numbers language-git"><code class="language-git">  git diff --cached<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li><p>比较某文件暂存区和 HEAD 的差异</p>
+<pre class="line-numbers language-git"><code class="language-git">  git diff --cached 文件名<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li><p>创建commit</p>
+<pre class="line-numbers language-git"><code class="language-git">  git commit <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li><p>将暂存区和工作区所有文件恢复成和 HEAD 一样</p>
+<pre class="line-numbers language-git"><code class="language-git">  git reset --hard<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li><p>将未处理完的变更先保存到 stash 中</p>
+<pre class="line-numbers language-git"><code class="language-git">  git stash<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li><p>临时任务处理完后继续之前的工作</p>
+<ul>
+<li>apply 保留 stash</li>
+<li>pop 不保留 stash<pre class="line-numbers language-git"><code class="language-git">git stash pop       
+git stash apply<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+</li>
+</ul>
+</li>
+<li><p>查看所有 stash</p>
+<pre class="line-numbers language-git"><code class="language-git">  git stash list<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li><p>取回某次 stash 的变更</p>
+<pre class="line-numbers language-git"><code class="language-git">  git stash pop stash@{数字n}<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+</ul>
+<h3 id="分支操作"><a href="#分支操作" class="headerlink" title="分支操作"></a>分支操作</h3><ul>
+<li><p>基于当前分支创建新分支</p>
+<pre class="line-numbers language-git"><code class="language-git">  git branch 新分支名<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li><p>基于指定分支创建新分支</p>
+<pre class="line-numbers language-git"><code class="language-git">  git branch 新分支 指定分支<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li><p>基于某个 commit 创建分支</p>
+<pre class="line-numbers language-git"><code class="language-git">  git branch 新分支 某个分支的commit id<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li><p>安全删除本地某分支</p>
+<pre class="line-numbers language-git"><code class="language-git">  git branch -d 本地分支<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li><p>强行删除本地某分支</p>
+<pre class="line-numbers language-git"><code class="language-git">  git branch -D 要删除的分支<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li><p>将 A 分支合入到当前分支中且为 merge 创建 commit</p>
+<pre class="line-numbers language-git"><code class="language-git">  git merge A分支<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li><p>将 A 分支合入到 B 分支中且为 merge 创建 commit</p>
+<pre class="line-numbers language-git"><code class="language-git">  git merge A分支 B分支<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li><p>将当前分支基于 B 分支做 rebase，以便将B分支合入到当前分支</p>
+<pre class="line-numbers language-git"><code class="language-git">  git rebase B分支<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li><p>将 A 分支基于 B 分支做 rebase，以便将 B 分支合入到 A 分支</p>
+<pre class="line-numbers language-git"><code class="language-git">  git rebase B分支 A分支<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+</ul>
+<h3 id="变更历史"><a href="#变更历史" class="headerlink" title="变更历史"></a>变更历史</h3><ul>
+<li><p>当前分支各个 commit 用一行显示</p>
+<pre class="line-numbers language-git"><code class="language-git">  git log --oneline<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li><p>显示就近的 n 个 commit</p>
+<pre class="line-numbers language-git"><code class="language-git">  git log -n<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li><p>用图示显示所有分支的历史</p>
+<pre class="line-numbers language-git"><code class="language-git">  git log --oneline --graph --all<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li><p>查看涉及到某文件变更的所有 commit</p>
+<pre class="line-numbers language-git"><code class="language-git">  git log 文件<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li><p>某文件各行最后修改对应的 commit 以及作者</p>
+<pre class="line-numbers language-git"><code class="language-git">  git blame 文件<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+</ul>
+<h3 id="标签操作"><a href="#标签操作" class="headerlink" title="标签操作"></a>标签操作</h3><ul>
+<li><p>查看已有标签</p>
+<pre class="line-numbers language-git"><code class="language-git">  git tag<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li><p>新建标签</p>
+<pre class="line-numbers language-git"><code class="language-git">  git tag v1.0<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li><p>新建带备注标签</p>
+<pre class="line-numbers language-git"><code class="language-git">  git tag -a v1.0 -m <span class="token string">'备注'</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li><p>给指定的 commit 打标签</p>
+<pre class="line-numbers language-git"><code class="language-git">  git tag v1.0 commit id<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li><p>推送一个本地标签</p>
+<pre class="line-numbers language-git"><code class="language-git">  git push origin v1.0<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li><p>推送全部未推送过的本地标签</p>
+<pre class="line-numbers language-git"><code class="language-git">  git push origin --tags<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li><p>删除一个本地标签</p>
+<pre class="line-numbers language-git"><code class="language-git">  git tag -d v1.0<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+</ul>
+<h3 id="远端交互"><a href="#远端交互" class="headerlink" title="远端交互"></a>远端交互</h3><ul>
+<li><p>查看所有远端仓库</p>
+<pre class="line-numbers language-git"><code class="language-git">  git remote -v<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li><p>添加远端仓库</p>
+<pre class="line-numbers language-git"><code class="language-git">  git remote add url<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li><p>删除远端仓库</p>
+<pre class="line-numbers language-git"><code class="language-git">  git remote remove remote的名称<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li><p>重命名远端仓库</p>
+<pre class="line-numbers language-git"><code class="language-git">  git remote rename 旧名称 新名称<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li><p>将远端所有分支和标签的变更都拉到本地</p>
+<pre class="line-numbers language-git"><code class="language-git">  git fetch remote<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li><p>把远端分支的变更拉到本地，且 merge 到本地分支</p>
+<pre class="line-numbers language-git"><code class="language-git">  git pull origin 分支名<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li><p>删除远端分支</p>
+<pre class="line-numbers language-git"><code class="language-git">  git push remote --delete 远端分支<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 </li>
 </ul>
 
@@ -979,12 +1115,18 @@
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            git总结
-全局配置  git config --global user.name '你的名字'
-  git config --global user.email '你的邮箱'
+                            git总结本地操作
+查看变更情况
+  git status
 
+将当前目录及其子目录下所有变更都加入到暂存区
+  git add .
 
+比较工作区和暂存区的所有差异
+  git diff 
 
+比较某文件工作区和暂存区的差异
+  git dif
                         
                     </div>
                     <div class="publish-info">
@@ -1230,7 +1372,7 @@
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">10.9k</span>
+            <span class="white-color">11.5k</span>
             
 
             <br>
