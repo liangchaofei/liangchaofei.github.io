@@ -1,4 +1,3 @@
-https://liangchaofei.github.io/2020/05/07/git-zong-jie/
 https://liangchaofei.github.io/2020/02/28/leetcode-shu-zu-219-cun-zai-chong-fu-yuan-su-2/
 https://liangchaofei.github.io/2020/02/27/leetcode-shu-zu-217-cun-zai-chong-fu-yuan-su/
 https://liangchaofei.github.io/2020/02/27/leetcode-shu-zu-189-xuan-zhuan-shu-zu/
@@ -9,6 +8,7 @@ https://liangchaofei.github.io/2020/02/24/leetcode-shu-zu-88-he-bing-liang-ge-yo
 https://liangchaofei.github.io/2020/02/22/shou-xie-shu-zu-map-filter-deng-fang-fa/
 https://liangchaofei.github.io/2020/02/22/shi-xian-yi-ge-han-shu-pan-duan-shu-ju-lei-xing/
 https://liangchaofei.github.io/2020/02/22/feng-zhuang-fetch-qing-qiu-han-shu/
+https://liangchaofei.github.io/2020/02/22/git-zong-jie/
 https://liangchaofei.github.io/2020/02/22/js-shu-zu-qu-chong-fang-fa/
 https://liangchaofei.github.io/2020/02/21/leetcode-shu-zu-35-sou-suo-cha-ru-wei-zhi/
 https://liangchaofei.github.io/2020/02/20/leetcode-shu-zu-27-yi-chu-yuan-su/
