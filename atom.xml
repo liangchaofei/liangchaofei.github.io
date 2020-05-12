@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://liangchaofei.github.io/"/>
-  <updated>2020-05-07T03:30:58.905Z</updated>
+  <updated>2020-05-12T01:42:14.206Z</updated>
   <id>https://liangchaofei.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>JS基础知识点及常考面试题</title>
+    <link href="https://liangchaofei.github.io/2020/05/11/js-ji-chu-zhi-shi-dian-ji-chang-kao-mian-shi-ti/"/>
+    <id>https://liangchaofei.github.io/2020/05/11/js-ji-chu-zhi-shi-dian-ji-chang-kao-mian-shi-ti/</id>
+    <published>2020-05-11T15:24:57.000Z</published>
+    <updated>2020-05-12T01:42:14.206Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;原始类型有哪几种？null-是对象嘛？&quot;&gt;&lt;a href=&quot;#原始类型有哪几种？null-是对象嘛？&quot; class=&quot;headerlink&quot; title=&quot;原始类型有哪几种？null 是对象嘛？&quot;&gt;&lt;/a&gt;原始类型有哪几种？null 是对象嘛？&lt;/h3&gt;&lt;h4
+        
+      
+    
+    </summary>
+    
+      <category term="面试题" scheme="https://liangchaofei.github.io/categories/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    
+    
+      <category term="js" scheme="https://liangchaofei.github.io/tags/js/"/>
+    
+  </entry>
   
   <entry>
     <title>git</title>
