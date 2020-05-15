@@ -411,8 +411,8 @@
                     
                     <div class="article-tag">
                         
-                        <a href="/tags/js/" target="_blank">
-                            <span class="chip bg-color">js</span>
+                        <a href="/tags/异步/" target="_blank">
+                            <span class="chip bg-color">异步</span>
                         </a>
                         
                     </div>
@@ -449,7 +449,7 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    95
+                    96
                 </div>
                 
 
@@ -476,17 +476,15 @@
 <li>手动封装一个请求函数，可以设置最大请求次数，请求成功则不再请求，请求失败则继续请求直到超过最大次数(流利说)</li>
 </ul>
 <pre class="line-numbers language-js"><code class="language-js">    <span class="token keyword">import</span> fetch <span class="token keyword">from</span> <span class="token string">'fetch'</span><span class="token punctuation">;</span>
-    <span class="token keyword">function</span> <span class="token function">request</span><span class="token punctuation">(</span>url<span class="token punctuation">,</span>body<span class="token punctuation">,</span>successCb<span class="token punctuation">,</span>errorCv<span class="token punctuation">,</span>maxCount <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-        <span class="token keyword">return</span> <span class="token function">fetch</span><span class="token punctuation">(</span>url<span class="token punctuation">,</span>body<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>res <span class="token operator">=</span><span class="token operator">></span> <span class="token function">successCb</span><span class="token punctuation">(</span>res<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token keyword">catch</span><span class="token punctuation">(</span>err <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
-            <span class="token keyword">if</span><span class="token punctuation">(</span>maxCount <span class="token operator">===</span> <span class="token number">0</span> <span class="token punctuation">)</span><span class="token punctuation">{</span>
-                <span class="token function">errorCb</span><span class="token punctuation">(</span><span class="token string">'请求超市'</span><span class="token punctuation">)</span>
-            <span class="token punctuation">}</span>
-            <span class="token keyword">return</span> <span class="token function">request</span><span class="token punctuation">(</span>url<span class="token punctuation">,</span>body<span class="token punctuation">,</span>successCb<span class="token punctuation">,</span>errorCb<span class="token punctuation">,</span><span class="token operator">--</span>maxCount<span class="token punctuation">)</span>
+    <span class="token keyword">function</span> <span class="token function">request</span><span class="token punctuation">(</span>url<span class="token punctuation">,</span>body<span class="token punctuation">,</span>successCb<span class="token punctuation">,</span>errCb<span class="token punctuation">,</span>maxCount <span class="token operator">=</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token function">fetch</span><span class="token punctuation">(</span>url<span class="token punctuation">,</span>body<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>res <span class="token operator">=</span><span class="token operator">></span> <span class="token function">successCb</span><span class="token punctuation">(</span>res<span class="token punctuation">)</span><span class="token punctuation">,</span>err<span class="token operator">=</span><span class="token operator">></span><span class="token punctuation">{</span>
+            <span class="token keyword">if</span><span class="token punctuation">(</span>maxCount <span class="token operator">&lt;</span> <span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token function">errCb</span><span class="token punctuation">(</span><span class="token string">'请求超时'</span><span class="token punctuation">)</span>
+            <span class="token keyword">return</span> <span class="token function">request</span><span class="token punctuation">(</span>url<span class="token punctuation">,</span>body<span class="token punctuation">,</span>successCb<span class="token punctuation">,</span>errCb<span class="token punctuation">,</span><span class="token operator">--</span>maxCount<span class="token punctuation">)</span>
         <span class="token punctuation">}</span><span class="token punctuation">)</span>
     <span class="token punctuation">}</span>
 
     <span class="token comment" spellcheck="true">// 用法</span>
-    <span class="token function">request</span><span class="token punctuation">(</span><span class="token string">'/api'</span><span class="token punctuation">,</span><span class="token punctuation">{</span>methos<span class="token punctuation">:</span><span class="token string">'get'</span><span class="token punctuation">,</span>headers<span class="token punctuation">:</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>res <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>err <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+    <span class="token function">request</span><span class="token punctuation">(</span><span class="token string">'/api'</span><span class="token punctuation">,</span><span class="token punctuation">{</span>methos<span class="token punctuation">:</span><span class="token string">'get'</span><span class="token punctuation">,</span>headers<span class="token punctuation">:</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>res <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>err <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
             </div>
             <hr />
@@ -1237,7 +1235,7 @@ let arr = [1,1,'true','true',true,true,15
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">12.7k</span>
+            <span class="white-color">12.9k</span>
             
 
             <br>

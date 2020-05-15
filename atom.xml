@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://liangchaofei.github.io/"/>
-  <updated>2020-05-13T16:14:50.147Z</updated>
+  <updated>2020-05-15T03:17:11.193Z</updated>
   <id>https://liangchaofei.github.io/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>scrollWidth,clientWidth,offsetWidth的区别</title>
+    <link href="https://liangchaofei.github.io/2020/05/15/scrollwidth-clientwidth-offsetwidth-de-qu-bie/"/>
+    <id>https://liangchaofei.github.io/2020/05/15/scrollwidth-clientwidth-offsetwidth-de-qu-bie/</id>
+    <published>2020-05-15T03:11:07.000Z</published>
+    <updated>2020-05-15T03:17:11.193Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;ul&gt;
+&lt;li&gt;scrollWidth：对象的实际内容的宽度，不包边线宽度，会随对象中内容超过可视区后而变大。&lt;/li&gt;
+&lt;li&gt;clientWidth：对象内容的可视区的宽度，不包滚动条等边线，会随对象显示大小的变化而改变。&lt;/li&gt;
+&lt;li&gt;offsetWidth：对象整体
+        
+      
+    
+    </summary>
+    
+      <category term="js" scheme="https://liangchaofei.github.io/categories/js/"/>
+    
+    
+      <category term="js" scheme="https://liangchaofei.github.io/tags/js/"/>
+    
+  </entry>
   
   <entry>
     <title>JS基础知识点及常考面试题</title>
@@ -312,7 +341,7 @@
     <link href="https://liangchaofei.github.io/2020/02/22/feng-zhuang-fetch-qing-qiu-han-shu/"/>
     <id>https://liangchaofei.github.io/2020/02/22/feng-zhuang-fetch-qing-qiu-han-shu/</id>
     <published>2020-02-22T08:11:24.000Z</published>
-    <updated>2020-02-22T08:16:44.217Z</updated>
+    <updated>2020-05-15T00:49:43.923Z</updated>
     
     <summary type="html">
     
@@ -332,7 +361,7 @@
       <category term="js" scheme="https://liangchaofei.github.io/categories/js/"/>
     
     
-      <category term="js" scheme="https://liangchaofei.github.io/tags/js/"/>
+      <category term="异步" scheme="https://liangchaofei.github.io/tags/%E5%BC%82%E6%AD%A5/"/>
     
   </entry>
   
@@ -519,32 +548,6 @@
     
     
       <category term="js" scheme="https://liangchaofei.github.io/tags/js/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>promise.all并发限制</title>
-    <link href="https://liangchaofei.github.io/2020/02/19/promise-all-bing-fa-xian-zhi/"/>
-    <id>https://liangchaofei.github.io/2020/02/19/promise-all-bing-fa-xian-zhi/</id>
-    <published>2020-02-19T13:19:53.000Z</published>
-    <updated>2020-05-14T23:58:33.500Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;下面通过3篇讲解promise-all并发限制&quot;&gt;&lt;a href=&quot;#下面通过3篇讲解promise-all并发限制&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="js" scheme="https://liangchaofei.github.io/categories/js/"/>
-    
-    
-      <category term="promise" scheme="https://liangchaofei.github.io/tags/promise/"/>
     
   </entry>
   

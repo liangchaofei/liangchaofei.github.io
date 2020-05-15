@@ -4,15 +4,14 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="promise.all并发限制, 前端">
+    <meta name="keywords" content="scrollWidth,clientWidth,offsetWidth的区别, 前端">
     <meta name="baidu-site-verification" content>
     <meta name="google-site-verification" content>
     <meta name="360-site-verification" content>
-    <meta name="description" content="下面通过3篇讲解promise.all并发限制Promise.all并发限制背景
-通常，我们在需要保证代码在多个异步处理之后执行，会用到：
-  Promise.all(promises: []).then(fun: function);
-
-">
+    <meta name="description" content="
+scrollWidth：对象的实际内容的宽度，不包边线宽度，会随对象中内容超过可视区后而变大。
+clientWidth：对象内容的可视区的宽度，不包滚动条等边线，会随对象显示大小的变化而改变。
+offsetWidth：对象整体的实际宽度，">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -20,7 +19,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>promise.all并发限制 | 朝飞的博客</title>
+    <title>scrollWidth,clientWidth,offsetWidth的区别 | 朝飞的博客</title>
     <link rel="icon" type="image/jpeg" href="/kb.jpg">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -294,13 +293,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        promise.all并发限制
+                        scrollWidth,clientWidth,offsetWidth的区别
                     </div>
                 </div>
             </div>
@@ -411,8 +410,8 @@
                     
                     <div class="article-tag">
                         
-                        <a href="/tags/promise/" target="_blank">
-                            <span class="chip bg-color">promise</span>
+                        <a href="/tags/js/" target="_blank">
+                            <span class="chip bg-color">js</span>
                         </a>
                         
                     </div>
@@ -435,7 +434,7 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-02-19
+                    2020-05-15
                 </div>
 
                 <div class="post-author info-break-policy">
@@ -449,14 +448,14 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.2k
+                    187
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    4 分
+                    1 分
                 </div>
                 
                 
@@ -472,135 +471,21 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="下面通过3篇讲解promise-all并发限制"><a href="#下面通过3篇讲解promise-all并发限制" class="headerlink" title="下面通过3篇讲解promise.all并发限制"></a>下面通过3篇讲解promise.all并发限制</h1><h2 id="Promise-all并发限制"><a href="#Promise-all并发限制" class="headerlink" title="Promise.all并发限制"></a>Promise.all并发限制</h2><h3 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h3><ul>
-<li><p>通常，我们在需要保证代码在多个异步处理之后执行，会用到：</p>
-<pre class="line-numbers language-js"><code class="language-js">  Promise<span class="token punctuation">.</span><span class="token function">all</span><span class="token punctuation">(</span>promises<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>fun<span class="token punctuation">:</span> <span class="token keyword">function</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-</li>
-<li><p>Promise.all可以保证，promises数组中所有promise对象都达到resolve状态，才执行then回调。</p>
-</li>
-<li><p>这时候考虑一个场景：如果你的promises数组中每个对象都是http请求，或者说每个对象包含了复杂的调用处理。而这样的对象有几十万个。</p>
-</li>
-<li><p>那么会出现的情况是，你在瞬间发出几十万http请求（tcp连接数不足可能造成等待），或者堆积了无数调用栈导致内存溢出。</p>
-</li>
-<li><p>这时候，我们就需要考虑对Promise.all做并发限制。</p>
-</li>
-<li><p>Promise.all并发限制指的是，每个时刻并发执行的promise数量是固定的，最终的执行结果还是保持与原来的Promise.all一致。</p>
-</li>
+                <ul>
+<li>scrollWidth：对象的实际内容的宽度，不包边线宽度，会随对象中内容超过可视区后而变大。</li>
+<li>clientWidth：对象内容的可视区的宽度，不包滚动条等边线，会随对象显示大小的变化而改变。</li>
+<li>offsetWidth：对象整体的实际宽度，包滚动条等边线，会随对象显示大小的变化而改变。</li>
 </ul>
-<h3 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h3><ul>
-<li><p>我们知道，promise并不是因为调用Promise.all才执行，而是在实例化promise对象的时候就执行了，在理解这一点的基础上，要实现并发限制，只能从promise实例化上下手。</p>
-</li>
-<li><p>换句话说，就是把生成promises数组的控制权，交给并发控制逻辑。</p>
-</li>
-<li><p>这里我并不打算一步步实现这个这个功能，npm中有很多实现这个功能的第三方包，比如async-pool、es6-promise-pool、p-limit，这里我直接拿async-pool的代码来分析一下实现原理。</p>
-</li>
-<li><p>代码很简单，去掉不必要的代码，加上自己的注释，大概内容如下：</p>
-<pre class="line-numbers language-js"><code class="language-js">  <span class="token keyword">function</span> <span class="token function">asyncPool</span><span class="token punctuation">(</span>poolLimit<span class="token punctuation">,</span> array<span class="token punctuation">,</span> iteratorFn<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-      <span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
-      <span class="token keyword">const</span> ret <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-      <span class="token keyword">const</span> executing <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-      <span class="token keyword">const</span> enqueue <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-          <span class="token comment" spellcheck="true">// 边界处理，array为空数组</span>
-          <span class="token keyword">if</span> <span class="token punctuation">(</span>i <span class="token operator">===</span> array<span class="token punctuation">.</span>length<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-              <span class="token keyword">return</span> Promise<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-          <span class="token punctuation">}</span>
-          <span class="token comment" spellcheck="true">// 每调一次enqueue，初始化一个promise</span>
-          <span class="token keyword">const</span> item <span class="token operator">=</span> array<span class="token punctuation">[</span>i<span class="token operator">++</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-          <span class="token keyword">const</span> p <span class="token operator">=</span> Promise<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token function">iteratorFn</span><span class="token punctuation">(</span>item<span class="token punctuation">,</span> array<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-          <span class="token comment" spellcheck="true">// 放入promises数组</span>
-          ret<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>p<span class="token punctuation">)</span><span class="token punctuation">;</span>
-          <span class="token comment" spellcheck="true">// promise执行完毕，从executing数组中删除</span>
-          <span class="token keyword">const</span> e <span class="token operator">=</span> p<span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> executing<span class="token punctuation">.</span><span class="token function">splice</span><span class="token punctuation">(</span>executing<span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-          <span class="token comment" spellcheck="true">// 插入executing数字，表示正在执行的promise</span>
-          executing<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token punctuation">;</span>
-          <span class="token comment" spellcheck="true">// 使用Promise.rece，每当executing数组中promise数量低于poolLimit，就实例化新的promise并执行</span>
-          <span class="token keyword">let</span> r <span class="token operator">=</span> Promise<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-          <span class="token keyword">if</span> <span class="token punctuation">(</span>executing<span class="token punctuation">.</span>length <span class="token operator">>=</span> poolLimit<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-              r <span class="token operator">=</span> Promise<span class="token punctuation">.</span><span class="token function">race</span><span class="token punctuation">(</span>executing<span class="token punctuation">)</span><span class="token punctuation">;</span>
-          <span class="token punctuation">}</span>
-          <span class="token comment" spellcheck="true">// 递归，直到遍历完array</span>
-          <span class="token keyword">return</span> r<span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token function">enqueue</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-      <span class="token punctuation">}</span><span class="token punctuation">;</span>
-      <span class="token keyword">return</span> <span class="token function">enqueue</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> Promise<span class="token punctuation">.</span><span class="token function">all</span><span class="token punctuation">(</span>ret<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-</li>
-<li><p>因为是promise加上递归，所以在代码注释上不太好标注执行顺序，但是大概的逻辑可以总结为：</p>
-<ul>
-<li>1.从array第1个元素开始，初始化promise对象，同时用一个executing数组保存正在执行的promise</li>
-<li>2.不断初始化promise，直到达到poolLimt</li>
-<li>3.使用Promise.race，获得executing中promise的执行情况，当有一个promise执行完毕，继续初始化promise并放入executing中</li>
-<li>4.所有promise都执行完了，调用Promise.all返回</li>
+<h3 id="情况1"><a href="#情况1" class="headerlink" title="情况1"></a>情况1</h3><ul>
+<li>元素内无内容或者内容不超过可视区，滚动不出现或不可用的情况下。</li>
+<li>scrollWidth=clientWidth，两者皆为内容可视区的宽度。</li>
+<li>offsetWidth为元素的实际宽度。<br><img src="./scrollWidth-clientWidth-offsetWidth%E7%9A%84%E5%8C%BA%E5%88%AB/demo1.png" alt="avatar"></li>
 </ul>
-</li>
-<li><p>使用方式就是：</p>
-<pre class="line-numbers language-js"><code class="language-js">  <span class="token keyword">const</span> timeout <span class="token operator">=</span> i <span class="token operator">=</span><span class="token operator">></span> <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span>resolve <span class="token operator">=</span><span class="token operator">></span> <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token function">resolve</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">,</span> i<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token keyword">return</span> <span class="token function">asyncPool</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">1000</span><span class="token punctuation">,</span> <span class="token number">5000</span><span class="token punctuation">,</span> <span class="token number">3000</span><span class="token punctuation">,</span> <span class="token number">2000</span><span class="token punctuation">]</span><span class="token punctuation">,</span> timeout<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>results <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
-      <span class="token operator">...</span>
-  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-</li>
-</ul>
-<h2 id="面试题"><a href="#面试题" class="headerlink" title="面试题:"></a>面试题:</h2><ul>
-<li>有 8 个图片资源的 url，已经存储在数组 urls 中（即urls = [‘<a href="http://example.com/1.jpg’" target="_blank" rel="noopener">http://example.com/1.jpg’</a>, …., ‘<a href="http://example.com/8.jpg’]），而且已经有一个函数" target="_blank" rel="noopener">http://example.com/8.jpg’]），而且已经有一个函数</a> function loadImg，输入一个 url 链接，返回一个 Promise，该 Promise 在图片下载完成的时候 resolve，下载失败则 reject。但是我们要求，任意时刻，同时下载的链接数量不可以超过 3 个。请写一段代码实现这个需求，要求尽可能快速地将所有图片下载完成。</li>
-<li>已有代码如下：<pre class="line-numbers language-js"><code class="language-js">  <span class="token keyword">var</span> urls <span class="token operator">=</span> <span class="token punctuation">[</span>
-  <span class="token string">'https://www.kkkk1000.com/images/getImgData/getImgDatadata.jpg'</span><span class="token punctuation">,</span> 
-  <span class="token string">'https://www.kkkk1000.com/images/getImgData/gray.gif'</span><span class="token punctuation">,</span> 
-  <span class="token string">'https://www.kkkk1000.com/images/getImgData/Particle.gif'</span><span class="token punctuation">,</span> 
-  <span class="token string">'https://www.kkkk1000.com/images/getImgData/arithmetic.png'</span><span class="token punctuation">,</span> 
-  <span class="token string">'https://www.kkkk1000.com/images/getImgData/arithmetic2.gif'</span><span class="token punctuation">,</span> 
-  <span class="token string">'https://www.kkkk1000.com/images/getImgData/getImgDataError.jpg'</span><span class="token punctuation">,</span> 
-  <span class="token string">'https://www.kkkk1000.com/images/getImgData/arithmetic.gif'</span><span class="token punctuation">,</span> 
-  <span class="token string">'https://www.kkkk1000.com/images/wxQrCode2.png'</span>
-  <span class="token punctuation">]</span><span class="token punctuation">;</span>
-  <span class="token keyword">function</span> <span class="token function">loadImg</span><span class="token punctuation">(</span>url<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-      <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token punctuation">(</span>resolve<span class="token punctuation">,</span> reject<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
-          <span class="token keyword">const</span> img <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Image</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-          img<span class="token punctuation">.</span>onload <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-              console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'一张图片加载完成'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-              <span class="token function">resolve</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-          <span class="token punctuation">}</span>
-          img<span class="token punctuation">.</span>onerror <span class="token operator">=</span> reject
-          img<span class="token punctuation">.</span>src <span class="token operator">=</span> url
-      <span class="token punctuation">}</span><span class="token punctuation">)</span>
-  <span class="token punctuation">}</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-</li>
-</ul>
-<h3 id="思路："><a href="#思路：" class="headerlink" title="思路："></a>思路：</h3><ul>
-<li><p>用 Promise.race来实现，先并发请求3个图片资源，这样可以得到 3 个 Promise实例，组成一个数组promises ，然后不断的调用 Promise.race 来返回最快改变状态的 Promise，然后从数组（promises ）中删掉这个 Promise 对象实例，再加入一个新的 Promise实例，直到全部的 url 被取完。</p>
-<pre class="line-numbers language-js"><code class="language-js">  <span class="token comment" spellcheck="true">//省略代码</span>
-  <span class="token keyword">function</span> <span class="token function">limitLoad</span><span class="token punctuation">(</span>urls<span class="token punctuation">,</span> handler<span class="token punctuation">,</span> limit<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-      <span class="token comment" spellcheck="true">// 对数组做一个拷贝</span>
-      <span class="token keyword">const</span> sequence <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">concat</span><span class="token punctuation">(</span>urls<span class="token punctuation">)</span>
-      <span class="token keyword">let</span> promises <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-
-      <span class="token comment" spellcheck="true">//并发请求到最大数</span>
-      promises <span class="token operator">=</span> sequence<span class="token punctuation">.</span><span class="token function">splice</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> limit<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token punctuation">(</span>url<span class="token punctuation">,</span> index<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
-          <span class="token comment" spellcheck="true">// 这里返回的 index 是任务在 promises 的脚标，</span>
-          <span class="token comment" spellcheck="true">//用于在 Promise.race 之后找到完成的任务脚标</span>
-          <span class="token keyword">return</span> <span class="token function">handler</span><span class="token punctuation">(</span>url<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
-              <span class="token keyword">return</span> index
-          <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-      <span class="token punctuation">(</span><span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token function">loop</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-          <span class="token keyword">let</span> p <span class="token operator">=</span> Promise<span class="token punctuation">.</span><span class="token function">race</span><span class="token punctuation">(</span>promises<span class="token punctuation">)</span><span class="token punctuation">;</span>
-          <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> sequence<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-              p <span class="token operator">=</span> p<span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span>res<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
-                  promises<span class="token punctuation">[</span>res<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">handler</span><span class="token punctuation">(</span>sequence<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
-                      <span class="token keyword">return</span> res
-                  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-                  <span class="token keyword">return</span> Promise<span class="token punctuation">.</span><span class="token function">race</span><span class="token punctuation">(</span>promises<span class="token punctuation">)</span>
-              <span class="token punctuation">}</span><span class="token punctuation">)</span>
-          <span class="token punctuation">}</span>
-      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-  <span class="token punctuation">}</span>
-  <span class="token function">limitLoad</span><span class="token punctuation">(</span>urls<span class="token punctuation">,</span> loadImg<span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-</li>
-<li><p>参考</p>
-<ul>
-<li><a href="https://blog.csdn.net/tonghonglei/article/details/88054116" target="_blank" rel="noopener">https://blog.csdn.net/tonghonglei/article/details/88054116</a></li>
-<li><a href="https://segmentfault.com/a/1190000016389127" target="_blank" rel="noopener">https://segmentfault.com/a/1190000016389127</a></li>
-</ul>
-</li>
+<h3 id="情况2"><a href="#情况2" class="headerlink" title="情况2"></a>情况2</h3><ul>
+<li>scrollWidth&gt;clientWidth。</li>
+<li>scrollWidth为实际内容的宽度。</li>
+<li>clientWidth是内容可视区的宽度。</li>
+<li>offsetWidth为元素的实际宽度。<br><img src="./scrollWidth-clientWidth-offsetWidth%E7%9A%84%E5%8C%BA%E5%88%AB/demo2.png" alt="avatar"></li>
 </ul>
 
             </div>
@@ -760,9 +645,9 @@
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《promise.all并发限制》
+                    《scrollWidth,clientWidth,offsetWidth的区别》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/2020/02/19/promise-all-bing-fa-xian-zhi/" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2020/05/15/scrollwidth-clientwidth-offsetwidth-de-qu-bie/" property="cc:attributionName"
                rel="cc:attributionURL">
                 朝飞
             </a> 采用
@@ -803,7 +688,7 @@
         repo: 'liangchaofei.github.io',
         owner: 'liangchaofei',
         admin: "liangchaofei",
-        id: '2020/02/19/promise-all-bing-fa-xian-zhi/',
+        id: '2020/05/15/scrollwidth-clientwidth-offsetwidth-de-qu-bie/',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -1086,84 +971,32 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2020/02/19/li-jie-he-shi-yong-promise-all-he-promise-race/">
+                <a href="/2020/05/15/scrollwidth-clientwidth-offsetwidth-de-qu-bie/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="理解和使用Promise.all和Promise.race">
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="scrollWidth,clientWidth,offsetWidth的区别">
                         
-                        <span class="card-title">理解和使用Promise.all和Promise.race</span>
+                        <span class="card-title">scrollWidth,clientWidth,offsetWidth的区别</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            一、Pomise.all的使用
-Promise.all可以将多个Promise实例包装成一个新的Promise实例。同时，成功和失败的返回值是不同的，成功的时候返回的是一个结果数组，而失败的时候则返回最先被reject失败状态的值。
-
-具体
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2020-02-19
-                        </span>
-                        <span class="publish-author">
                             
-                            <i class="fa fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/ES6/" class="post-category" target="_blank">
-                                    ES6
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/js/" target="_blank">
-                        <span class="chip bg-color">js</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="fa fa-dot-circle-o"></i>
-            </div>
-            <div class="card">
-                <a href="/2020/02/19/promise-all-bing-fa-xian-zhi/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="promise.all并发限制">
-                        
-                        <span class="card-title">promise.all并发限制</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            下面通过3篇讲解promise.all并发限制Promise.all并发限制背景
-通常，我们在需要保证代码在多个异步处理之后执行，会用到：
-  Promise.all(promises: []).then(fun: function);
-
-
+scrollWidth：对象的实际内容的宽度，不包边线宽度，会随对象中内容超过可视区后而变大。
+clientWidth：对象内容的可视区的宽度，不包滚动条等边线，会随对象显示大小的变化而改变。
+offsetWidth：对象整体的实际宽度，
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-02-19
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-05-15
                             </span>
                         <span class="publish-author">
                             
@@ -1181,8 +1014,67 @@ Promise.all可以将多个Promise实例包装成一个新的Promise实例。同�
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/promise/" target="_blank">
-                        <span class="chip bg-color">promise</span>
+                    <a href="/tags/js/" target="_blank">
+                        <span class="chip bg-color">js</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2020/05/11/js-ji-chu-zhi-shi-dian-ji-chang-kao-mian-shi-ti/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="JS基础知识点及常考面试题">
+                        
+                        <span class="card-title">JS基础知识点及常考面试题</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            原始类型有哪几种？null 是对象嘛？原始类型有6种
+string
+number
+boolean
+null
+undefined
+symbol
+
+原始类型存储的都是值，没有函数调用
+比如undefined.toString()；会报错
+‘1’
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-05-11
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/面试题/" class="post-category" target="_blank">
+                                    面试题
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/js/" target="_blank">
+                        <span class="chip bg-color">js</span>
                     </a>
                     
                 </div>
