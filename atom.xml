@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://liangchaofei.github.io/"/>
-  <updated>2020-05-16T01:27:21.243Z</updated>
+  <updated>2020-05-16T02:22:28.912Z</updated>
   <id>https://liangchaofei.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>leetcode-字符串-242-有效的字母异位词</title>
+    <link href="https://liangchaofei.github.io/2020/05/16/leetcode-zi-fu-chuan-242-you-xiao-de-zi-mu-yi-wei-ci/"/>
+    <id>https://liangchaofei.github.io/2020/05/16/leetcode-zi-fu-chuan-242-you-xiao-de-zi-mu-yi-wei-ci/</id>
+    <published>2020-05-16T02:22:13.000Z</published>
+    <updated>2020-05-16T02:22:28.912Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;242-有效的字母异位词&quot;&gt;&lt;a href=&quot;#242-有效的字母异位词&quot; class=&quot;headerlink&quot; title=&quot;242.有效的字母异位词&quot;&gt;&lt;/a&gt;242.有效的字母异位词&lt;/h2&gt;&lt;h3 id=&quot;描述&quot;&gt;&lt;a href=&quot;#描述&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="算法" scheme="https://liangchaofei.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+      <category term="leetcode" scheme="https://liangchaofei.github.io/tags/leetcode/"/>
+    
+  </entry>
   
   <entry>
     <title>leetcode-字符串-7-整数反转</title>
@@ -522,32 +548,6 @@
     
     
       <category term="leetcode" scheme="https://liangchaofei.github.io/tags/leetcode/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Promise处理异常</title>
-    <link href="https://liangchaofei.github.io/2020/02/19/promise-chu-li-yi-chang/"/>
-    <id>https://liangchaofei.github.io/2020/02/19/promise-chu-li-yi-chang/</id>
-    <published>2020-02-19T14:36:00.000Z</published>
-    <updated>2020-05-15T00:37:26.805Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;promise如何进行异常处理&quot;&gt;&lt;a href=&quot;#promise如何进行异常处理&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="js" scheme="https://liangchaofei.github.io/categories/js/"/>
-    
-    
-      <category term="异步" scheme="https://liangchaofei.github.io/tags/%E5%BC%82%E6%AD%A5/"/>
     
   </entry>
   

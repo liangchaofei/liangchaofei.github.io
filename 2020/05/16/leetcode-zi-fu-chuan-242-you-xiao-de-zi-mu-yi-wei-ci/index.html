@@ -4,14 +4,15 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="leetcode-数组-27-移除元素, 前端">
+    <meta name="keywords" content="leetcode-字符串-242-有效的字母异位词, 前端">
     <meta name="baidu-site-verification" content>
     <meta name="google-site-verification" content>
     <meta name="360-site-verification" content>
-    <meta name="description" content="移除元素描述
-给定一个数组 nums 和一个值 val，你需要原地移除所有数值等于 val 的元素，返回移除后数组的新长度。
-不要使用额外的数组空间，你必须在原地修改输入数组并在使用 O(1) 额外空间的条件下完成。
-元素的顺序可以改变。你">
+    <meta name="description" content="242.有效的字母异位词描述
+给定两个字符串 s 和 t ，编写一个函数来判断 t 是否是 s 的字母异位词。
+
+示例 1    输入: s = &amp;quot;anagram&amp;quot;, t = &amp;quot;nagaram&amp;quot;
+  ">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -19,7 +20,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>leetcode-数组-27-移除元素 | 朝飞的博客</title>
+    <title>leetcode-字符串-242-有效的字母异位词 | 朝飞的博客</title>
     <link rel="icon" type="image/jpeg" href="/kb.jpg">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -293,13 +294,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/25.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/24.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        leetcode-数组-27-移除元素
+                        leetcode-字符串-242-有效的字母异位词
                     </div>
                 </div>
             </div>
@@ -434,7 +435,7 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-02-20
+                    2020-05-16
                 </div>
 
                 <div class="post-author info-break-policy">
@@ -448,14 +449,14 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    470
+                    604
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
                 
@@ -471,66 +472,88 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="移除元素"><a href="#移除元素" class="headerlink" title="移除元素"></a>移除元素</h2><h3 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h3><ul>
-<li>给定一个数组 nums 和一个值 val，你需要原地移除所有数值等于 val 的元素，返回移除后数组的新长度。</li>
-<li>不要使用额外的数组空间，你必须在原地修改输入数组并在使用 O(1) 额外空间的条件下完成。</li>
-<li>元素的顺序可以改变。你不需要考虑数组中超出新长度后面的元素。</li>
+                <h2 id="242-有效的字母异位词"><a href="#242-有效的字母异位词" class="headerlink" title="242.有效的字母异位词"></a>242.有效的字母异位词</h2><h3 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h3><ul>
+<li>给定两个字符串 s 和 t ，编写一个函数来判断 t 是否是 s 的字母异位词。</li>
 </ul>
-<h3 id="示例1"><a href="#示例1" class="headerlink" title="示例1"></a>示例1</h3><pre><code>    给定 nums = [3,2,2,3], val = 3,
-
-    函数应该返回新的长度 2, 并且 nums 中的前两个元素均为 2。
-
-    你不需要考虑数组中超出新长度后面的元素。</code></pre><h3 id="示例2"><a href="#示例2" class="headerlink" title="示例2"></a>示例2</h3><pre><code>    给定 nums = [0,1,2,2,3,0,4,2], val = 2,
-
-    函数应该返回新的长度 5, 并且 nums 中的前五个元素为 0, 1, 3, 0, 4。
-
-    注意这五个元素可为任意顺序。
-
-    你不需要考虑数组中超出新长度后面的元素。
-</code></pre><h3 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h3><ul>
-<li>1.暴力法：判断元素是否等于目标值，如果是，则用JavaScript内置函数splice删除该元素，最后返回数组长度</li>
-<li>2.迁移法：从前往后遍历，建立一个索引值，将不等于目标值的元素按新索引值赋予给数组，返回新索引值</li>
+<h3 id="示例-1"><a href="#示例-1" class="headerlink" title="示例 1"></a>示例 1</h3><pre><code>    输入: s = &quot;anagram&quot;, t = &quot;nagaram&quot;
+    输出: true</code></pre><h3 id="示例-2"><a href="#示例-2" class="headerlink" title="示例 2"></a>示例 2</h3><pre><code>    输入: s = &quot;rat&quot;, t = &quot;car&quot;
+    输出: false</code></pre><h3 id="思路-1"><a href="#思路-1" class="headerlink" title="思路 1"></a>思路 1</h3><ul>
+<li>1.将字符串转成数组</li>
+<li>2.利用数组sort方法进行排序</li>
+<li>3.将数组转成字符串，依次比较字符是否相等，如果全相等，返回true，否则返回false</li>
 </ul>
-<h4 id="暴力法"><a href="#暴力法" class="headerlink" title="暴力法"></a>暴力法</h4><pre class="line-numbers language-js"><code class="language-js">    <span class="token comment" spellcheck="true">/**
-     * JavaScript暴力法
-     * @param {number[]} nums
-     * @param {number} val
-     * @return {number}
-     */</span>
-    <span class="token comment" spellcheck="true">// 数组从后向前遍历</span>
-    <span class="token keyword">var</span> removeElement <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span>nums<span class="token punctuation">,</span> val<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token comment" spellcheck="true">// 思考：为什么从后往前移动</span>
-        <span class="token comment" spellcheck="true">// 提示：数组的变化</span>
-        <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> nums<span class="token punctuation">.</span>length <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">>=</span> <span class="token number">0</span><span class="token punctuation">;</span> i<span class="token operator">--</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            <span class="token keyword">if</span> <span class="token punctuation">(</span>nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">===</span> val<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-                <span class="token comment" spellcheck="true">// 删除原数组元素</span>
-                nums<span class="token punctuation">.</span><span class="token function">splice</span><span class="token punctuation">(</span>i<span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span>
-            <span class="token punctuation">}</span>
-        <span class="token punctuation">}</span>
-        <span class="token keyword">return</span> nums<span class="token punctuation">.</span>length<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<h3 id="解法-1"><a href="#解法-1" class="headerlink" title="解法 1"></a>解法 1</h3><pre class="line-numbers language-js"><code class="language-js"><span class="token comment" spellcheck="true">/**
+ * @param {string} s
+ * @param {string} t
+ * @return {boolean}
+ */</span>
+<span class="token keyword">var</span> isAnagram <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span>s<span class="token punctuation">,</span> t<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// 先判断两个字符串长度是否相等，不相等直接返回false</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>s<span class="token punctuation">.</span>length <span class="token operator">!==</span> t<span class="token punctuation">.</span>length<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
 
-    <span class="token comment" spellcheck="true">// 数组从前向后遍历</span>
-    <span class="token keyword">var</span> removeElement <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span>nums<span class="token punctuation">,</span> val<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i<span class="token operator">&lt;</span>nums<span class="token punctuation">.</span>length<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            <span class="token keyword">if</span> <span class="token punctuation">(</span>nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">===</span> val<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-                <span class="token comment" spellcheck="true">// 删除原数组元素</span>
-                nums<span class="token punctuation">.</span><span class="token function">splice</span><span class="token punctuation">(</span>i<span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span>
-                i<span class="token operator">--</span>
-            <span class="token punctuation">}</span>
+   <span class="token comment" spellcheck="true">// 将字符串转成数组</span>
+   <span class="token keyword">let</span> sArr <span class="token operator">=</span> s<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">''</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+   <span class="token keyword">let</span> tArr <span class="token operator">=</span> t<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">''</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+   <span class="token comment" spellcheck="true">// 排序函数</span>
+   <span class="token keyword">const</span> sortFn <span class="token operator">=</span> <span class="token punctuation">(</span>a<span class="token punctuation">,</span>b<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> a<span class="token punctuation">.</span><span class="token function">charCodeAt</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-</span> b<span class="token punctuation">.</span><span class="token function">charCodeAt</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+   <span class="token comment" spellcheck="true">// 进行排序</span>
+   sArr<span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span>sortFn<span class="token punctuation">)</span><span class="token punctuation">;</span>
+   tArr<span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span>sortFn<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+   <span class="token comment" spellcheck="true">// 依次比较字符</span>
+   <span class="token keyword">return</span> sArr<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token string">''</span><span class="token punctuation">)</span> <span class="token operator">===</span> tArr<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token string">''</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="复杂度分析-1"><a href="#复杂度分析-1" class="headerlink" title="复杂度分析 1"></a>复杂度分析 1</h3><ul>
+<li><p>时间复杂度：O(nlogn)</p>
+<ul>
+<li>JavaScript 的 sort 方法的实现原理，当数组长度小于等于 10 的时候，采用插入排序，大于 10 的时候，采用快排，快排的平均时间复杂度是 。</li>
+</ul>
+</li>
+<li><p>空间复杂度：O(n)</p>
+<ul>
+<li>算法中申请了 2 个数组变量用于存放字符串分割后的字符串数组，所以数组空间长度跟字符串长度线性相关，所以为 。</li>
+</ul>
+</li>
+</ul>
+<h3 id="思路-2"><a href="#思路-2" class="headerlink" title="思路 2"></a>思路 2</h3><ul>
+<li>1.定义一个对象，遍历其中的一个字符串，对每个字符串的个数累加</li>
+<li>2.遍历另一个字符串，使每一个字母在已得到的对象中做匹配，如果匹配则对象下的字母个数减 1，如果匹配不到，则返回 false，如果最后对象中每个字母个数都为 0，则表示两字符串相等。</li>
+</ul>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><pre class="line-numbers language-js"><code class="language-js"><span class="token comment" spellcheck="true">/**
+ * @param {string} s
+ * @param {string} t
+ * @return {boolean}
+ */</span>
+<span class="token keyword">var</span> isAnagram <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span>s<span class="token punctuation">,</span> t<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// 先判断两个字符串长度是否相等，不相等直接返回false</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>s<span class="token punctuation">.</span>length <span class="token operator">!==</span> t<span class="token punctuation">.</span>length<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment" spellcheck="true">// 定义一个对象，</span>
+    <span class="token keyword">const</span> hash <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+    <span class="token comment" spellcheck="true">// 遍历字符串s，看每个字符的个数，最后形成</span>
+    <span class="token comment" spellcheck="true">// hash = { a: 3, n: 1, g: 1, r: 1, m: 1 }</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">const</span> k <span class="token keyword">of</span> s<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        hash<span class="token punctuation">[</span>k<span class="token punctuation">]</span> <span class="token operator">=</span> hash<span class="token punctuation">[</span>k<span class="token punctuation">]</span> <span class="token operator">||</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        hash<span class="token punctuation">[</span>k<span class="token punctuation">]</span> <span class="token operator">+</span><span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment" spellcheck="true">// 然后遍历字符串t</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">const</span> k <span class="token keyword">of</span> t<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">// 判断字符串t中的每个字符是否在hash中，不在，则返回false</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>hash<span class="token punctuation">[</span>k<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
         <span class="token punctuation">}</span>
-        <span class="token keyword">return</span> nums<span class="token punctuation">.</span>length<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h4 id="迁移法"><a href="#迁移法" class="headerlink" title="迁移法"></a>迁移法</h4><pre class="line-numbers language-js"><code class="language-js">    <span class="token keyword">var</span> removeElement <span class="token operator">=</span> <span class="token punctuation">(</span>nums<span class="token punctuation">,</span>val<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
-        <span class="token keyword">let</span> index <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
-        <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>nums<span class="token punctuation">.</span>length<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-            <span class="token keyword">if</span><span class="token punctuation">(</span>nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">!==</span> val<span class="token punctuation">)</span><span class="token punctuation">{</span>
-                nums<span class="token punctuation">[</span>index<span class="token punctuation">]</span> <span class="token operator">=</span> nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span>
-                index<span class="token operator">++</span>
-            <span class="token punctuation">}</span>
-        <span class="token punctuation">}</span>
-        <span class="token keyword">return</span> index<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+        <span class="token comment" spellcheck="true">// 说明匹配成功，把遍历的字符个数减一</span>
+        hash<span class="token punctuation">[</span>k<span class="token punctuation">]</span> <span class="token operator">-</span><span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
             </div>
             <hr />
@@ -689,9 +712,9 @@
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《leetcode-数组-27-移除元素》
+                    《leetcode-字符串-242-有效的字母异位词》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/2020/02/20/leetcode-shu-zu-27-yi-chu-yuan-su/" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2020/05/16/leetcode-zi-fu-chuan-242-you-xiao-de-zi-mu-yi-wei-ci/" property="cc:attributionName"
                rel="cc:attributionURL">
                 朝飞
             </a> 采用
@@ -732,7 +755,7 @@
         repo: 'liangchaofei.github.io',
         owner: 'liangchaofei',
         admin: "liangchaofei",
-        id: '2020/02/20/leetcode-shu-zu-27-yi-chu-yuan-su/',
+        id: '2020/05/16/leetcode-zi-fu-chuan-242-you-xiao-de-zi-mu-yi-wei-ci/',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -1015,35 +1038,34 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2020/02/21/leetcode-shu-zu-35-sou-suo-cha-ru-wei-zhi/">
+                <a href="/2020/05/16/leetcode-zi-fu-chuan-242-you-xiao-de-zi-mu-yi-wei-ci/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/26.jpg" class="responsive-img" alt="leetcode-数组-35-搜索插入位置">
+                        <img src="/medias/featureimages/24.jpg" class="responsive-img" alt="leetcode-字符串-242-有效的字母异位词">
                         
-                        <span class="card-title">leetcode-数组-35-搜索插入位置</span>
+                        <span class="card-title">leetcode-字符串-242-有效的字母异位词</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            搜索插入位置题目描述（难度：简单）
-给定一个排序数组和一个目标值，在数组中找到目标值，并返回其索引。如果目标值不存在于数组中，返回它将会被按顺序插入的位置。
+                            242.有效的字母异位词描述
+给定两个字符串 s 和 t ，编写一个函数来判断 t 是否是 s 的字母异位词。
 
-你可以假设数组中无重复元素。
-
-
-示例 1:    输入: [1,3,5,6],
+示例 1    输入: s = &quot;anagram&quot;, t = &quot;nagaram&quot;
+  
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2020-02-21
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-05-16
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
@@ -1056,6 +1078,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -1074,32 +1097,30 @@
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/02/20/leetcode-shu-zu-26-shan-chu-pai-xu-shu-zu-zhong-de-chong-fu-xiang/">
+                <a href="/2020/05/16/leetcode-zi-fu-chuan-7-zheng-shu-fan-zhuan/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="leetcode-数组-26-删除排序数组中的重复项">
+                        <img src="/medias/featureimages/25.jpg" class="responsive-img" alt="leetcode-字符串-7-整数反转">
                         
-                        <span class="card-title">leetcode-数组-26-删除排序数组中的重复项</span>
+                        <span class="card-title">leetcode-字符串-7-整数反转</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            删除排序数组中的重复项
-描述：
+                            7. 整数反转描述
+给出一个 32 位的有符号整数，你需要将这个整数中每位上的数字进行反转。
 
-给定一个排序数组，你需要在原地删除重复出现的元素，使得每个元素只出现一次，返回移除后数组的新长度。
-不要使用额外的数组空间，你必须在原地修改输入数组并在使用 O(1) 额外空间的条件下完成。
-
-
-示例1:
+示例 1    输入: 123
+    输出: 321示例 2    输入: -123
+    输出: -321示例 3    输入: 120
 
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-02-20
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-05-16
                             </span>
                         <span class="publish-author">
                             
