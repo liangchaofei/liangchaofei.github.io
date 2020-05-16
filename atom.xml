@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://liangchaofei.github.io/"/>
-  <updated>2020-05-16T03:12:12.219Z</updated>
+  <updated>2020-05-16T08:56:34.812Z</updated>
   <id>https://liangchaofei.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>js实现一个函数判断数据类型</title>
+    <link href="https://liangchaofei.github.io/2020/05/16/js-shi-xian-yi-ge-han-shu-pan-duan-shu-ju-lei-xing/"/>
+    <id>https://liangchaofei.github.io/2020/05/16/js-shi-xian-yi-ge-han-shu-pan-duan-shu-ju-lei-xing/</id>
+    <published>2020-05-16T08:54:38.000Z</published>
+    <updated>2020-05-16T08:56:34.812Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;pre class=&quot;line-numbers language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;    &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token
+        
+      
+    
+    </summary>
+    
+      <category term="js" scheme="https://liangchaofei.github.io/categories/js/"/>
+    
+    
+      <category term="js" scheme="https://liangchaofei.github.io/tags/js/"/>
+    
+  </entry>
   
   <entry>
     <title>leetcode-字符串-8-字符串转整数</title>
@@ -512,32 +538,6 @@
         
         
           &lt;h2 id=&quot;移除元素&quot;&gt;&lt;a href=&quot;#移除元素&quot; class=&quot;headerlink&quot; title=&quot;移除元素&quot;&gt;&lt;/a&gt;移除元素&lt;/h2&gt;&lt;h3 id=&quot;描述&quot;&gt;&lt;a href=&quot;#描述&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="算法" scheme="https://liangchaofei.github.io/categories/%E7%AE%97%E6%B3%95/"/>
-    
-    
-      <category term="leetcode" scheme="https://liangchaofei.github.io/tags/leetcode/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>leetcode-数组-26-删除排序数组中的重复项</title>
-    <link href="https://liangchaofei.github.io/2020/02/20/leetcode-shu-zu-26-shan-chu-pai-xu-shu-zu-zhong-de-chong-fu-xiang/"/>
-    <id>https://liangchaofei.github.io/2020/02/20/leetcode-shu-zu-26-shan-chu-pai-xu-shu-zu-zhong-de-chong-fu-xiang/</id>
-    <published>2020-02-20T15:42:17.000Z</published>
-    <updated>2020-02-20T15:47:53.183Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;删除排序数组中的重复项&quot;&gt;&lt;a href=&quot;#删除排序数组中的重复项&quot; class=&quot;headerlink&quot;
         
       
     
