@@ -1,3 +1,5 @@
+https://liangchaofei.github.io/2020/05/16/js-jie-xi-url-params-wei-dui-xiang/
+https://liangchaofei.github.io/2020/05/16/js-shi-xian-zhuan-hua-wei-tuo-feng-ming-ming/
 https://liangchaofei.github.io/2020/05/16/js-shi-xian-yi-ge-han-shu-pan-duan-shu-ju-lei-xing/
 https://liangchaofei.github.io/2020/05/16/leetcode-zi-fu-chuan-8-zi-fu-chuan-zhuan-zheng-shu/
 https://liangchaofei.github.io/2020/05/16/leetcode-zi-fu-chuan-242-you-xiao-de-zi-mu-yi-wei-ci/
