@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://liangchaofei.github.io/"/>
-  <updated>2020-05-16T02:23:50.722Z</updated>
+  <updated>2020-05-16T03:12:12.219Z</updated>
   <id>https://liangchaofei.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>leetcode-字符串-8-字符串转整数</title>
+    <link href="https://liangchaofei.github.io/2020/05/16/leetcode-zi-fu-chuan-8-zi-fu-chuan-zhuan-zheng-shu/"/>
+    <id>https://liangchaofei.github.io/2020/05/16/leetcode-zi-fu-chuan-8-zi-fu-chuan-zhuan-zheng-shu/</id>
+    <published>2020-05-16T03:11:58.000Z</published>
+    <updated>2020-05-16T03:12:12.219Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;8-字符串转换整数-atoi&quot;&gt;&lt;a href=&quot;#8-字符串转换整数-atoi&quot; class=&quot;headerlink&quot; title=&quot;8. 字符串转换整数 (atoi)&quot;&gt;&lt;/a&gt;8. 字符串转换整数 (atoi)&lt;/h2&gt;&lt;h3 id=&quot;描述&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="算法" scheme="https://liangchaofei.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+      <category term="leetcode" scheme="https://liangchaofei.github.io/tags/leetcode/"/>
+    
+  </entry>
   
   <entry>
     <title>leetcode-字符串-242-有效的字母异位词</title>
@@ -512,33 +538,6 @@
         
         
           &lt;h2 id=&quot;删除排序数组中的重复项&quot;&gt;&lt;a href=&quot;#删除排序数组中的重复项&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="算法" scheme="https://liangchaofei.github.io/categories/%E7%AE%97%E6%B3%95/"/>
-    
-    
-      <category term="leetcode" scheme="https://liangchaofei.github.io/tags/leetcode/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>leetcode-数组-1-两数之和</title>
-    <link href="https://liangchaofei.github.io/2020/02/19/leetcode-shu-zu-1-liang-shu-zhi-he/"/>
-    <id>https://liangchaofei.github.io/2020/02/19/leetcode-shu-zu-1-liang-shu-zhi-he/</id>
-    <published>2020-02-19T15:59:57.000Z</published>
-    <updated>2020-02-20T01:37:41.716Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;两数之和&quot;&gt;&lt;a href=&quot;#两数之和&quot; class=&quot;headerlink&quot; title=&quot;两数之和&quot;&gt;&lt;/a&gt;两数之和&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那 两个
         
       
     
