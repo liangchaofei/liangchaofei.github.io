@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://liangchaofei.github.io/"/>
-  <updated>2020-05-17T02:30:07.809Z</updated>
+  <updated>2020-05-17T03:09:21.804Z</updated>
   <id>https://liangchaofei.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>leetcode-字符串-125-验证回文字符串</title>
+    <link href="https://liangchaofei.github.io/2020/05/17/leetcode-zi-fu-chuan-125-yan-zheng-hui-wen-zi-fu-chuan/"/>
+    <id>https://liangchaofei.github.io/2020/05/17/leetcode-zi-fu-chuan-125-yan-zheng-hui-wen-zi-fu-chuan/</id>
+    <published>2020-05-17T03:08:56.000Z</published>
+    <updated>2020-05-17T03:09:21.804Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;125-验证回文串&quot;&gt;&lt;a href=&quot;#125-验证回文串&quot; class=&quot;headerlink&quot; title=&quot;125. 验证回文串&quot;&gt;&lt;/a&gt;125. 验证回文串&lt;/h1&gt;&lt;h3 id=&quot;题目描述（难度：简单）&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="算法" scheme="https://liangchaofei.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+      <category term="字符串" scheme="https://liangchaofei.github.io/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
+    
+  </entry>
   
   <entry>
     <title>leetcode-字符串-387-字符串中的第一个唯一字符</title>
@@ -515,33 +541,6 @@
     
     
       <category term="js" scheme="https://liangchaofei.github.io/tags/js/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>leetcode-数组-118-杨辉三角</title>
-    <link href="https://liangchaofei.github.io/2020/02/25/leetcode-shu-zu-118-yang-hui-san-jiao/"/>
-    <id>https://liangchaofei.github.io/2020/02/25/leetcode-shu-zu-118-yang-hui-san-jiao/</id>
-    <published>2020-02-25T13:42:38.000Z</published>
-    <updated>2020-02-25T13:44:27.412Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;描述&quot;&gt;&lt;a href=&quot;#描述&quot; class=&quot;headerlink&quot; title=&quot;描述&quot;&gt;&lt;/a&gt;描述&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;给定一个非负整数 numRows，生成杨辉三角的前 numRows
-        
-      
-    
-    </summary>
-    
-      <category term="算法" scheme="https://liangchaofei.github.io/categories/%E7%AE%97%E6%B3%95/"/>
-    
-    
-      <category term="leetcode" scheme="https://liangchaofei.github.io/tags/leetcode/"/>
     
   </entry>
   
