@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://liangchaofei.github.io/"/>
-  <updated>2020-05-16T10:47:51.559Z</updated>
+  <updated>2020-05-17T02:30:07.809Z</updated>
   <id>https://liangchaofei.github.io/</id>
   
   <author>
@@ -15,6 +15,138 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>leetcode-字符串-387-字符串中的第一个唯一字符</title>
+    <link href="https://liangchaofei.github.io/2020/05/17/leetcode-zi-fu-chuan-387-zi-fu-chuan-zhong-de-di-yi-ge-wei-yi-zi-fu/"/>
+    <id>https://liangchaofei.github.io/2020/05/17/leetcode-zi-fu-chuan-387-zi-fu-chuan-zhong-de-di-yi-ge-wei-yi-zi-fu/</id>
+    <published>2020-05-17T02:29:40.000Z</published>
+    <updated>2020-05-17T02:30:07.809Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;387-字符串中的第一个唯一字符&quot;&gt;&lt;a href=&quot;#387-字符串中的第一个唯一字符&quot; class=&quot;headerlink&quot; title=&quot;387. 字符串中的第一个唯一字符&quot;&gt;&lt;/a&gt;387. 字符串中的第一个唯一字符&lt;/h1&gt;&lt;h3
+        
+      
+    
+    </summary>
+    
+      <category term="算法" scheme="https://liangchaofei.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+      <category term="leetcode" scheme="https://liangchaofei.github.io/tags/leetcode/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>leetcode-字符串-344-反转字符串</title>
+    <link href="https://liangchaofei.github.io/2020/05/17/leetcode-zi-fu-chuan-344-fan-zhuan-zi-fu-chuan/"/>
+    <id>https://liangchaofei.github.io/2020/05/17/leetcode-zi-fu-chuan-344-fan-zhuan-zi-fu-chuan/</id>
+    <published>2020-05-17T01:57:13.000Z</published>
+    <updated>2020-05-17T01:57:36.336Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;344-反转字符串&quot;&gt;&lt;a href=&quot;#344-反转字符串&quot; class=&quot;headerlink&quot; title=&quot;344. 反转字符串&quot;&gt;&lt;/a&gt;344. 反转字符串&lt;/h1&gt;&lt;h4 id=&quot;题目描述（难度：简单）&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="算法" scheme="https://liangchaofei.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+      <category term="字符串" scheme="https://liangchaofei.github.io/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>js-interview</title>
+    <link href="https://liangchaofei.github.io/2020/05/16/js-interview/"/>
+    <id>https://liangchaofei.github.io/2020/05/16/js-interview/</id>
+    <published>2020-05-16T14:25:53.000Z</published>
+    <updated>2020-05-16T15:14:30.824Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;点击一个input依次触发的事件&quot;&gt;&lt;a href=&quot;#点击一个input依次触发的事件&quot; class=&quot;headerlink&quot; title=&quot;点击一个input依次触发的事件&quot;&gt;&lt;/a&gt;点击一个input依次触发的事件&lt;/h3&gt;&lt;pre
+        
+      
+    
+    </summary>
+    
+      <category term="面试题" scheme="https://liangchaofei.github.io/categories/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    
+    
+      <category term="js" scheme="https://liangchaofei.github.io/tags/js/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>css-interview</title>
+    <link href="https://liangchaofei.github.io/2020/05/16/css-interview/"/>
+    <id>https://liangchaofei.github.io/2020/05/16/css-interview/</id>
+    <published>2020-05-16T14:22:45.000Z</published>
+    <updated>2020-05-16T14:24:50.147Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;如何解决a标点击后hover事件失效的问题&quot;&gt;&lt;a href=&quot;#如何解决a标点击后hover事件失效的问题&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="css" scheme="https://liangchaofei.github.io/categories/css/"/>
+    
+    
+      <category term="css" scheme="https://liangchaofei.github.io/tags/css/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>js实现查找字符串中出现最多的字符和个数</title>
+    <link href="https://liangchaofei.github.io/2020/05/16/js-shi-xian-cha-zhao-zi-fu-chuan-zhong-chu-xian-zui-duo-de-zi-fu-he-ge-shu/"/>
+    <id>https://liangchaofei.github.io/2020/05/16/js-shi-xian-cha-zhao-zi-fu-chuan-zhong-chu-xian-zui-duo-de-zi-fu-he-ge-shu/</id>
+    <published>2020-05-16T13:34:25.000Z</published>
+    <updated>2020-05-16T13:34:59.084Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;ul&gt;
+&lt;li&gt;&lt;p&gt;例: abbcccddddd -&amp;gt; 字符最多的是d，出现了5次&lt;/p&gt;
+&lt;pre class=&quot;line-numbers language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;  &lt;span class=&quot;token
+        
+      
+    
+    </summary>
+    
+      <category term="js" scheme="https://liangchaofei.github.io/categories/js/"/>
+    
+    
+      <category term="js" scheme="https://liangchaofei.github.io/tags/js/"/>
+    
+  </entry>
   
   <entry>
     <title>js解析 URL Params 为对象</title>
@@ -410,143 +542,6 @@
     
     
       <category term="leetcode" scheme="https://liangchaofei.github.io/tags/leetcode/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>leetcode-数组-88-合并两个有序数组</title>
-    <link href="https://liangchaofei.github.io/2020/02/24/leetcode-shu-zu-88-he-bing-liang-ge-you-xu-shu-zu/"/>
-    <id>https://liangchaofei.github.io/2020/02/24/leetcode-shu-zu-88-he-bing-liang-ge-you-xu-shu-zu/</id>
-    <published>2020-02-24T15:17:09.000Z</published>
-    <updated>2020-02-24T15:19:54.367Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;题目描述（难度：简单）&quot;&gt;&lt;a href=&quot;#题目描述（难度：简单）&quot; class=&quot;headerlink&quot; title=&quot;题目描述（难度：简单）&quot;&gt;&lt;/a&gt;题目描述（难度：简单）&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;给定两个有序整数数组 nums1 和 nums2，将
-        
-      
-    
-    </summary>
-    
-      <category term="算法" scheme="https://liangchaofei.github.io/categories/%E7%AE%97%E6%B3%95/"/>
-    
-    
-      <category term="leetcode" scheme="https://liangchaofei.github.io/tags/leetcode/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>手写数组map,filter等方法</title>
-    <link href="https://liangchaofei.github.io/2020/02/22/shou-xie-shu-zu-map-filter-deng-fang-fa/"/>
-    <id>https://liangchaofei.github.io/2020/02/22/shou-xie-shu-zu-map-filter-deng-fang-fa/</id>
-    <published>2020-02-22T10:25:48.000Z</published>
-    <updated>2020-05-16T10:21:24.288Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;本文自己动手实现数组常用方法，包括filter-map-some-reduce-every等方法&quot;&gt;&lt;a href=&quot;#本文自己动手实现数组常用方法，包括filter-map-some-reduce-every等方法&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="数组" scheme="https://liangchaofei.github.io/categories/%E6%95%B0%E7%BB%84/"/>
-    
-    
-      <category term="js" scheme="https://liangchaofei.github.io/tags/js/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>实现一个函数判断数据类型</title>
-    <link href="https://liangchaofei.github.io/2020/02/22/shi-xian-yi-ge-han-shu-pan-duan-shu-ju-lei-xing/"/>
-    <id>https://liangchaofei.github.io/2020/02/22/shi-xian-yi-ge-han-shu-pan-duan-shu-ju-lei-xing/</id>
-    <published>2020-02-22T09:19:31.000Z</published>
-    <updated>2020-02-22T09:19:52.791Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;实现一个函数判断数据类型&quot;&gt;&lt;a href=&quot;#实现一个函数判断数据类型&quot; class=&quot;headerlink&quot; title=&quot;实现一个函数判断数据类型&quot;&gt;&lt;/a&gt;实现一个函数判断数据类型&lt;/h2&gt;&lt;pre class=&quot;line-numbers
-        
-      
-    
-    </summary>
-    
-      <category term="js" scheme="https://liangchaofei.github.io/categories/js/"/>
-    
-    
-      <category term="js" scheme="https://liangchaofei.github.io/tags/js/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>封装fetch请求函数</title>
-    <link href="https://liangchaofei.github.io/2020/02/22/feng-zhuang-fetch-qing-qiu-han-shu/"/>
-    <id>https://liangchaofei.github.io/2020/02/22/feng-zhuang-fetch-qing-qiu-han-shu/</id>
-    <published>2020-02-22T08:11:24.000Z</published>
-    <updated>2020-05-15T00:49:43.923Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;ul&gt;
-&lt;li&gt;手动封装一个请求函数，可以设置最大请求次数，请求成功则不再请求，请求失败则继续请求直到超过最大次数(流利说)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;pre class=&quot;line-numbers language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;
-        
-      
-    
-    </summary>
-    
-      <category term="js" scheme="https://liangchaofei.github.io/categories/js/"/>
-    
-    
-      <category term="异步" scheme="https://liangchaofei.github.io/tags/%E5%BC%82%E6%AD%A5/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>js数组去重方法(史上最全?)</title>
-    <link href="https://liangchaofei.github.io/2020/02/22/js-shu-zu-qu-chong-fang-fa/"/>
-    <id>https://liangchaofei.github.io/2020/02/22/js-shu-zu-qu-chong-fang-fa/</id>
-    <published>2020-02-22T06:45:04.000Z</published>
-    <updated>2020-05-07T02:46:48.149Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;ul&gt;
-&lt;li&gt;下面介绍下对象数组去重和普通数组去重&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;普通数组去重&quot;&gt;&lt;a href=&quot;#普通数组去重&quot; class=&quot;headerlink&quot; title=&quot;普通数组去重&quot;&gt;&lt;/a&gt;普通数组去重&lt;/h2&gt;&lt;h3
-        
-      
-    
-    </summary>
-    
-      <category term="js" scheme="https://liangchaofei.github.io/categories/js/"/>
-    
-    
-      <category term="数组" scheme="https://liangchaofei.github.io/tags/%E6%95%B0%E7%BB%84/"/>
     
   </entry>
   
