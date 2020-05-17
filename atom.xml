@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://liangchaofei.github.io/"/>
-  <updated>2020-05-17T03:09:21.804Z</updated>
+  <updated>2020-05-17T08:50:32.999Z</updated>
   <id>https://liangchaofei.github.io/</id>
   
   <author>
@@ -15,6 +15,102 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>react-interview</title>
+    <link href="https://liangchaofei.github.io/2020/05/17/interview-react/"/>
+    <id>https://liangchaofei.github.io/2020/05/17/interview-react/</id>
+    <published>2020-05-17T08:32:06.000Z</published>
+    <updated>2020-05-17T08:50:32.999Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;介绍一下虚拟DOM&quot;&gt;&lt;a href=&quot;#介绍一下虚拟DOM&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="框架" scheme="https://liangchaofei.github.io/categories/%E6%A1%86%E6%9E%B6/"/>
+    
+    
+      <category term="react" scheme="https://liangchaofei.github.io/tags/react/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>sec-interview</title>
+    <link href="https://liangchaofei.github.io/2020/05/17/interview-sec/"/>
+    <id>https://liangchaofei.github.io/2020/05/17/interview-sec/</id>
+    <published>2020-05-17T08:31:23.000Z</published>
+    <updated>2020-05-17T09:03:15.348Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="安全" scheme="https://liangchaofei.github.io/categories/%E5%AE%89%E5%85%A8/"/>
+    
+    
+      <category term="安全" scheme="https://liangchaofei.github.io/tags/%E5%AE%89%E5%85%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>http-interview</title>
+    <link href="https://liangchaofei.github.io/2020/05/17/interview-http/"/>
+    <id>https://liangchaofei.github.io/2020/05/17/interview-http/</id>
+    <published>2020-05-17T08:30:55.000Z</published>
+    <updated>2020-05-17T15:08:17.835Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;HTTP和TCP的不同&quot;&gt;&lt;a href=&quot;#HTTP和TCP的不同&quot; class=&quot;headerlink&quot; title=&quot;HTTP和TCP的不同&quot;&gt;&lt;/a&gt;HTTP和TCP的不同&lt;/h3&gt;&lt;h3 id=&quot;TCP和UDP的区别&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="网络" scheme="https://liangchaofei.github.io/categories/%E7%BD%91%E7%BB%9C/"/>
+    
+    
+      <category term="HTTP" scheme="https://liangchaofei.github.io/tags/HTTP/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>webpack-interview</title>
+    <link href="https://liangchaofei.github.io/2020/05/17/interview-webpack/"/>
+    <id>https://liangchaofei.github.io/2020/05/17/interview-webpack/</id>
+    <published>2020-05-17T08:28:50.000Z</published>
+    <updated>2020-05-17T09:07:08.314Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;webpack中的loader和plugin有什么区别&quot;&gt;&lt;a href=&quot;#webpack中的loader和plugin有什么区别&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="基础工程" scheme="https://liangchaofei.github.io/categories/%E5%9F%BA%E7%A1%80%E5%B7%A5%E7%A8%8B/"/>
+    
+    
+      <category term="webpack" scheme="https://liangchaofei.github.io/tags/webpack/"/>
+    
+  </entry>
   
   <entry>
     <title>leetcode-字符串-125-验证回文字符串</title>
@@ -96,10 +192,10 @@
   
   <entry>
     <title>js-interview</title>
-    <link href="https://liangchaofei.github.io/2020/05/16/js-interview/"/>
-    <id>https://liangchaofei.github.io/2020/05/16/js-interview/</id>
+    <link href="https://liangchaofei.github.io/2020/05/16/interview-js/"/>
+    <id>https://liangchaofei.github.io/2020/05/16/interview-js/</id>
     <published>2020-05-16T14:25:53.000Z</published>
-    <updated>2020-05-16T15:14:30.824Z</updated>
+    <updated>2020-05-17T13:41:36.718Z</updated>
     
     <summary type="html">
     
@@ -122,10 +218,10 @@
   
   <entry>
     <title>css-interview</title>
-    <link href="https://liangchaofei.github.io/2020/05/16/css-interview/"/>
-    <id>https://liangchaofei.github.io/2020/05/16/css-interview/</id>
+    <link href="https://liangchaofei.github.io/2020/05/16/interview-css/"/>
+    <id>https://liangchaofei.github.io/2020/05/16/interview-css/</id>
     <published>2020-05-16T14:22:45.000Z</published>
-    <updated>2020-05-16T14:24:50.147Z</updated>
+    <updated>2020-05-17T13:27:47.239Z</updated>
     
     <summary type="html">
     
@@ -435,112 +531,6 @@
     
     
       <category term="leetcode" scheme="https://liangchaofei.github.io/tags/leetcode/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>leetcode-数组-217-存在重复元素</title>
-    <link href="https://liangchaofei.github.io/2020/02/27/leetcode-shu-zu-217-cun-zai-chong-fu-yuan-su/"/>
-    <id>https://liangchaofei.github.io/2020/02/27/leetcode-shu-zu-217-cun-zai-chong-fu-yuan-su/</id>
-    <published>2020-02-27T08:22:11.000Z</published>
-    <updated>2020-02-27T08:27:58.508Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;题目描述（难度：简单）&quot;&gt;&lt;a href=&quot;#题目描述（难度：简单）&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="算法" scheme="https://liangchaofei.github.io/categories/%E7%AE%97%E6%B3%95/"/>
-    
-    
-      <category term="leetcode" scheme="https://liangchaofei.github.io/tags/leetcode/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>leetcode-数组-189-旋转数组</title>
-    <link href="https://liangchaofei.github.io/2020/02/27/leetcode-shu-zu-189-xuan-zhuan-shu-zu/"/>
-    <id>https://liangchaofei.github.io/2020/02/27/leetcode-shu-zu-189-xuan-zhuan-shu-zu/</id>
-    <published>2020-02-27T08:03:43.000Z</published>
-    <updated>2020-02-27T08:05:26.336Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;题目描述（难度：简单）&quot;&gt;&lt;a href=&quot;#题目描述（难度：简单）&quot; class=&quot;headerlink&quot; title=&quot;题目描述（难度：简单）&quot;&gt;&lt;/a&gt;题目描述（难度：简单）&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;给定一个数组，将数组中的元素向右移动 k 个位置，其中
-        
-      
-    
-    </summary>
-    
-      <category term="算法" scheme="https://liangchaofei.github.io/categories/%E7%AE%97%E6%B3%95/"/>
-    
-    
-      <category term="leetcode" scheme="https://liangchaofei.github.io/tags/leetcode/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>leetcode-数组-119-杨辉三角2</title>
-    <link href="https://liangchaofei.github.io/2020/02/26/leetcode-shu-zu-119-yang-hui-san-jiao-2/"/>
-    <id>https://liangchaofei.github.io/2020/02/26/leetcode-shu-zu-119-yang-hui-san-jiao-2/</id>
-    <published>2020-02-26T09:44:23.000Z</published>
-    <updated>2020-02-26T09:47:58.280Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;题目描述（难度：简单）&quot;&gt;&lt;a href=&quot;#题目描述（难度：简单）&quot; class=&quot;headerlink&quot; title=&quot;题目描述（难度：简单）&quot;&gt;&lt;/a&gt;题目描述（难度：简单）&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;给定一个非负索引 k，其中 k ≤
-        
-      
-    
-    </summary>
-    
-      <category term="算法" scheme="https://liangchaofei.github.io/categories/%E7%AE%97%E6%B3%95/"/>
-    
-    
-      <category term="leetcode" scheme="https://liangchaofei.github.io/tags/leetcode/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>彻底理解this、apply、call、bind</title>
-    <link href="https://liangchaofei.github.io/2020/02/25/che-di-li-jie-this-apply-call-bind/"/>
-    <id>https://liangchaofei.github.io/2020/02/25/che-di-li-jie-this-apply-call-bind/</id>
-    <published>2020-02-25T15:09:20.000Z</published>
-    <updated>2020-02-25T15:25:07.757Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;this、apply、call、bind&quot;&gt;&lt;a href=&quot;#this、apply、call、bind&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="js" scheme="https://liangchaofei.github.io/categories/js/"/>
-    
-    
-      <category term="js" scheme="https://liangchaofei.github.io/tags/js/"/>
     
   </entry>
   
