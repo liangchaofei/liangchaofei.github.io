@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://liangchaofei.github.io/"/>
-  <updated>2020-05-17T08:50:32.999Z</updated>
+  <updated>2020-05-18T01:27:28.404Z</updated>
   <id>https://liangchaofei.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>leetcode-字符串-28-实现strStr()</title>
+    <link href="https://liangchaofei.github.io/2020/05/18/leetcode-zi-fu-chuan-28-shi-xian-strstr/"/>
+    <id>https://liangchaofei.github.io/2020/05/18/leetcode-zi-fu-chuan-28-shi-xian-strstr/</id>
+    <published>2020-05-18T01:27:06.000Z</published>
+    <updated>2020-05-18T01:27:28.404Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;28-实现-strStr&quot;&gt;&lt;a href=&quot;#28-实现-strStr&quot; class=&quot;headerlink&quot; title=&quot;28. 实现 strStr()&quot;&gt;&lt;/a&gt;28. 实现 strStr()&lt;/h2&gt;&lt;h3 id=&quot;描述&quot;&gt;&lt;a href=&quot;#描述&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="算法" scheme="https://liangchaofei.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+      <category term="字符串" scheme="https://liangchaofei.github.io/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
+    
+  </entry>
   
   <entry>
     <title>react-interview</title>
@@ -504,33 +530,6 @@
     
     
       <category term="git" scheme="https://liangchaofei.github.io/tags/git/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>leetcode-数组-219-存在重复元素2</title>
-    <link href="https://liangchaofei.github.io/2020/02/28/leetcode-shu-zu-219-cun-zai-chong-fu-yuan-su-2/"/>
-    <id>https://liangchaofei.github.io/2020/02/28/leetcode-shu-zu-219-cun-zai-chong-fu-yuan-su-2/</id>
-    <published>2020-02-28T15:13:06.000Z</published>
-    <updated>2020-02-29T02:56:30.801Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;描述&quot;&gt;&lt;a href=&quot;#描述&quot; class=&quot;headerlink&quot; title=&quot;描述&quot;&gt;&lt;/a&gt;描述&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;给定一个整数数组和一个整数 k，判断数组中是否存在两个不同的索引 i 和 j，使得 nums [i] = nums
-        
-      
-    
-    </summary>
-    
-      <category term="算法" scheme="https://liangchaofei.github.io/categories/%E7%AE%97%E6%B3%95/"/>
-    
-    
-      <category term="leetcode" scheme="https://liangchaofei.github.io/tags/leetcode/"/>
     
   </entry>
   

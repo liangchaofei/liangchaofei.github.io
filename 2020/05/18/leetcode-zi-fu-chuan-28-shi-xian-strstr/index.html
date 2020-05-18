@@ -4,18 +4,13 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="leetcode-字符串-387-字符串中的第一个唯一字符, 前端">
+    <meta name="keywords" content="leetcode-字符串-28-实现strStr(), 前端">
     <meta name="baidu-site-verification" content>
     <meta name="google-site-verification" content>
     <meta name="360-site-verification" content>
-    <meta name="description" content="387. 字符串中的第一个唯一字符题目描述（难度：简单）
-给定一个字符串，找到它的第一个不重复的字符，并返回它的索引。如果不存在，则返回 -1。
-
-示例1:
-    s = &amp;quot;leetcode&amp;quot;
-    返回 0.
-
- ">
+    <meta name="description" content="28. 实现 strStr()描述
+给定一个 haystack 字符串和一个 needle 字符串，在 haystack 字符串中找出 needle 字符串出现的第一个位置 (从0开始)。如果不存在，则返回  -1。
+对于本题而言，当 ne">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -23,7 +18,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>leetcode-字符串-387-字符串中的第一个唯一字符 | 朝飞的博客</title>
+    <title>leetcode-字符串-28-实现strStr() | 朝飞的博客</title>
     <link rel="icon" type="image/jpeg" href="/kb.jpg">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -297,13 +292,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/23.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        leetcode-字符串-387-字符串中的第一个唯一字符
+                        leetcode-字符串-28-实现strStr()
                     </div>
                 </div>
             </div>
@@ -414,8 +409,8 @@
                     
                     <div class="article-tag">
                         
-                        <a href="/tags/leetcode/" target="_blank">
-                            <span class="chip bg-color">leetcode</span>
+                        <a href="/tags/字符串/" target="_blank">
+                            <span class="chip bg-color">字符串</span>
                         </a>
                         
                     </div>
@@ -438,7 +433,7 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-05-17
+                    2020-05-18
                 </div>
 
                 <div class="post-author info-break-policy">
@@ -452,14 +447,14 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    335
+                    1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    4 分
                 </div>
                 
                 
@@ -475,68 +470,135 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="387-字符串中的第一个唯一字符"><a href="#387-字符串中的第一个唯一字符" class="headerlink" title="387. 字符串中的第一个唯一字符"></a>387. 字符串中的第一个唯一字符</h1><h3 id="题目描述（难度：简单）"><a href="#题目描述（难度：简单）" class="headerlink" title="题目描述（难度：简单）"></a>题目描述（难度：简单）</h3><ul>
-<li>给定一个字符串，找到它的第一个不重复的字符，并返回它的索引。如果不存在，则返回 -1。</li>
+                <h2 id="28-实现-strStr"><a href="#28-实现-strStr" class="headerlink" title="28. 实现 strStr()"></a>28. 实现 strStr()</h2><h3 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h3><ul>
+<li>给定一个 haystack 字符串和一个 needle 字符串，在 haystack 字符串中找出 needle 字符串出现的第一个位置 (从0开始)。如果不存在，则返回  -1。</li>
+<li>对于本题而言，当 needle 是空字符串时我们应当返回 0 </li>
 </ul>
-<p>示例1:</p>
-<pre><code>    s = &quot;leetcode&quot;
-    返回 0.
-
-    s = &quot;loveleetcode&quot;,
-    返回 2.</code></pre><h3 id="思路1"><a href="#思路1" class="headerlink" title="思路1:"></a>思路1:</h3><ul>
-<li><p>某个字符从头开始开始的索引和从尾开始找的索引如果相等，就说明这个字符只出现了一次</p>
+<h3 id="示例-1"><a href="#示例-1" class="headerlink" title="示例 1"></a>示例 1</h3><pre><code>    输入: haystack = &quot;hello&quot;, needle = &quot;ll&quot;
+    输出: 2</code></pre><h3 id="示例-2"><a href="#示例-2" class="headerlink" title="示例 2"></a>示例 2</h3><pre><code>    输入: haystack = &quot;aaaaa&quot;, needle = &quot;bba&quot;
+    输出: -1</code></pre><h3 id="思路-1"><a href="#思路-1" class="headerlink" title="思路 1"></a>思路 1</h3><ul>
+<li>使用js提供的indexOf</li>
+</ul>
+<h3 id="解法-1"><a href="#解法-1" class="headerlink" title="解法 1"></a>解法 1</h3><pre class="line-numbers language-js"><code class="language-js"><span class="token comment" spellcheck="true">/**
+ * @param {string} haystack
+ * @param {string} needle
+ * @return {number}
+ */</span>
+<span class="token keyword">var</span> strStr <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span>haystack<span class="token punctuation">,</span> needle<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+   <span class="token keyword">return</span> haystack<span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span>needle<span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="思路-2"><a href="#思路-2" class="headerlink" title="思路 2"></a>思路 2</h3><ul>
+<li>遍历截取字符串对比,从匹配字符串 haystack 中截取出与需查找字符串 needle 长度相等的内容后，对比截取的内容与匹配字符串是否相等，如果相等返回开始截取的下标。<ul>
+<li>1.needle 的长度为0，直接返回0</li>
+<li>2.needle 的字符串长度大于 haystack，肯定不匹配</li>
+<li>3.needle 的字符串长度等于 haystack，判断是否相等，相等则匹配否则不匹配</li>
+<li>4.剩下的就是 needle 字符串长度小于 haystack 的情况，遍历 haystack.在遍历中判断 将要截取的字符串的首位与 needle 字符串的首位是否相同 ，如果不相同也就不需要后续截取、比较，跳过该次循环</li>
+</ul>
 </li>
-<li><p>详解</p>
+</ul>
+<h3 id="代码-2"><a href="#代码-2" class="headerlink" title="代码 2"></a>代码 2</h3><pre class="line-numbers language-js"><code class="language-js"><span class="token comment" spellcheck="true">/**
+ * @param {string} haystack
+ * @param {string} needle
+ * @return {number}
+ */</span>
+<span class="token keyword">var</span> strStr <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span>haystack<span class="token punctuation">,</span> needle<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+   <span class="token keyword">const</span> haystackLen <span class="token operator">=</span> haystack<span class="token punctuation">.</span>length<span class="token punctuation">;</span>
+   <span class="token keyword">const</span> needleLen <span class="token operator">=</span> needle<span class="token punctuation">.</span>length<span class="token punctuation">;</span>
+
+    <span class="token comment" spellcheck="true">// needle字符串为空的情况，返回0</span>
+   <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">!</span>needle<span class="token punctuation">)</span><span class="token punctuation">{</span>
+       <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+       <span class="token comment" spellcheck="true">// needle字符串长度大于haystack字符串长度，肯定不匹配</span>
+   <span class="token punctuation">}</span><span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span>needleLen<span class="token operator">></span>haystackLen<span class="token punctuation">)</span><span class="token punctuation">{</span>
+       <span class="token keyword">return</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
+       <span class="token comment" spellcheck="true">// needle字符串长度等于haystack字符串长度，则直接比较两个字符是否一样即可</span>
+   <span class="token punctuation">}</span><span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span>needleLen <span class="token operator">===</span> haystackLen<span class="token punctuation">)</span><span class="token punctuation">{</span>
+       <span class="token keyword">return</span> haystack <span class="token operator">===</span> needle <span class="token operator">?</span> <span class="token number">0</span> <span class="token punctuation">:</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
+   <span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{</span>
+       <span class="token comment" spellcheck="true">// needle字符串长度小于haystack字符串长度，遍历开始；</span>
+       <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>haystackLen<span class="token operator">-</span>needleLen<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+           <span class="token comment" spellcheck="true">// 如果haystack字符的每一项 都不等于 needle的第一项，则肯定不匹配</span>
+           <span class="token keyword">if</span><span class="token punctuation">(</span>haystack<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">!==</span> needle<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+               <span class="token keyword">continue</span><span class="token punctuation">;</span>
+           <span class="token punctuation">}</span>
+            <span class="token comment" spellcheck="true">// 从haystack截取和needle长度一样的字符，和needle比较是否一样</span>
+           <span class="token keyword">if</span><span class="token punctuation">(</span>haystack<span class="token punctuation">.</span><span class="token function">substring</span><span class="token punctuation">(</span>i<span class="token punctuation">,</span>i<span class="token operator">+</span>needleLen<span class="token punctuation">)</span> <span class="token operator">===</span> needle<span class="token punctuation">)</span><span class="token punctuation">{</span>
+               <span class="token keyword">return</span> i<span class="token punctuation">;</span>
+           <span class="token punctuation">}</span>
+       <span class="token punctuation">}</span>
+   <span class="token punctuation">}</span>
+   <span class="token keyword">return</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="复杂度分析-2"><a href="#复杂度分析-2" class="headerlink" title="复杂度分析 2"></a>复杂度分析 2</h3><ul>
+<li><p>时间复杂度：O(n)</p>
 <ul>
-<li>1.从头到尾遍历一遍字段串；</li>
-<li>2.判断每个位置的字符的 index() 和 lastIndexOf() 的结果是否相等；</li>
+<li>遍历长度可能从 1 到 n -1n−1，假设不同长度出现的概率均等，那么时间复杂度为 (n-1 + 1) / 2(n−1+1)/2时间复杂度即为O(n)</li>
 </ul>
 </li>
-</ul>
-<h3 id="代码1"><a href="#代码1" class="headerlink" title="代码1"></a>代码1</h3><pre class="line-numbers language-js"><code class="language-js">    <span class="token comment" spellcheck="true">/**
-     * @param {string} s
-     * @return {number}
-     */</span>
-    <span class="token keyword">const</span> firstUniqChar <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>s<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>s<span class="token punctuation">.</span>length<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-            <span class="token keyword">if</span><span class="token punctuation">(</span>s<span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span> <span class="token operator">===</span> s<span class="token punctuation">.</span><span class="token function">lastIndexOf</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-                <span class="token keyword">return</span> i<span class="token punctuation">;</span>
-            <span class="token punctuation">}</span>
-        <span class="token punctuation">}</span>
-        <span class="token keyword">return</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="思路2"><a href="#思路2" class="headerlink" title="思路2:"></a>思路2:</h3><ul>
-<li><p>遍历两次。第一次遍历，用一个哈希对象记录所有字符的出现次数；第二次遍历，找出哈希对象中只出现一次的字符的下标</p>
-</li>
-<li><p>详解：</p>
+<li><p>空间复杂度：O(1)</p>
 <ul>
-<li>1.第一次遍历，用一个哈希对象记录所有字符的出现次数；</li>
-<li>2.第二次遍历，找出哈希对象中只出现一次的字符的下标；</li>
+<li>使用 2 个额外存储空间。</li>
 </ul>
 </li>
 </ul>
-<h3 id="代码2"><a href="#代码2" class="headerlink" title="代码2"></a>代码2</h3><pre class="line-numbers language-js"><code class="language-js">    <span class="token comment" spellcheck="true">/**
-     * @param {string} s
-     * @return {number}
-     */</span>
-    <span class="token keyword">const</span> firstUniqChar <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>s<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">let</span> hash <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
-        <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>s<span class="token punctuation">.</span>length<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-            <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">!</span>hash<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-                hash<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
-            <span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{</span>
-                hash<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">++</span>
-            <span class="token punctuation">}</span>
-        <span class="token punctuation">}</span>
+<h3 id="思路-3"><a href="#思路-3" class="headerlink" title="思路 3"></a>思路 3</h3><ul>
+<li>双层循环对比字符;从匹配字符串 haystack 的不同位置开始遍历，判断其中是否含有查找字符串 needle。</li>
+</ul>
+<pre><code>    如：haystack 为 hello， needle 为 ll，依次判断 he、el、ll、lo是否完全和 ll 相等，相等即返回对应字符串在 haystack 中的下标。</code></pre><ul>
+<li>1.边界情况处理</li>
+<li>2.设置最外层循环，遍历次数为 0 - haystack长度减去 needle 的长度。剩余字符串长度小于 needle 长度时，肯定不匹配</li>
+<li>3.判断匹配字符串 haystack 中该次循环使用到的字符串首尾字母是否与查找字符串 needle 首尾字母相同。<ul>
+<li>不相等，直接跳过继续遍历。 </li>
+<li>相等，执行第4步。</li>
+</ul>
+</li>
+<li>4.判断查找字符串 needle 的长度<ul>
+<li>长度为 1，表明匹配成功，直接返回当前长字符串下标即可</li>
+<li>长度大于 1，执行第5步</li>
+</ul>
+</li>
+<li>5.遍历对比字符串，循环判断匹配字符串 haystack 不同位置的字符是否与匹配字符串 needle 对应位置的字符相等<ul>
+<li>不相等时，跳出循环，进行下次循环。</li>
+<li>到最后一位还未跳出循环表明完全匹配，返回当前遍历次数（即查找字符串在匹配字符串中首次出现的位置)</li>
+</ul>
+</li>
+</ul>
+<h3 id="代码-3"><a href="#代码-3" class="headerlink" title="代码 3"></a>代码 3</h3><pre class="line-numbers language-js"><code class="language-js"><span class="token keyword">const</span> strStr <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>haystack<span class="token punctuation">,</span> needle<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> hayLen <span class="token operator">=</span> haystack<span class="token punctuation">.</span>length<span class="token punctuation">;</span>
+  <span class="token keyword">const</span> nedLen <span class="token operator">=</span> needle<span class="token punctuation">.</span>length<span class="token punctuation">;</span>
 
-        <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>s<span class="token punctuation">,</span>length<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-            <span class="token keyword">if</span><span class="token punctuation">(</span>hash<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">===</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-                <span class="token keyword">return</span> i<span class="token punctuation">;</span>
-            <span class="token punctuation">}</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>needle<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>nedLen <span class="token operator">></span> hayLen<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>nedLen <span class="token operator">===</span> hayLen<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> haystack <span class="token operator">===</span> needle <span class="token operator">?</span> <span class="token number">0</span> <span class="token punctuation">:</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> hasIndex <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> hasIndex <span class="token operator">&lt;=</span> hayLen <span class="token operator">-</span> nedLen<span class="token punctuation">;</span> hasIndex<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>
+        haystack<span class="token punctuation">[</span>hasIndex<span class="token punctuation">]</span> <span class="token operator">===</span> needle<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">&amp;&amp;</span>
+          haystack<span class="token punctuation">[</span>hasIndex <span class="token operator">+</span> nedLen <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">===</span> needle<span class="token punctuation">[</span>nedLen <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span>
+      <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>nedLen <span class="token operator">===</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token keyword">return</span> hasIndex<span class="token punctuation">;</span>
         <span class="token punctuation">}</span>
-        <span class="token keyword">return</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
-
-    <span class="token punctuation">}</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> nedIndex <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> nedIndex <span class="token operator">&lt;</span> nedLen<span class="token punctuation">;</span> nedIndex<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token keyword">if</span> <span class="token punctuation">(</span>haystack<span class="token punctuation">[</span>hasIndex <span class="token operator">+</span> nedIndex<span class="token punctuation">]</span> <span class="token operator">!==</span> needle<span class="token punctuation">[</span>nedIndex<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">break</span><span class="token punctuation">;</span>
+          <span class="token punctuation">}</span>
+          <span class="token keyword">if</span> <span class="token punctuation">(</span>nedIndex <span class="token operator">===</span> nedLen <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> hasIndex<span class="token punctuation">;</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="复杂度分析-3"><a href="#复杂度分析-3" class="headerlink" title="复杂度分析 3"></a>复杂度分析 3</h3><ul>
+<li>时间复杂度：O(n^2)</li>
+<li>空间复杂度：O(1)</li>
+</ul>
 
             </div>
             <hr />
@@ -695,9 +757,9 @@
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《leetcode-字符串-387-字符串中的第一个唯一字符》
+                    《leetcode-字符串-28-实现strStr()》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/2020/05/17/leetcode-zi-fu-chuan-387-zi-fu-chuan-zhong-de-di-yi-ge-wei-yi-zi-fu/" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2020/05/18/leetcode-zi-fu-chuan-28-shi-xian-strstr/" property="cc:attributionName"
                rel="cc:attributionURL">
                 朝飞
             </a> 采用
@@ -738,7 +800,7 @@
         repo: 'liangchaofei.github.io',
         owner: 'liangchaofei',
         admin: "liangchaofei",
-        id: '2020/05/17/leetcode-zi-fu-chuan-387-zi-fu-chuan-zhong-de-di-yi-ge-wei-yi-zi-fu/',
+        id: '2020/05/18/leetcode-zi-fu-chuan-28-shi-xian-strstr/',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -1021,35 +1083,32 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2020/05/17/leetcode-zi-fu-chuan-125-yan-zheng-hui-wen-zi-fu-chuan/">
+                <a href="/2020/05/18/leetcode-zi-fu-chuan-28-shi-xian-strstr/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="leetcode-字符串-125-验证回文字符串">
+                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="leetcode-字符串-28-实现strStr()">
                         
-                        <span class="card-title">leetcode-字符串-125-验证回文字符串</span>
+                        <span class="card-title">leetcode-字符串-28-实现strStr()</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            125. 验证回文串题目描述（难度：简单）
-给定一个字符串，验证它是否是回文串，只考虑字母和数字字符，可以忽略字母的大小写。
-
-说明：本题中，我们将空字符串定义为有效的回文串。
-
-示例1:
-  输入: &quot;A man, a plan
+                            28. 实现 strStr()描述
+给定一个 haystack 字符串和一个 needle 字符串，在 haystack 字符串中找出 needle 字符串出现的第一个位置 (从0开始)。如果不存在，则返回  -1。
+对于本题而言，当 ne
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2020-05-17
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-05-18
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
@@ -1062,6 +1121,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -1080,19 +1140,19 @@
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/05/17/leetcode-zi-fu-chuan-344-fan-zhuan-zi-fu-chuan/">
+                <a href="/2020/05/17/interview-react/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="leetcode-字符串-344-反转字符串">
+                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="react-interview">
                         
-                        <span class="card-title">leetcode-字符串-344-反转字符串</span>
+                        <span class="card-title">react-interview</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            344. 反转字符串题目描述（难度：简单）（中文版）编写一个函数，其作用是将输入的字符串反转过来。输入字符串以字符数组 char[] 的形式给出。不要给另外的数组分配额外的空间，你必须原地修改输入数组、使用 O(1) 的额外空间解决这一问题
+                            介绍一下虚拟DOM
                         
                     </div>
                     <div class="publish-info">
@@ -1103,8 +1163,8 @@
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/算法/" class="post-category" target="_blank">
-                                    算法
+                            <a href="/categories/框架/" class="post-category" target="_blank">
+                                    框架
                                 </a>
                             
                             
@@ -1114,8 +1174,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/字符串/" target="_blank">
-                        <span class="chip bg-color">字符串</span>
+                    <a href="/tags/react/" target="_blank">
+                        <span class="chip bg-color">react</span>
                     </a>
                     
                 </div>
