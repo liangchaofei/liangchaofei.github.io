@@ -4,15 +4,18 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="leetcode-字符串-242-有效的字母异位词, 前端">
+    <meta name="keywords" content="leetcode-数组-136-值出现一次的数字, 前端">
     <meta name="baidu-site-verification" content>
     <meta name="google-site-verification" content>
     <meta name="360-site-verification" content>
-    <meta name="description" content="242.有效的字母异位词描述
-给定两个字符串 s 和 t ，编写一个函数来判断 t 是否是 s 的字母异位词。
+    <meta name="description" content="136. 只出现一次的数字题目描述（难度：简单）
+给定一个非空整数数组，除了某个元素只出现一次以外，其余每个元素均出现两次。找出那个只出现了一次的元素。
 
-示例 1    输入: s = &amp;quot;anagram&amp;quot;, t = &amp;quot;nagaram&amp;quot;
-  ">
+说明：你的算法应该具有线性时间复杂度
+
+示例1:
+  输入: [2,2,1]
+  输">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -20,7 +23,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>leetcode-字符串-242-有效的字母异位词 | 朝飞的博客</title>
+    <title>leetcode-数组-136-值出现一次的数字 | 朝飞的博客</title>
     <link rel="icon" type="image/jpeg" href="/kb.jpg">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -294,13 +297,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/20.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        leetcode-字符串-242-有效的字母异位词
+                        leetcode-数组-136-值出现一次的数字
                     </div>
                 </div>
             </div>
@@ -411,8 +414,8 @@
                     
                     <div class="article-tag">
                         
-                        <a href="/tags/leetcode/" target="_blank">
-                            <span class="chip bg-color">leetcode</span>
+                        <a href="/tags/数组/" target="_blank">
+                            <span class="chip bg-color">数组</span>
                         </a>
                         
                     </div>
@@ -435,7 +438,7 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-05-16
+                    2020-05-19
                 </div>
 
                 <div class="post-author info-break-policy">
@@ -449,7 +452,7 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    678
+                    756
                 </div>
                 
 
@@ -472,99 +475,90 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="242-有效的字母异位词"><a href="#242-有效的字母异位词" class="headerlink" title="242.有效的字母异位词"></a>242.有效的字母异位词</h2><h3 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h3><ul>
-<li>给定两个字符串 s 和 t ，编写一个函数来判断 t 是否是 s 的字母异位词。</li>
-</ul>
-<h3 id="示例-1"><a href="#示例-1" class="headerlink" title="示例 1"></a>示例 1</h3><pre><code>    输入: s = &quot;anagram&quot;, t = &quot;nagaram&quot;
-    输出: true</code></pre><h3 id="示例-2"><a href="#示例-2" class="headerlink" title="示例 2"></a>示例 2</h3><pre><code>    输入: s = &quot;rat&quot;, t = &quot;car&quot;
-    输出: false</code></pre><h3 id="思路-1"><a href="#思路-1" class="headerlink" title="思路 1"></a>思路 1</h3><ul>
-<li>1.将字符串转成数组</li>
-<li>2.利用数组sort方法进行排序</li>
-<li>3.将数组转成字符串，依次比较字符是否相等，如果全相等，返回true，否则返回false</li>
-</ul>
-<h3 id="解法-1"><a href="#解法-1" class="headerlink" title="解法 1"></a>解法 1</h3><pre class="line-numbers language-js"><code class="language-js"><span class="token comment" spellcheck="true">/**
- * @param {string} s
- * @param {string} t
- * @return {boolean}
- */</span>
-<span class="token keyword">var</span> isAnagram <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span>s<span class="token punctuation">,</span> t<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token comment" spellcheck="true">// 先判断两个字符串长度是否相等，不相等直接返回false</span>
-    <span class="token keyword">if</span> <span class="token punctuation">(</span>s<span class="token punctuation">.</span>length <span class="token operator">!==</span> t<span class="token punctuation">.</span>length<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-
-   <span class="token comment" spellcheck="true">// 将字符串转成数组</span>
-   <span class="token keyword">let</span> sArr <span class="token operator">=</span> s<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">''</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-   <span class="token keyword">let</span> tArr <span class="token operator">=</span> t<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">''</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-   <span class="token comment" spellcheck="true">// 排序函数</span>
-   <span class="token keyword">const</span> sortFn <span class="token operator">=</span> <span class="token punctuation">(</span>a<span class="token punctuation">,</span>b<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> a<span class="token punctuation">.</span><span class="token function">charCodeAt</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-</span> b<span class="token punctuation">.</span><span class="token function">charCodeAt</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-   <span class="token comment" spellcheck="true">// 进行排序</span>
-   sArr<span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span>sortFn<span class="token punctuation">)</span><span class="token punctuation">;</span>
-   tArr<span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span>sortFn<span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-   <span class="token comment" spellcheck="true">// 依次比较字符</span>
-   <span class="token keyword">return</span> sArr<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token string">''</span><span class="token punctuation">)</span> <span class="token operator">===</span> tArr<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token string">''</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="复杂度分析-1"><a href="#复杂度分析-1" class="headerlink" title="复杂度分析 1"></a>复杂度分析 1</h3><ul>
-<li><p>时间复杂度：O(nlogn)</p>
-<ul>
-<li>JavaScript 的 sort 方法的实现原理，当数组长度小于等于 10 的时候，采用插入排序，大于 10 的时候，采用快排，快排的平均时间复杂度是 。</li>
-</ul>
+                <h1 id="136-只出现一次的数字"><a href="#136-只出现一次的数字" class="headerlink" title="136. 只出现一次的数字"></a>136. 只出现一次的数字</h1><h3 id="题目描述（难度：简单）"><a href="#题目描述（难度：简单）" class="headerlink" title="题目描述（难度：简单）"></a>题目描述（难度：简单）</h3><ul>
+<li><p>给定一个非空整数数组，除了某个元素只出现一次以外，其余每个元素均出现两次。找出那个只出现了一次的元素。</p>
 </li>
-<li><p>空间复杂度：O(n)</p>
-<ul>
-<li>算法中申请了 2 个数组变量用于存放字符串分割后的字符串数组，所以数组空间长度跟字符串长度线性相关，所以为 。</li>
-</ul>
+<li><p>说明：你的算法应该具有线性时间复杂度</p>
 </li>
+<li><p>示例1:</p>
+<pre><code>  输入: [2,2,1]
+  输出: 1</code></pre></li>
+<li><p>示例2:</p>
+<pre><code>  输入: [4,1,2,1,2]
+  输出: 4</code></pre></li>
 </ul>
-<h3 id="思路-2"><a href="#思路-2" class="headerlink" title="思路 2"></a>思路 2</h3><ul>
-<li>1.定义一个对象，遍历其中的一个字符串，对每个字符串的个数累加</li>
-<li>2.遍历另一个字符串，使每一个字母在已得到的对象中做匹配，如果匹配则对象下的字母个数减 1，如果匹配不到，则返回 false，如果最后对象中每个字母个数都为 0，则表示两字符串相等。</li>
+<h3 id="思路1"><a href="#思路1" class="headerlink" title="思路1:"></a>思路1:</h3><ul>
+<li>哈希方法</li>
 </ul>
-<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><pre class="line-numbers language-js"><code class="language-js"><span class="token comment" spellcheck="true">/**
- * @param {string} s
- * @param {string} t
- * @return {boolean}
+<h3 id="代码1"><a href="#代码1" class="headerlink" title="代码1"></a>代码1</h3><pre class="line-numbers language-js"><code class="language-js"><span class="token comment" spellcheck="true">/**
+ * @param {number[]} nums
+ * @return {number}
  */</span>
-<span class="token keyword">var</span> isAnagram <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span>s<span class="token punctuation">,</span> t<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token comment" spellcheck="true">// 先判断两个字符串长度是否相等，不相等直接返回false</span>
-    <span class="token keyword">if</span> <span class="token punctuation">(</span>s<span class="token punctuation">.</span>length <span class="token operator">!==</span> t<span class="token punctuation">.</span>length<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-    <span class="token comment" spellcheck="true">// 定义一个对象，</span>
-    <span class="token keyword">const</span> hash <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
-
-    <span class="token comment" spellcheck="true">// 遍历字符串s，看每个字符的个数，最后形成</span>
-    <span class="token comment" spellcheck="true">// hash = { a: 3, n: 1, g: 1, r: 1, m: 1 }</span>
-    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">const</span> k <span class="token keyword">of</span> s<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        hash<span class="token punctuation">[</span>k<span class="token punctuation">]</span> <span class="token operator">=</span> hash<span class="token punctuation">[</span>k<span class="token punctuation">]</span> <span class="token operator">||</span> <span class="token number">0</span><span class="token punctuation">;</span>
-        hash<span class="token punctuation">[</span>k<span class="token punctuation">]</span> <span class="token operator">+</span><span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-
-    <span class="token comment" spellcheck="true">// 然后遍历字符串t</span>
-    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">const</span> k <span class="token keyword">of</span> t<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token comment" spellcheck="true">// 判断字符串t中的每个字符是否在hash中，不在，则返回false</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>hash<span class="token punctuation">[</span>k<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> singleNumber <span class="token operator">=</span> <span class="token punctuation">(</span>nums<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> hash <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>nums<span class="token punctuation">.</span>length<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>hash<span class="token punctuation">[</span>nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">delete</span> hash<span class="token punctuation">[</span>nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">]</span>
+        <span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{</span>
+            hash<span class="token punctuation">[</span>nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
         <span class="token punctuation">}</span>
-        <span class="token comment" spellcheck="true">// 说明匹配成功，把遍历的字符个数减一</span>
-        hash<span class="token punctuation">[</span>k<span class="token punctuation">]</span> <span class="token operator">-</span><span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
-    <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="复杂度分析-1-1"><a href="#复杂度分析-1-1" class="headerlink" title="复杂度分析 1"></a>复杂度分析 1</h3><ul>
-<li><p>时间复杂度：O(n)</p>
-<ul>
-<li>使用了 2 个单层循环，因此，时间复杂度为 。</li>
+    <span class="token keyword">return</span> Object<span class="token punctuation">.</span><span class="token function">keys</span><span class="token punctuation">(</span>hash<span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="思路-2"><a href="#思路-2" class="headerlink" title="思路 2"></a>思路 2</h3><ul>
+<li>先排序，再遍历判断当前项和前一项，后一项是否相等。如果不相等，则就是当前项</li>
+</ul>
+<h3 id="代码2"><a href="#代码2" class="headerlink" title="代码2"></a>代码2</h3><pre class="line-numbers language-js"><code class="language-js"><span class="token comment" spellcheck="true">/**
+ * @param {number[]} nums
+ * @return {number}
+ */</span>
+<span class="token keyword">const</span> singleNumber <span class="token operator">=</span> <span class="token punctuation">(</span>nums<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+    nums <span class="token operator">=</span> nums<span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>nums<span class="token punctuation">.</span>length<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">!==</span> nums<span class="token punctuation">[</span>i<span class="token number">-1</span><span class="token punctuation">]</span> <span class="token operator">&amp;&amp;</span> nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">!==</span> nums<span class="token punctuation">[</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">return</span> nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+
+<span class="token punctuation">}</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="思路-3"><a href="#思路-3" class="headerlink" title="思路 3"></a>思路 3</h3><ul>
+<li>将数组遍历，并通过过滤的方法，将值相同的数归集为数组的一个元素，由于除了一个元素，其他元素都会出现两次，所有只要找到过滤的集合的长度为1的那个集合，该集合第一个元素即是该元素。<ul>
+<li>1.遍历数组，由于需要返回值，这里使用map方法</li>
+<li>2.使用过滤函数，过滤数组中值与当前遍历的元素的值相同的元素</li>
+<li>3.现在得到了一个存在多个集合的数组，而数组中唯一值的那个元素的集合肯定值存在它自己</li>
+<li>4.查询这个集合中长度只有1的集合，再取这个集合的第一个元素，即是只出现一次的数字</li>
 </ul>
 </li>
-<li><p>空间复杂度：O(1)</p>
-<ul>
-<li>申请的变量 hash 最大长度为 256，因为 Ascii 字符最多 256 种可能，因此，考虑为常量空间，即 O(1)O(1)</li>
+</ul>
+<h3 id="代码-3"><a href="#代码-3" class="headerlink" title="代码 3"></a>代码 3</h3><pre class="line-numbers language-js"><code class="language-js"><span class="token comment" spellcheck="true">/**
+ * @param {number[]} nums
+ * @return {number}
+ */</span>
+<span class="token keyword">const</span> singleNumber <span class="token operator">=</span> <span class="token punctuation">(</span>nums<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> singleNum <span class="token operator">=</span> nums<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span>item <span class="token operator">=</span><span class="token operator">></span> nums<span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span>v <span class="token operator">=</span><span class="token operator">></span> v <span class="token operator">===</span> item<span class="token punctuation">)</span><span class="token punctuation">)</span>  
+    <span class="token keyword">return</span>   singleNum<span class="token punctuation">.</span><span class="token function">find</span><span class="token punctuation">(</span>item <span class="token operator">=</span><span class="token operator">></span> item<span class="token punctuation">.</span>length <span class="token operator">===</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="复杂度分析"><a href="#复杂度分析" class="headerlink" title="复杂度分析"></a>复杂度分析</h3><ul>
+<li>时间复杂度：O(n^2).使用了 map 和 filter，嵌套遍历;</li>
+<li>空间复杂度：O(n).map方法创建了一个长度为的数组，占用了大小的空间。</li>
+</ul>
+<h3 id="思路-4"><a href="#思路-4" class="headerlink" title="思路 4"></a>思路 4</h3><ul>
+<li>异或运算符可以将两个数字比较，由于有一个数只出现了一次，其他数皆出现了两次，类似乘法法则无论先后顺序，最后相同的数都会异或成0，唯一出现的数与0异或就会得到其本身，该方法是最优解，直接通过比较的方式即可得到只出现一次的数字。<ul>
+<li>1.将数组的一个元素与下一个元素做异或比较，直接使用reduce方法</li>
+<li>2.两两异或最后与所有元素都不相同，最后返回的值即是只出现一次的数字。</li>
 </ul>
 </li>
+</ul>
+<h3 id="代码-4"><a href="#代码-4" class="headerlink" title="代码 4"></a>代码 4</h3><pre class="line-numbers language-js"><code class="language-js"><span class="token comment" spellcheck="true">/**
+ * @param {number[]} nums
+ * @return {number}
+ */</span>
+<span class="token keyword">const</span> singleNumber <span class="token operator">=</span> <span class="token punctuation">(</span>nums<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+   <span class="token keyword">return</span> nums<span class="token punctuation">.</span><span class="token function">reduce</span><span class="token punctuation">(</span><span class="token punctuation">(</span>cur<span class="token punctuation">,</span>pre<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> cur <span class="token operator">^</span> pre<span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="复杂度分析-1"><a href="#复杂度分析-1" class="headerlink" title="复杂度分析"></a>复杂度分析</h3><ul>
+<li>时间复杂度：O(n)。仅用 reduce 方法遍历，一层遍历</li>
+<li>空间复杂度：O(1)。空间复杂度为常量，占用空间没有随数据量 的大小发生改变</li>
 </ul>
 
             </div>
@@ -724,9 +718,9 @@
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《leetcode-字符串-242-有效的字母异位词》
+                    《leetcode-数组-136-值出现一次的数字》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/2020/05/16/leetcode-zi-fu-chuan-242-you-xiao-de-zi-mu-yi-wei-ci/" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2020/05/19/leetcode-shu-zu-136-zhi-chu-xian-yi-ci-de-shu-zi/" property="cc:attributionName"
                rel="cc:attributionURL">
                 朝飞
             </a> 采用
@@ -767,7 +761,7 @@
         repo: 'liangchaofei.github.io',
         owner: 'liangchaofei',
         admin: "liangchaofei",
-        id: '2020/05/16/leetcode-zi-fu-chuan-242-you-xiao-de-zi-mu-yi-wei-ci/',
+        id: '2020/05/19/leetcode-shu-zu-136-zhi-chu-xian-yi-ci-de-shu-zi/',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -1050,32 +1044,37 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2020/05/16/leetcode-zi-fu-chuan-8-zi-fu-chuan-zhuan-zheng-shu/">
+                <a href="/2020/05/19/leetcode-shu-zu-136-zhi-chu-xian-yi-ci-de-shu-zi/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/26.jpg" class="responsive-img" alt="leetcode-字符串-8-字符串转整数">
+                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="leetcode-数组-136-值出现一次的数字">
                         
-                        <span class="card-title">leetcode-字符串-8-字符串转整数</span>
+                        <span class="card-title">leetcode-数组-136-值出现一次的数字</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            8. 字符串转换整数 (atoi)描述
-请你来实现一个 atoi 函数，使其能将字符串转换成整数。
-首先，该函数会根据需要丢弃无用的开头空格字符，直到寻找到第一个非空格的字符为止。接下来的转化规则如下：
-如果第一个非空字符为正或者负号时，则
+                            136. 只出现一次的数字题目描述（难度：简单）
+给定一个非空整数数组，除了某个元素只出现一次以外，其余每个元素均出现两次。找出那个只出现了一次的元素。
+
+说明：你的算法应该具有线性时间复杂度
+
+示例1:
+  输入: [2,2,1]
+  输
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2020-05-16
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-05-19
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
@@ -1088,11 +1087,12 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/leetcode/" target="_blank">
-                        <span class="chip bg-color">leetcode</span>
+                    <a href="/tags/数组/" target="_blank">
+                        <span class="chip bg-color">数组</span>
                     </a>
                     
                 </div>
@@ -1106,30 +1106,30 @@
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/05/16/leetcode-zi-fu-chuan-7-zheng-shu-fan-zhuan/">
+                <a href="/2020/05/18/leetcode-shu-zu-189-xuan-zhuan-shu-zu-1/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="leetcode-字符串-7-整数反转">
+                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="leetcode-数组-189-旋转数组">
                         
-                        <span class="card-title">leetcode-字符串-7-整数反转</span>
+                        <span class="card-title">leetcode-数组-189-旋转数组</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            7. 整数反转描述
-给出一个 32 位的有符号整数，你需要将这个整数中每位上的数字进行反转。
+                            189. 旋转数组描述
+给定一个数组，将数组中的元素向右移动 k 个位置，其中 k 是非负数。
 
-示例 1    输入: 123
-    输出: 321示例 2    输入: -123
-    输出: -321示例 3    输入: 120
-
+示例 1    输入: [1,2,3,4,5,6,7] 和 k = 3
+    输出: [5,6,7,1,2,3,4]
+    解释:
+   
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-05-16
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-05-18
                             </span>
                         <span class="publish-author">
                             
@@ -1146,8 +1146,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/leetcode/" target="_blank">
-                        <span class="chip bg-color">leetcode</span>
+                    <a href="/tags/数组/" target="_blank">
+                        <span class="chip bg-color">数组</span>
                     </a>
                     
                 </div>
