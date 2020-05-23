@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://liangchaofei.github.io/"/>
-  <updated>2020-05-23T02:53:35.773Z</updated>
+  <updated>2020-05-23T03:04:22.476Z</updated>
   <id>https://liangchaofei.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>leetcode-数组-283-移动零</title>
+    <link href="https://liangchaofei.github.io/2020/05/23/leetcode-shu-zu-283-yi-dong-ling/"/>
+    <id>https://liangchaofei.github.io/2020/05/23/leetcode-shu-zu-283-yi-dong-ling/</id>
+    <published>2020-05-23T03:03:52.000Z</published>
+    <updated>2020-05-23T03:04:22.476Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;283-移动零&quot;&gt;&lt;a href=&quot;#283-移动零&quot; class=&quot;headerlink&quot; title=&quot;283. 移动零&quot;&gt;&lt;/a&gt;283. 移动零&lt;/h1&gt;&lt;h4 id=&quot;题目描述（难度：简单）&quot;&gt;&lt;a href=&quot;#题目描述（难度：简单）&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="算法" scheme="https://liangchaofei.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+      <category term="数组" scheme="https://liangchaofei.github.io/tags/%E6%95%B0%E7%BB%84/"/>
+    
+  </entry>
   
   <entry>
     <title>leetcode-数组-股票买卖最佳时机合集</title>
@@ -492,32 +518,6 @@
         
         
           &lt;h2 id=&quot;242-有效的字母异位词&quot;&gt;&lt;a href=&quot;#242-有效的字母异位词&quot; class=&quot;headerlink&quot; title=&quot;242.有效的字母异位词&quot;&gt;&lt;/a&gt;242.有效的字母异位词&lt;/h2&gt;&lt;h3 id=&quot;描述&quot;&gt;&lt;a href=&quot;#描述&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="算法" scheme="https://liangchaofei.github.io/categories/%E7%AE%97%E6%B3%95/"/>
-    
-    
-      <category term="leetcode" scheme="https://liangchaofei.github.io/tags/leetcode/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>leetcode-字符串-7-整数反转</title>
-    <link href="https://liangchaofei.github.io/2020/05/16/leetcode-zi-fu-chuan-7-zheng-shu-fan-zhuan/"/>
-    <id>https://liangchaofei.github.io/2020/05/16/leetcode-zi-fu-chuan-7-zheng-shu-fan-zhuan/</id>
-    <published>2020-05-16T01:26:58.000Z</published>
-    <updated>2020-05-16T01:27:21.243Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;7-整数反转&quot;&gt;&lt;a href=&quot;#7-整数反转&quot; class=&quot;headerlink&quot; title=&quot;7. 整数反转&quot;&gt;&lt;/a&gt;7. 整数反转&lt;/h2&gt;&lt;h3 id=&quot;描述&quot;&gt;&lt;a href=&quot;#描述&quot; class=&quot;headerlink&quot;
         
       
     
