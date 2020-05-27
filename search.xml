@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>leetcode-排序-278-第一个错误的版本</title>
+      <link href="/2020/05/27/leetcode-pai-xu-278-di-yi-ge-cuo-wu-de-ban-ben/"/>
+      <url>/2020/05/27/leetcode-pai-xu-278-di-yi-ge-cuo-wu-de-ban-ben/</url>
+      
+        <content type="html"><![CDATA[<h1 id="278-第一个错误的版本"><a href="#278-第一个错误的版本" class="headerlink" title="278. 第一个错误的版本"></a>278. 第一个错误的版本</h1><h4 id="题目描述（难度：简单）"><a href="#题目描述（难度：简单）" class="headerlink" title="题目描述（难度：简单）"></a>题目描述（难度：简单）</h4><ul><li>你是产品经理，目前正在带领一个团队开发新的产品。不幸的是，你的产品的最新版本没有通过质量检测。由于每个版本都是基于之前的版本开发的，所以错误的版本之后的所有版本都是错的。</li><li>假设你有 n 个版本 [1, 2, …, n]，你想找出导致之后所有版本出错的第一个错误的版本。</li><li>你可以通过调用 bool isBadVersion(version) 接口来判断版本号 version 是否在单元测试中出错。实现一个函数来查找第一个错误的版本。你应该尽量减少对调用 API 的次数。</li></ul><p>示例1:</p><pre><code>给定 n = 5，并且 version = 4 是第一个错误的版本。调用 isBadVersion(3) -&gt; false调用 isBadVersion(5) -&gt; true调用 isBadVersion(4) -&gt; true所以，4 是第一个错误的版本。</code></pre><h4 id="解题思路-二分查找"><a href="#解题思路-二分查找" class="headerlink" title="解题思路(二分查找)"></a>解题思路(二分查找)</h4><ul><li>1.确定数组左边边界值和右边边界值，找到边界值的中间值</li><li>2.比较中间值是否是错误版本，如果是则右边边界值=中间值-1，再找中间值比较。如果不是错误版本则左侧边界值=中间值+1，再找左侧值和右侧值之间的中间值比较，这样重复下去</li><li>3.当左侧边界值&gt;右侧边界值得时候，说明右侧已经全是错误版本了，当前左侧的值就是临界值</li></ul><h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token keyword">const</span> solution <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span>isBadVersion<span class="token punctuation">)</span> <span class="token punctuation">{</span>  <span class="token keyword">return</span> <span class="token keyword">function</span> firstBadVersion <span class="token punctuation">(</span>n<span class="token punctuation">)</span> <span class="token punctuation">{</span>      <span class="token keyword">let</span> left <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>      <span class="token keyword">let</span> right <span class="token operator">=</span> n<span class="token punctuation">;</span>      <span class="token keyword">while</span><span class="token punctuation">(</span>left<span class="token operator">&lt;</span>right<span class="token punctuation">)</span><span class="token punctuation">{</span>          <span class="token keyword">let</span> mid <span class="token operator">=</span> Math<span class="token punctuation">.</span><span class="token function">floor</span><span class="token punctuation">(</span>left <span class="token operator">+</span> <span class="token punctuation">(</span>right<span class="token operator">-</span>left<span class="token punctuation">)</span><span class="token operator">/</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>          <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token function">firstBadVersion</span><span class="token punctuation">(</span>mid<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>              right <span class="token operator">=</span> mid <span class="token operator">-</span> <span class="token number">1</span>          <span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{</span>              left <span class="token operator">=</span> mid <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>          <span class="token punctuation">}</span>      <span class="token punctuation">}</span>      <span class="token keyword">return</span> left<span class="token punctuation">;</span>  <span class="token punctuation">}</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 算法 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 排序 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>leetcode-排序-88-合并两个有序数组</title>
       <link href="/2020/05/27/leetcode-pai-xu-88-he-bing-liang-ge-you-xu-shu-zu/"/>
       <url>/2020/05/27/leetcode-pai-xu-88-he-bing-liang-ge-you-xu-shu-zu/</url>

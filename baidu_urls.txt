@@ -1,3 +1,4 @@
+https://liangchaofei.github.io/2020/05/27/leetcode-pai-xu-278-di-yi-ge-cuo-wu-de-ban-ben/
 https://liangchaofei.github.io/2020/05/27/leetcode-pai-xu-88-he-bing-liang-ge-you-xu-shu-zu/
 https://liangchaofei.github.io/2020/05/25/leetcode-shu-zu-1185-yi-zhou-zhong-de-di-ji-tian/
 https://liangchaofei.github.io/2020/05/25/leetcode-shu-zu-349-liang-ge-shu-zu-de-jiao-ji/
