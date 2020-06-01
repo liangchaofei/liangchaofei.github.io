@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://liangchaofei.github.io/"/>
-  <updated>2020-05-27T01:31:55.815Z</updated>
+  <updated>2020-06-01T13:48:07.050Z</updated>
   <id>https://liangchaofei.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>leetcode-搜索-34-在排序数组中查找元素的第一个和最后一个位置</title>
+    <link href="https://liangchaofei.github.io/2020/06/01/leetcode-sou-suo-34-zai-pai-xu-shu-zu-zhong-cha-zhao-yuan-su-de-di-yi-ge-he-zui-hou-yi-ge-wei-zhi/"/>
+    <id>https://liangchaofei.github.io/2020/06/01/leetcode-sou-suo-34-zai-pai-xu-shu-zu-zhong-cha-zhao-yuan-su-de-di-yi-ge-he-zui-hou-yi-ge-wei-zhi/</id>
+    <published>2020-06-01T13:47:44.000Z</published>
+    <updated>2020-06-01T13:48:07.050Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;34-在排序数组中查找元素的第一个和最后一个位置&quot;&gt;&lt;a href=&quot;#34-在排序数组中查找元素的第一个和最后一个位置&quot; class=&quot;headerlink&quot; title=&quot;34. 在排序数组中查找元素的第一个和最后一个位置&quot;&gt;&lt;/a&gt;34.
+        
+      
+    
+    </summary>
+    
+      <category term="算法" scheme="https://liangchaofei.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+      <category term="搜索" scheme="https://liangchaofei.github.io/tags/%E6%90%9C%E7%B4%A2/"/>
+    
+  </entry>
   
   <entry>
     <title>leetcode-搜索-33-搜索旋转排序数组</title>
@@ -504,34 +530,6 @@
     
     
       <category term="css" scheme="https://liangchaofei.github.io/tags/css/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>js实现查找字符串中出现最多的字符和个数</title>
-    <link href="https://liangchaofei.github.io/2020/05/16/js-shi-xian-cha-zhao-zi-fu-chuan-zhong-chu-xian-zui-duo-de-zi-fu-he-ge-shu/"/>
-    <id>https://liangchaofei.github.io/2020/05/16/js-shi-xian-cha-zhao-zi-fu-chuan-zhong-chu-xian-zui-duo-de-zi-fu-he-ge-shu/</id>
-    <published>2020-05-16T13:34:25.000Z</published>
-    <updated>2020-05-16T13:34:59.084Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;例: abbcccddddd -&amp;gt; 字符最多的是d，出现了5次&lt;/p&gt;
-&lt;pre class=&quot;line-numbers language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;  &lt;span class=&quot;token
-        
-      
-    
-    </summary>
-    
-      <category term="js" scheme="https://liangchaofei.github.io/categories/js/"/>
-    
-    
-      <category term="js" scheme="https://liangchaofei.github.io/tags/js/"/>
     
   </entry>
   

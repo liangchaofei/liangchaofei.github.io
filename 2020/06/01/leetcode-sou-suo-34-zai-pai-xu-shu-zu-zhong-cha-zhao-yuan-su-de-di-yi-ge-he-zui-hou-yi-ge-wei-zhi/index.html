@@ -4,17 +4,14 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="leetcode-数组-35-搜索插入位置, 前端">
+    <meta name="keywords" content="leetcode-搜索-34-在排序数组中查找元素的第一个和最后一个位置, 前端">
     <meta name="baidu-site-verification" content>
     <meta name="google-site-verification" content>
     <meta name="360-site-verification" content>
-    <meta name="description" content="搜索插入位置题目描述（难度：简单）
-给定一个排序数组和一个目标值，在数组中找到目标值，并返回其索引。如果目标值不存在于数组中，返回它将会被按顺序插入的位置。
-
-你可以假设数组中无重复元素。
-
-
-示例 1:    输入: [1,3,5,6],">
+    <meta name="description" content="34. 在排序数组中查找元素的第一个和最后一个位置描述
+给定一个按照升序排列的整数数组 nums，和一个目标值 target。找出给定目标值在数组中的开始位置和结束位置。
+你的算法时间复杂度必须是 O(log n) 级别。
+如果数组中不存在">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -22,7 +19,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>leetcode-数组-35-搜索插入位置 | 朝飞的博客</title>
+    <title>leetcode-搜索-34-在排序数组中查找元素的第一个和最后一个位置 | 朝飞的博客</title>
     <link rel="icon" type="image/jpeg" href="/kb.jpg">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -296,13 +293,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/21.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/5.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        leetcode-数组-35-搜索插入位置
+                        leetcode-搜索-34-在排序数组中查找元素的第一个和最后一个位置
                     </div>
                 </div>
             </div>
@@ -413,8 +410,8 @@
                     
                     <div class="article-tag">
                         
-                        <a href="/tags/leetcode/" target="_blank">
-                            <span class="chip bg-color">leetcode</span>
+                        <a href="/tags/搜索/" target="_blank">
+                            <span class="chip bg-color">搜索</span>
                         </a>
                         
                     </div>
@@ -437,7 +434,7 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-02-21
+                    2020-06-01
                 </div>
 
                 <div class="post-author info-break-policy">
@@ -451,7 +448,7 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    392
+                    366
                 </div>
                 
 
@@ -474,64 +471,59 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="搜索插入位置"><a href="#搜索插入位置" class="headerlink" title="搜索插入位置"></a>搜索插入位置</h2><h3 id="题目描述（难度：简单）"><a href="#题目描述（难度：简单）" class="headerlink" title="题目描述（难度：简单）"></a>题目描述（难度：简单）</h3><ul>
-<li><p>给定一个排序数组和一个目标值，在数组中找到目标值，并返回其索引。如果目标值不存在于数组中，返回它将会被按顺序插入的位置。</p>
-</li>
-<li><p>你可以假设数组中无重复元素。</p>
-</li>
+                <h2 id="34-在排序数组中查找元素的第一个和最后一个位置"><a href="#34-在排序数组中查找元素的第一个和最后一个位置" class="headerlink" title="34. 在排序数组中查找元素的第一个和最后一个位置"></a>34. 在排序数组中查找元素的第一个和最后一个位置</h2><h3 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h3><ul>
+<li>给定一个按照升序排列的整数数组 nums，和一个目标值 target。找出给定目标值在数组中的开始位置和结束位置。</li>
+<li>你的算法时间复杂度必须是 O(log n) 级别。</li>
+<li>如果数组中不存在目标值，返回 [-1, -1]。</li>
 </ul>
-<h3 id="示例-1"><a href="#示例-1" class="headerlink" title="示例 1:"></a>示例 1:</h3><pre><code>    输入: [1,3,5,6], 5
-    输出: 2</code></pre><h3 id="示例-2"><a href="#示例-2" class="headerlink" title="示例 2:"></a>示例 2:</h3><pre><code>    输入: [1,3,5,6], 2
-    输出: 1</code></pre><h3 id="示例-3"><a href="#示例-3" class="headerlink" title="示例 3:"></a>示例 3:</h3><pre><code>    输入: [1,3,5,6], 7
-    输出: 4</code></pre><h3 id="示例-4："><a href="#示例-4：" class="headerlink" title="示例 4："></a>示例 4：</h3><pre><code>    输入: [1,3,5,6], 0
-    输出: 0</code></pre><h3 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h3><ul>
-<li>暴力法：由于数组有序，从0开始遍历，找到一个小于或等于目标值的索引，直接返回该索引，适用于数量少</li>
-<li>二分法：由于数组有序，将数组用中间值分为大小区间；用目标值与中间值比较，如果大于该区间，则将中间值取为大区间的起点，重新计算中间值比较；最终当区间只有一个数的时候，比其大则返回其索引+1</li>
+<h3 id="示例-1"><a href="#示例-1" class="headerlink" title="示例 1"></a>示例 1</h3><pre><code>输入: nums = [5,7,7,8,8,10], target = 8
+输出: [3,4]</code></pre><h3 id="示例-2"><a href="#示例-2" class="headerlink" title="示例 2"></a>示例 2</h3><pre><code>输入: nums = [5,7,7,8,8,10], target = 6
+输出: [-1,-1]</code></pre><h3 id="思路-1"><a href="#思路-1" class="headerlink" title="思路 1"></a>思路 1</h3><ul>
+<li>根据二分查找，找到左边第一个不小于目标值的位置</li>
+<li>从上一步中的位置开始到最后，二分查找，确定右边最后一个符合条件值的位置</li>
+<li>得到结果</li>
 </ul>
-<h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">/**
- * 暴力法
- * @param {number[]} nums
- * @param {number} target
- * @return {number}
- */</span>
-<span class="token keyword">var</span> searchInsert <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span>nums<span class="token punctuation">,</span> target<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> nums<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-          <span class="token comment" spellcheck="true">// 判断小于或等于当前，即返回当前位置索引</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>target <span class="token operator">&lt;=</span> nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            <span class="token keyword">return</span> i<span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
+<h3 id="解法-1"><a href="#解法-1" class="headerlink" title="解法 1"></a>解法 1</h3><pre class="line-numbers language-js"><code class="language-js"><span class="token keyword">function</span> getBinarySearchLowerBound <span class="token punctuation">(</span>array<span class="token punctuation">,</span> low<span class="token punctuation">,</span> high<span class="token punctuation">,</span> target<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment" spellcheck="true">// 找到第一个不小于目标值的位置</span>
+  <span class="token keyword">while</span> <span class="token punctuation">(</span>low <span class="token operator">&lt;</span> high<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> mid <span class="token operator">=</span> Math<span class="token punctuation">.</span><span class="token function">floor</span><span class="token punctuation">(</span><span class="token punctuation">(</span>low <span class="token operator">+</span> high<span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>array<span class="token punctuation">[</span>mid<span class="token punctuation">]</span> <span class="token operator">&lt;</span> target<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      low <span class="token operator">=</span> mid <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+      high <span class="token operator">=</span> mid<span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
-    <span class="token keyword">return</span> nums<span class="token punctuation">.</span>length<span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
 
+  <span class="token comment" spellcheck="true">// 如果相等，则匹配，否则不匹配</span>
+  <span class="token keyword">return</span> array<span class="token punctuation">[</span>low<span class="token punctuation">]</span> <span class="token operator">===</span> target <span class="token operator">?</span> low <span class="token punctuation">:</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 
-<span class="token comment" spellcheck="true">/**
- * 二分法
- * @param {number[]} nums
- * @param {number} target
- * @return {number}
- */</span>
-<span class="token keyword">var</span> searchInsert <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span>nums<span class="token punctuation">,</span> target<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-      <span class="token comment" spellcheck="true">// 二分法递归</span>
-    <span class="token keyword">return</span> <span class="token function">search</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> nums<span class="token punctuation">.</span>length<span class="token punctuation">,</span> nums<span class="token punctuation">,</span> target<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-<span class="token comment" spellcheck="true">/**
- * 递归
- */</span>
-<span class="token keyword">function</span> <span class="token function">fn</span><span class="token punctuation">(</span>arr<span class="token punctuation">,</span>target<span class="token punctuation">)</span><span class="token punctuation">{</span>
-    <span class="token keyword">let</span> left <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> right <span class="token operator">=</span>arr<span class="token punctuation">.</span>length <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">;</span>
-    <span class="token keyword">while</span><span class="token punctuation">(</span>left<span class="token operator">&lt;</span>right<span class="token punctuation">)</span><span class="token punctuation">{</span>
-        <span class="token keyword">let</span> mid <span class="token operator">=</span> <span class="token function">parseInt</span><span class="token punctuation">(</span><span class="token punctuation">(</span>left<span class="token operator">+</span>right<span class="token punctuation">)</span><span class="token operator">/</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token keyword">if</span><span class="token punctuation">(</span>target <span class="token operator">===</span> arr<span class="token punctuation">[</span>mid<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-            <span class="token keyword">return</span> mid<span class="token punctuation">;</span>
-        <span class="token punctuation">}</span><span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span>target <span class="token operator">&lt;</span> arr<span class="token punctuation">[</span>mid<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-            right <span class="token operator">=</span> right <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{</span>
-            left <span class="token operator">=</span> left <span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
+<span class="token keyword">function</span> getBinarySearchUpperBound <span class="token punctuation">(</span>array<span class="token punctuation">,</span> low<span class="token punctuation">,</span> high<span class="token punctuation">,</span> target<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment" spellcheck="true">// 找到第一个不大于目标值的位置</span>
+  <span class="token keyword">while</span> <span class="token punctuation">(</span>low <span class="token operator">&lt;</span> high<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> mid <span class="token operator">=</span> Math<span class="token punctuation">.</span><span class="token function">ceil</span><span class="token punctuation">(</span><span class="token punctuation">(</span>low <span class="token operator">+</span> high<span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>array<span class="token punctuation">[</span>mid<span class="token punctuation">]</span> <span class="token operator">></span> target<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      high <span class="token operator">=</span> mid <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+      low <span class="token operator">=</span> mid<span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
-    <span class="token keyword">return</span> left<span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+  <span class="token punctuation">}</span>
+
+  <span class="token comment" spellcheck="true">// 如果相等，则匹配，否则不匹配</span>
+  <span class="token keyword">return</span> array<span class="token punctuation">[</span>high<span class="token punctuation">]</span> <span class="token operator">===</span> target <span class="token operator">?</span> high <span class="token punctuation">:</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">const</span> searchRange <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>nums<span class="token punctuation">,</span> target<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> size <span class="token operator">=</span> nums<span class="token punctuation">.</span>length<span class="token punctuation">;</span>
+  <span class="token keyword">const</span> low <span class="token operator">=</span> <span class="token function">getBinarySearchLowerBound</span><span class="token punctuation">(</span>nums<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> size <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">,</span> target<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>low <span class="token operator">===</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token comment" spellcheck="true">// 从左边数字的位置开始</span>
+  <span class="token keyword">const</span> high <span class="token operator">=</span> <span class="token function">getBinarySearchUpperBound</span><span class="token punctuation">(</span>nums<span class="token punctuation">,</span> low <span class="token operator">>=</span> <span class="token number">0</span> <span class="token operator">?</span> low <span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">,</span> size <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">,</span> target<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> <span class="token punctuation">[</span>low<span class="token punctuation">,</span> high<span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
             </div>
             <hr />
@@ -690,9 +682,9 @@
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《leetcode-数组-35-搜索插入位置》
+                    《leetcode-搜索-34-在排序数组中查找元素的第一个和最后一个位置》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/2020/02/21/leetcode-shu-zu-35-sou-suo-cha-ru-wei-zhi/" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2020/06/01/leetcode-sou-suo-34-zai-pai-xu-shu-zu-zhong-cha-zhao-yuan-su-de-di-yi-ge-he-zui-hou-yi-ge-wei-zhi/" property="cc:attributionName"
                rel="cc:attributionURL">
                 朝飞
             </a> 采用
@@ -733,7 +725,7 @@
         repo: 'liangchaofei.github.io',
         owner: 'liangchaofei',
         admin: "liangchaofei",
-        id: '2020/02/21/leetcode-shu-zu-35-sou-suo-cha-ru-wei-zhi/',
+        id: '2020/06/01/leetcode-sou-suo-34-zai-pai-xu-shu-zu-zhong-cha-zhao-yuan-su-de-di-yi-ge-he-zui-hou-yi-ge-wei-zhi/',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -1016,51 +1008,51 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2020/02/22/js-shu-zu-qu-chong-fang-fa/">
+                <a href="/2020/06/01/leetcode-sou-suo-34-zai-pai-xu-shu-zu-zhong-cha-zhao-yuan-su-de-di-yi-ge-he-zui-hou-yi-ge-wei-zhi/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="js数组去重方法(史上最全?)">
+                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="leetcode-搜索-34-在排序数组中查找元素的第一个和最后一个位置">
                         
-                        <span class="card-title">js数组去重方法(史上最全?)</span>
+                        <span class="card-title">leetcode-搜索-34-在排序数组中查找元素的第一个和最后一个位置</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
-下面介绍下对象数组去重和普通数组去重
-
-普通数组去重第一种：利用ES6 Set去重
-不考虑兼容性，这种去重的方法代码最少。这种方法还无法去掉“{}”空对象
-let arr = [1,1,'true','true',true,true,15
+                            34. 在排序数组中查找元素的第一个和最后一个位置描述
+给定一个按照升序排列的整数数组 nums，和一个目标值 target。找出给定目标值在数组中的开始位置和结束位置。
+你的算法时间复杂度必须是 O(log n) 级别。
+如果数组中不存在
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2020-02-22
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-06-01
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/js/" class="post-category" target="_blank">
-                                    js
+                            <a href="/categories/算法/" class="post-category" target="_blank">
+                                    算法
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/数组/" target="_blank">
-                        <span class="chip bg-color">数组</span>
+                    <a href="/tags/搜索/" target="_blank">
+                        <span class="chip bg-color">搜索</span>
                     </a>
                     
                 </div>
@@ -1074,27 +1066,27 @@ let arr = [1,1,'true','true',true,true,15
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/02/20/leetcode-shu-zu-27-yi-chu-yuan-su/">
+                <a href="/2020/05/27/leetcode-sou-suo-33-sou-suo-xuan-zhuan-pai-xu-shu-zu/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="leetcode-数组-27-移除元素">
+                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="leetcode-搜索-33-搜索旋转排序数组">
                         
-                        <span class="card-title">leetcode-数组-27-移除元素</span>
+                        <span class="card-title">leetcode-搜索-33-搜索旋转排序数组</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            移除元素描述
-给定一个数组 nums 和一个值 val，你需要原地移除所有数值等于 val 的元素，返回移除后数组的新长度。
-不要使用额外的数组空间，你必须在原地修改输入数组并在使用 O(1) 额外空间的条件下完成。
-元素的顺序可以改变。你
+                            33. 搜索旋转排序数组描述
+假设按照升序排序的数组在预先未知的某个点上进行了旋转。
+( 例如，数组 [0,1,2,4,5,6,7] 可能变为 [4,5,6,7,0,1,2] )
+搜索一个给定的目标值，如果数组中存在这个目标值，则返回它的索
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-02-20
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-05-27
                             </span>
                         <span class="publish-author">
                             
@@ -1111,8 +1103,8 @@ let arr = [1,1,'true','true',true,true,15
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/leetcode/" target="_blank">
-                        <span class="chip bg-color">leetcode</span>
+                    <a href="/tags/搜索/" target="_blank">
+                        <span class="chip bg-color">搜索</span>
                     </a>
                     
                 </div>
