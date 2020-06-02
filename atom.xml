@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://liangchaofei.github.io/"/>
-  <updated>2020-06-02T14:17:50.380Z</updated>
+  <updated>2020-06-02T15:57:21.054Z</updated>
   <id>https://liangchaofei.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>js实现promise</title>
+    <link href="https://liangchaofei.github.io/2020/06/02/js-shi-xian-promise/"/>
+    <id>https://liangchaofei.github.io/2020/06/02/js-shi-xian-promise/</id>
+    <published>2020-06-02T15:57:00.000Z</published>
+    <updated>2020-06-02T15:57:21.054Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h4 id&gt;&lt;a href=&quot;#&quot; class=&quot;headerlink&quot; title=&quot;??&quot;&gt;&lt;/a&gt;??&lt;/h4&gt;&lt;pre&gt;&lt;code&gt;new Promise((resolve, reject) =&amp;gt; {
+   
+        
+      
+    
+    </summary>
+    
+      <category term="js" scheme="https://liangchaofei.github.io/categories/js/"/>
+    
+    
+      <category term="promise" scheme="https://liangchaofei.github.io/tags/promise/"/>
+    
+  </entry>
   
   <entry>
     <title>JS数组扁平化(flat)方法总结</title>
@@ -505,32 +532,6 @@
     
     
       <category term="字符串" scheme="https://liangchaofei.github.io/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>js-interview</title>
-    <link href="https://liangchaofei.github.io/2020/05/16/interview-js/"/>
-    <id>https://liangchaofei.github.io/2020/05/16/interview-js/</id>
-    <published>2020-05-16T14:25:53.000Z</published>
-    <updated>2020-05-26T14:21:42.630Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;点击一个input依次触发的事件&quot;&gt;&lt;a href=&quot;#点击一个input依次触发的事件&quot; class=&quot;headerlink&quot; title=&quot;点击一个input依次触发的事件&quot;&gt;&lt;/a&gt;点击一个input依次触发的事件&lt;/h3&gt;&lt;pre
-        
-      
-    
-    </summary>
-    
-      <category term="面试题" scheme="https://liangchaofei.github.io/categories/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
-    
-    
-      <category term="js" scheme="https://liangchaofei.github.io/tags/js/"/>
     
   </entry>
   
