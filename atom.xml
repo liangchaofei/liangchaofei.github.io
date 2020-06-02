@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://liangchaofei.github.io/"/>
-  <updated>2020-06-01T13:48:07.050Z</updated>
+  <updated>2020-06-02T14:17:50.380Z</updated>
   <id>https://liangchaofei.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>JS数组扁平化(flat)方法总结</title>
+    <link href="https://liangchaofei.github.io/2020/06/02/js-shu-zu-bian-ping-hua-flat-fang-fa-zong-jie/"/>
+    <id>https://liangchaofei.github.io/2020/06/02/js-shu-zu-bian-ping-hua-flat-fang-fa-zong-jie/</id>
+    <published>2020-06-02T14:16:17.000Z</published>
+    <updated>2020-06-02T14:17:50.380Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;pre class=&quot;line-numbers language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token comment&quot; spellcheck=&quot;true&quot;&gt;// 第一种&lt;/span&gt;
+&lt;span
+        
+      
+    
+    </summary>
+    
+      <category term="js" scheme="https://liangchaofei.github.io/categories/js/"/>
+    
+    
+      <category term="数组" scheme="https://liangchaofei.github.io/tags/%E6%95%B0%E7%BB%84/"/>
+    
+  </entry>
   
   <entry>
     <title>leetcode-搜索-34-在排序数组中查找元素的第一个和最后一个位置</title>
@@ -504,32 +531,6 @@
     
     
       <category term="js" scheme="https://liangchaofei.github.io/tags/js/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>css-interview</title>
-    <link href="https://liangchaofei.github.io/2020/05/16/interview-css/"/>
-    <id>https://liangchaofei.github.io/2020/05/16/interview-css/</id>
-    <published>2020-05-16T14:22:45.000Z</published>
-    <updated>2020-05-17T13:27:47.239Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;如何解决a标点击后hover事件失效的问题&quot;&gt;&lt;a href=&quot;#如何解决a标点击后hover事件失效的问题&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="css" scheme="https://liangchaofei.github.io/categories/css/"/>
-    
-    
-      <category term="css" scheme="https://liangchaofei.github.io/tags/css/"/>
     
   </entry>
   
