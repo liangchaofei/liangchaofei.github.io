@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://liangchaofei.github.io/2020/05/16/interview-js/</loc>
+    <lastmod>2020-06-02</lastmod>
+  </url>  <url>
     <loc>https://liangchaofei.github.io/2020/06/02/js-shi-xian-promise/</loc>
     <lastmod>2020-06-02</lastmod>
   </url>  <url>
@@ -18,9 +21,6 @@
   </url>  <url>
     <loc>https://liangchaofei.github.io/2020/05/27/leetcode-pai-xu-88-he-bing-liang-ge-you-xu-shu-zu/</loc>
     <lastmod>2020-05-27</lastmod>
-  </url>  <url>
-    <loc>https://liangchaofei.github.io/2020/05/16/interview-js/</loc>
-    <lastmod>2020-05-26</lastmod>
   </url>  <url>
     <loc>https://liangchaofei.github.io/2020/05/25/leetcode-shu-zu-1185-yi-zhou-zhong-de-di-ji-tian/</loc>
     <lastmod>2020-05-25</lastmod>
