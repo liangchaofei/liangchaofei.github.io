@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://liangchaofei.github.io/"/>
-  <updated>2020-06-13T10:11:31.663Z</updated>
+  <updated>2020-06-13T10:42:45.989Z</updated>
   <id>https://liangchaofei.github.io/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>js-手写题</title>
+    <title>js-basic</title>
     <link href="https://liangchaofei.github.io/2020/06/13/js-shou-xie-ti/"/>
     <id>https://liangchaofei.github.io/2020/06/13/js-shou-xie-ti/</id>
     <published>2020-06-13T08:57:03.000Z</published>
-    <updated>2020-06-13T10:11:31.663Z</updated>
+    <updated>2020-06-13T10:42:45.989Z</updated>
     
     <summary type="html">
     
@@ -37,6 +37,8 @@
     
       <category term="js" scheme="https://liangchaofei.github.io/categories/js/"/>
     
+    
+      <category term="????" scheme="https://liangchaofei.github.io/tags//"/>
     
   </entry>
   
