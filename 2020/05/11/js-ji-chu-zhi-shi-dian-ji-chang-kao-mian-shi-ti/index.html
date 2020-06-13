@@ -455,14 +455,14 @@ symbol
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.4k
+                    2.7k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    11 分
+                    12 分
                 </div>
                 
                 
@@ -963,6 +963,64 @@ p1<span class="token punctuation">.</span><span class="token function">setAttrib
 <p>2.window.onerror</p>
 <p>​    对跨域的js,如cdn 不会有详细的报错信息</p>
 <p>​    对应压缩的js,需要配合sourcemap 反查到未压缩的代码行列</p>
+<h3 id="new-Object-和Object-create-区别"><a href="#new-Object-和Object-create-区别" class="headerlink" title="new Object()和Object.create()区别"></a>new Object()和Object.create()区别</h3><p>1.{}等于new Object()。原型是Object.prototype</p>
+<p>2.Object.create(null) 没有原型</p>
+<p>3.Object.create({…}) 指定原型</p>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token keyword">let</span> obj1 <span class="token operator">=</span> <span class="token punctuation">{</span>
+    a<span class="token punctuation">:</span><span class="token number">1</span><span class="token punctuation">,</span>
+    b<span class="token punctuation">:</span><span class="token number">2</span><span class="token punctuation">,</span>
+    sum<span class="token punctuation">:</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>a <span class="token operator">+</span> <span class="token keyword">this</span><span class="token punctuation">.</span>b
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">let</span> obj2 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Object</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    a<span class="token punctuation">:</span><span class="token number">1</span><span class="token punctuation">,</span>
+    b<span class="token punctuation">:</span><span class="token number">2</span><span class="token punctuation">,</span>
+    sum<span class="token punctuation">:</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>a <span class="token operator">+</span> <span class="token keyword">this</span><span class="token punctuation">.</span>b
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>obj1 <span class="token operator">===</span> obj2 <span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// false</span>
+<span class="token keyword">let</span> obj3 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Object</span><span class="token punctuation">(</span>obj1<span class="token punctuation">)</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>obj3 <span class="token operator">===</span> obj1 <span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// true</span>
+
+<span class="token keyword">let</span> obj4 <span class="token operator">=</span>Object<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">)</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>obj4<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 什么也没有</span>
+<span class="token keyword">let</span> obj5 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Object</span><span class="token punctuation">(</span><span class="token punctuation">)</span> 
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>obj5<span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// 有原型</span>
+
+<span class="token keyword">let</span> obj6  <span class="token operator">=</span> Object<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span>obj1<span class="token punctuation">)</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>obj6<span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// 空对象。有原型</span>
+obj6<span class="token punctuation">.</span>__proto <span class="token operator">===</span> obj1<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// true ***</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>obj6 <span class="token operator">===</span> obj1<span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// false</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="数组slice-和-splice-的区别："><a href="#数组slice-和-splice-的区别：" class="headerlink" title="数组slice 和 splice 的区别："></a>数组slice 和 splice 的区别：</h3><p>1.功能区别：slice切片 splice剪接</p>
+<p>2.参数和返回值</p>
+<p>3.是否是纯函数</p>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token keyword">let</span> arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">]</span>
+<span class="token comment" spellcheck="true">// slice</span>
+<span class="token keyword">let</span> arr1 <span class="token operator">=</span> arr<span class="token punctuation">.</span><span class="token function">slice</span><span class="token punctuation">(</span>startIndex<span class="token punctuation">,</span>endIndex<span class="token punctuation">)</span>
+
+<span class="token comment" spellcheck="true">// splice</span>
+<span class="token comment" spellcheck="true">// 插入</span>
+<span class="token keyword">let</span> spliceRes <span class="token operator">=</span> arr<span class="token punctuation">.</span><span class="token function">splice</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token string">'a'</span><span class="token punctuation">)</span> 
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>spliceRes<span class="token punctuation">,</span>arr<span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// [2,3] [1,'a',4]</span>
+<span class="token comment" spellcheck="true">// 增加</span>
+<span class="token keyword">let</span> spliceRes <span class="token operator">=</span> arr<span class="token punctuation">.</span><span class="token function">splice</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token string">'a'</span><span class="token punctuation">)</span> 
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>spliceRes<span class="token punctuation">,</span>arr<span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// [] [1,'a',2,3,4]</span>
+
+<span class="token comment" spellcheck="true">//删除</span>
+<span class="token keyword">let</span> spliceRes <span class="token operator">=</span> arr<span class="token punctuation">.</span><span class="token function">splice</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span> 
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>spliceRes<span class="token punctuation">,</span>arr<span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// [2,3] [1,4]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="10-20-30-map-parseInt-返回结果"><a href="#10-20-30-map-parseInt-返回结果" class="headerlink" title="[10,20,30].map(parseInt)返回结果:"></a>[10,20,30].map(parseInt)返回结果:</h3><pre class="line-numbers language-js"><code class="language-js"><span class="token punctuation">[</span><span class="token number">10</span><span class="token punctuation">,</span><span class="token number">20</span><span class="token punctuation">,</span><span class="token number">30</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token punctuation">(</span>num<span class="token punctuation">,</span>index<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token function">parseInt</span><span class="token punctuation">(</span>num<span class="token punctuation">,</span>index<span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token comment" spellcheck="true">// 相当于</span>
+<span class="token function">parseInt</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// 10</span>
+<span class="token function">parseInt</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// NaN</span>
+<span class="token function">parseInt</span><span class="token punctuation">(</span><span class="token number">30</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// NaN</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
             </div>
             <hr />
@@ -1719,7 +1777,7 @@ offsetWidth：对象整体的实际宽度，
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">29k</span>
+            <span class="white-color">29.3k</span>
             
 
             <br>
