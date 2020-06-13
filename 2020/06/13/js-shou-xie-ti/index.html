@@ -4,14 +4,15 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="leetcode-数组-股票买卖最佳时机合集, 前端">
+    <meta name="keywords" content="js-手写题, 前端">
     <meta name="baidu-site-verification" content>
     <meta name="google-site-verification" content>
     <meta name="360-site-verification" content>
-    <meta name="description" content="121. 买卖股票的最佳时机题目描述（难度：简单）
-给定一个数组，它的第 i 个元素是一支给定股票第 i 天的价格。
-如果你最多只允许完成一笔交易（即买入和卖出一支股票一次），设计一个算法来计算你所能获取的最大利润。
-注意：你不能在买入股票">
+    <meta name="description" content="??function debounce(fn,delay){
+    let timer = null;
+    return function(){
+        if(timer){
+            clearTimeout(">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -19,7 +20,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>leetcode-数组-股票买卖最佳时机合集 | 朝飞的博客</title>
+    <title>js-手写题 | 朝飞的博客</title>
     <link rel="icon" type="image/jpeg" href="/kb.jpg">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -293,13 +294,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/16.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        leetcode-数组-股票买卖最佳时机合集
+                        js-手写题
                     </div>
                 </div>
             </div>
@@ -409,11 +410,7 @@
                 <div class="col s7">
                     
                     <div class="article-tag">
-                        
-                        <a href="/tags/动态规划/" target="_blank">
-                            <span class="chip bg-color">动态规划</span>
-                        </a>
-                        
+                        <span class="chip bg-color">无标签</span>
                     </div>
                     
                 </div>
@@ -422,8 +419,8 @@
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                        <a href="/categories/算法/" class="post-category" target="_blank">
-                            算法
+                        <a href="/categories/js/" class="post-category" target="_blank">
+                            js
                         </a>
                         
                     </div>
@@ -434,7 +431,7 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-05-23
+                    2020-06-13
                 </div>
 
                 <div class="post-author info-break-policy">
@@ -448,14 +445,14 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.3k
+                    422
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    5 分
+                    2 分
                 </div>
                 
                 
@@ -471,116 +468,189 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="121-买卖股票的最佳时机"><a href="#121-买卖股票的最佳时机" class="headerlink" title="121. 买卖股票的最佳时机"></a>121. 买卖股票的最佳时机</h2><h3 id="题目描述（难度：简单）"><a href="#题目描述（难度：简单）" class="headerlink" title="题目描述（难度：简单）"></a>题目描述（难度：简单）</h3><ul>
-<li>给定一个数组，它的第 i 个元素是一支给定股票第 i 天的价格。</li>
-<li>如果你最多只允许完成一笔交易（即买入和卖出一支股票一次），设计一个算法来计算你所能获取的最大利润。</li>
-<li>注意：你不能在买入股票前卖出股票。</li>
-</ul>
-<h3 id="示例1"><a href="#示例1" class="headerlink" title="示例1:"></a>示例1:</h3><pre><code>    输入: [7,1,5,3,6,4]
-    输出: 5
-    解释: 在第 2 天（股票价格 = 1）的时候买入，在第 5 天（股票价格 = 6）的时候卖出，最大利润 = 6-1 = 5 。
-     注意利润不能是 7-1 = 6, 因为卖出价格需要大于买入价格；同时，你不能在买入前卖出股票。</code></pre><h3 id="示例2"><a href="#示例2" class="headerlink" title="示例2:"></a>示例2:</h3><pre><code>    输入: [7,6,4,3,1]
-    输出: 0
-    解释: 在这种情况下, 没有交易完成, 所以最大利润为 0。</code></pre><h3 id="思路1"><a href="#思路1" class="headerlink" title="思路1:"></a>思路1:</h3><ul>
-<li>找最大差值</li>
-</ul>
-<h3 id="代码1"><a href="#代码1" class="headerlink" title="代码1"></a>代码1</h3><pre class="line-numbers language-js"><code class="language-js"><span class="token comment" spellcheck="true">/**
- * @param {number[]} prices
- * @return {number}
- */</span>
-<span class="token keyword">var</span> maxProfit <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span>prices<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">let</span> valley <span class="token operator">=</span> Number<span class="token punctuation">.</span>MAX_SAFE_INTEGER<span class="token punctuation">;</span>
-    <span class="token keyword">let</span> max <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
-    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>prices<span class="token punctuation">.</span>length<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-        <span class="token keyword">if</span><span class="token punctuation">(</span>prices<span class="token punctuation">[</span>i <span class="token operator">&lt;</span> valley<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-            valley <span class="token operator">=</span> prices<span class="token punctuation">[</span>i<span class="token punctuation">]</span>
-        <span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{</span>
-            max <span class="token operator">=</span> Math<span class="token punctuation">.</span><span class="token function">max</span><span class="token punctuation">(</span>max<span class="token punctuation">,</span>prices<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">-</span> valley<span class="token punctuation">)</span>
+                <h3 id><a href="#" class="headerlink" title="??"></a>??</h3><pre class="line-numbers language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">debounce</span><span class="token punctuation">(</span>fn<span class="token punctuation">,</span>delay<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">let</span> timer <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>timer<span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token function">clearTimeout</span><span class="token punctuation">(</span>timer<span class="token punctuation">)</span>
         <span class="token punctuation">}</span>
+
+        timer <span class="token operator">=</span> <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+            fn<span class="token punctuation">.</span><span class="token function">apply</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">,</span>arguments<span class="token punctuation">)</span>
+            timer <span class="token operator">=</span> <span class="token keyword">null</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>delay<span class="token punctuation">)</span>
     <span class="token punctuation">}</span>
-    <span class="token keyword">return</span> max<span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="思路-2"><a href="#思路-2" class="headerlink" title="思路 2"></a>思路 2</h3><ul>
-<li>动态规划</li>
-</ul>
-<h3 id="代码-2"><a href="#代码-2" class="headerlink" title="代码 2"></a>代码 2</h3><pre class="line-numbers language-js"><code class="language-js"><span class="token keyword">var</span> maxProfit <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span>prices<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">let</span> last <span class="token operator">=</span> <span class="token number">0</span>
-    <span class="token keyword">let</span> max <span class="token operator">=</span> <span class="token number">0</span>
-    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> prices<span class="token punctuation">.</span>length<span class="token number">-1</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        last <span class="token operator">=</span> Math<span class="token punctuation">.</span><span class="token function">max</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> last <span class="token operator">+</span> prices<span class="token punctuation">[</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">-</span>prices<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span>
-        max <span class="token operator">=</span> Math<span class="token punctuation">.</span><span class="token function">max</span><span class="token punctuation">(</span>max<span class="token punctuation">,</span>last<span class="token punctuation">)</span>
-    <span class="token punctuation">}</span>
-    <span class="token keyword">return</span> max
 <span class="token punctuation">}</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 id="122-买卖股票的最佳时机-II"><a href="#122-买卖股票的最佳时机-II" class="headerlink" title="122. 买卖股票的最佳时机 II"></a>122. 买卖股票的最佳时机 II</h2><h3 id="题目描述（难度：简单）-1"><a href="#题目描述（难度：简单）-1" class="headerlink" title="题目描述（难度：简单）"></a>题目描述（难度：简单）</h3><ul>
-<li>给定一个数组，它的第 i 个元素是一支给定股票第 i 天的价格。</li>
-<li>设计一个算法来计算你所能获取的最大利润。你可以尽可能地完成更多的交易（多次买卖一支股票）。</li>
-<li>注意：你不能同时参与多笔交易（你必须在再次购买前出售掉之前的股票）。</li>
-</ul>
-<h3 id="示例1-1"><a href="#示例1-1" class="headerlink" title="示例1:"></a>示例1:</h3><pre><code>输入: [7,1,5,3,6,4]
-输出: 7
-解释: 在第 2 天（股票价格 = 1）的时候买入，在第 3 天（股票价格 = 5）的时候卖出, 这笔交易所能获得利润 = 5-1 = 4 。
-     随后，在第 4 天（股票价格 = 3）的时候买入，在第 5 天（股票价格 = 6）的时候卖出, 这笔交易所能获得利润 = 6-3 = 3 。</code></pre><h3 id="示例2-1"><a href="#示例2-1" class="headerlink" title="示例2:"></a>示例2:</h3><pre><code>输入: [1,2,3,4,5]
-输出: 4
-解释: 在第 1 天（股票价格 = 1）的时候买入，在第 5 天 （股票价格 = 5）的时候卖出, 这笔交易所能获得利润 = 5-1 = 4 。
-     注意你不能在第 1 天和第 2 天接连购买股票，之后再将它们卖出。
-     因为这样属于同时参与了多笔交易，你必须在再次购买前出售掉之前的股票。</code></pre><h3 id="示例-3"><a href="#示例-3" class="headerlink" title="示例 3"></a>示例 3</h3><pre><code>输入: [7,6,4,3,1]
-输出: 0
-解释: 在这种情况下, 没有交易完成, 所以最大利润为 0。</code></pre><h3 id="思路1-1"><a href="#思路1-1" class="headerlink" title="思路1:"></a>思路1:</h3><ul>
-<li>1.从前向后遍历数组，从第二个开始</li>
-<li>2.如果当前日的价格比前一日的价格高，则相减得出利润差，累加在总利润上。</li>
-<li>3.遍历到最后一日，退出循环，返回总利润</li>
-</ul>
-<h3 id="代码1-1"><a href="#代码1-1" class="headerlink" title="代码1"></a>代码1</h3><pre class="line-numbers language-js"><code class="language-js"><span class="token keyword">const</span> maxProfit <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>prices<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">let</span> profit <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
-    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> prices<span class="token punctuation">.</span>length <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>prices<span class="token punctuation">[</span>i <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">></span> prices<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span> profit <span class="token operator">+</span><span class="token operator">=</span> prices<span class="token punctuation">[</span>i <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">-</span> prices<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">// ??</span>
+input1<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'keyup'</span><span class="token punctuation">,</span><span class="token function">debounce</span><span class="token punctuation">(</span>e <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>input1<span class="token punctuation">.</span>value<span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token number">600</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="-1"><a href="#-1" class="headerlink" title="??"></a>??</h3><pre class="line-numbers language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">throttle</span><span class="token punctuation">(</span>fn<span class="token punctuation">,</span>delay<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">let</span> timer <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>timer<span class="token punctuation">)</span> <span class="token keyword">return</span><span class="token punctuation">;</span>
+        timer <span class="token operator">=</span> <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+            fn<span class="token punctuation">.</span><span class="token function">apply</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">,</span>arguments<span class="token punctuation">)</span>
+            timer <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>delay<span class="token punctuation">)</span>
     <span class="token punctuation">}</span>
-    <span class="token keyword">return</span> profit<span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="复杂度"><a href="#复杂度" class="headerlink" title="复杂度"></a>复杂度</h3><ul>
-<li>时间复杂度：O(n)</li>
-<li>空间复杂度：O(1)</li>
+<span class="token punctuation">}</span>
+
+<span class="token comment" spellcheck="true">// ??</span>
+div1<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'arag'</span><span class="token punctuation">,</span>e <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>e<span class="token punctuation">.</span>offsetX<span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="-2"><a href="#-2" class="headerlink" title="???"></a>???</h3><ul>
+<li>????<pre class="line-numbers language-js"><code class="language-js"><span class="token keyword">let</span> obj1 <span class="token operator">=</span> <span class="token punctuation">{</span>
+a<span class="token punctuation">:</span> <span class="token string">'1'</span><span class="token punctuation">,</span>
+b<span class="token punctuation">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+c<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+  d<span class="token punctuation">:</span> <span class="token string">'xx'</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span>
+e<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">'1'</span><span class="token punctuation">,</span><span class="token string">'2'</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
 </ul>
-<h2 id="123-买卖股票的最佳时机-III"><a href="#123-买卖股票的最佳时机-III" class="headerlink" title="123. 买卖股票的最佳时机 III"></a>123. 买卖股票的最佳时机 III</h2><h3 id="题目描述（难度：困难）"><a href="#题目描述（难度：困难）" class="headerlink" title="题目描述（难度：困难）"></a>题目描述（难度：困难）</h3><ul>
-<li>给定一个数组，它的第 i 个元素是一支给定的股票在第 i 天的价格。</li>
-<li>设计一个算法来计算你所能获取的最大利润。你最多可以完成 两笔 交易。</li>
-<li>注意: 你不能同时参与多笔交易（你必须在再次购买前出售掉之前的股票）。</li>
-</ul>
-<h3 id="示例-1"><a href="#示例-1" class="headerlink" title="示例 1"></a>示例 1</h3><pre><code>输入: [3,3,5,0,0,3,1,4]
-输出: 6
-解释: 在第 4 天（股票价格 = 0）的时候买入，在第 6 天（股票价格 = 3）的时候卖出，这笔交易所能获得利润 = 3-0 = 3 。
-     随后，在第 7 天（股票价格 = 1）的时候买入，在第 8 天 （股票价格 = 4）的时候卖出，这笔交易所能获得利润 = 4-1 = 3 。</code></pre><h3 id="示例-2"><a href="#示例-2" class="headerlink" title="示例 2"></a>示例 2</h3><pre><code>输入: [1,2,3,4,5]
-输出: 4
-解释: 在第 1 天（股票价格 = 1）的时候买入，在第 5 天 （股票价格 = 5）的时候卖出, 这笔交易所能获得利润 = 5-1 = 4 。   
-     注意你不能在第 1 天和第 2 天接连购买股票，之后再将它们卖出。   
-     因为这样属于同时参与了多笔交易，你必须在再次购买前出售掉之前的股票。</code></pre><h3 id="示例-3-1"><a href="#示例-3-1" class="headerlink" title="示例 3:"></a>示例 3:</h3><pre><code>输入: [7,6,4,3,1] 
-输出: 0 
-解释: 在这个情况下, 没有交易完成, 所以最大利润为 0。</code></pre><h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><ul>
-<li>动态规划</li>
-</ul>
-<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><pre class="line-numbers language-js"><code class="language-js"><span class="token comment" spellcheck="true">/**
- * @param {number[]} prices
- * @return {number}
- */</span>
-<span class="token comment" spellcheck="true">// 动态规划 dp[i][k][j] 第i天，交易k笔，j=0：手中不持有</span>
-<span class="token keyword">var</span> maxProfit <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span>prices<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token comment" spellcheck="true">// 获取初始状态值</span>
-    <span class="token keyword">let</span> dpi10<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>
-    <span class="token keyword">let</span> dpi11<span class="token operator">=</span><span class="token operator">-</span>prices<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-    <span class="token keyword">let</span> dpi20<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>
-    <span class="token keyword">let</span> dpi21<span class="token operator">=</span><span class="token operator">-</span>prices<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-    <span class="token comment" spellcheck="true">//计算第i天</span>
-    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">let</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>prices<span class="token punctuation">.</span>length<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-        dpi10<span class="token operator">=</span>Math<span class="token punctuation">.</span><span class="token function">max</span><span class="token punctuation">(</span>dpi10<span class="token punctuation">,</span>dpi11<span class="token operator">+</span>prices<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        dpi11<span class="token operator">=</span>Math<span class="token punctuation">.</span><span class="token function">max</span><span class="token punctuation">(</span>dpi11<span class="token punctuation">,</span><span class="token operator">-</span>prices<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        dpi20<span class="token operator">=</span>Math<span class="token punctuation">.</span><span class="token function">max</span><span class="token punctuation">(</span>dpi20<span class="token punctuation">,</span>dpi21<span class="token operator">+</span>prices<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        dpi21<span class="token operator">=</span>Math<span class="token punctuation">.</span><span class="token function">max</span><span class="token punctuation">(</span>dpi21<span class="token punctuation">,</span>dpi10<span class="token operator">-</span>prices<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<p>let obj2 = obj1;<br>obj2.c.d = ‘yy’<br>obj2.e[0] = ‘3’<br>console.log(obj1.c.d) // yy<br>console.log(obj1.e[0]) // 3</p>
+<pre><code>+ ????obj2??????obj1??????
++ ??????????????
+```js
+// ???
+function deepClone(obj = {}){
+  // obj ? null ???????????????
+  if(typeof obj !== &#39;object&#39; || typeof == null){
+    return obj;
+  }
+
+  let res;
+  // ???????
+  if(obj instanceof Array){
+    res = []
+  }else{
+    res = {}
+  }
+
+  for(let key in obj){
+    // ?? key ???????
+    if(obj.hasOwnProperty(key)){
+      // ???????
+      res[key] = deepClone(obj[key])
+    }
+  }
+  // ????
+  return res;
+}</code></pre><h3 id="loadsh-isEqual"><a href="#loadsh-isEqual" class="headerlink" title="????loadsh isEqual"></a>????loadsh isEqual</h3><pre class="line-numbers language-js"><code class="language-js"><span class="token comment" spellcheck="true">// ??????????</span>
+<span class="token keyword">function</span> <span class="token function">isObject</span><span class="token punctuation">(</span>obj<span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token keyword">typeof</span> obj <span class="token operator">===</span> <span class="token string">'object'</span> <span class="token operator">&amp;&amp;</span> obj <span class="token operator">!==</span> <span class="token keyword">null</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">isEqual</span><span class="token punctuation">(</span>obj1<span class="token punctuation">,</span>obj2<span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">!</span><span class="token function">isObject</span><span class="token punctuation">(</span>obj1<span class="token punctuation">)</span> <span class="token operator">||</span> <span class="token operator">!</span><span class="token function">isObject</span><span class="token punctuation">(</span>obj2<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// ?????</span>
+    <span class="token keyword">return</span> obj1 <span class="token operator">===</span> obj2
+  <span class="token punctuation">}</span>
+  <span class="token comment" spellcheck="true">// ??????</span>
+  <span class="token keyword">if</span><span class="token punctuation">(</span>obj1 <span class="token operator">===</span> obj2 <span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token comment" spellcheck="true">// ???????????????</span>
+  <span class="token comment" spellcheck="true">// 1. ??? obj1 ? obj2 ? keys ?????</span>
+  <span class="token keyword">const</span> obj1Keys <span class="token operator">=</span> Object<span class="token punctuation">.</span><span class="token function">keys</span><span class="token punctuation">(</span>obj1<span class="token punctuation">)</span>
+  <span class="token keyword">const</span> obj2Keys <span class="token operator">=</span> Object<span class="token punctuation">.</span><span class="token function">keys</span><span class="token punctuation">(</span>obj2<span class="token punctuation">)</span>
+  <span class="token keyword">if</span><span class="token punctuation">(</span>obj1Keys<span class="token punctuation">.</span>length <span class="token operator">!==</span> obj2Keys<span class="token punctuation">.</span>length<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token comment" spellcheck="true">// 2. ? obj1 ????? obj2 ??????</span>
+  <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">let</span> key <span class="token keyword">in</span> obj1<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// ???? key ? val �� ?????</span>
+    <span class="token keyword">const</span> res <span class="token operator">=</span> <span class="token function">isEuqal</span><span class="token punctuation">(</span>obj1<span class="token punctuation">[</span>key<span class="token punctuation">]</span><span class="token punctuation">,</span>obj2<span class="token punctuation">[</span>key<span class="token punctuation">]</span><span class="token punctuation">)</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">!</span>res<span class="token punctuation">)</span><span class="token punctuation">{</span>
+      <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
-    <span class="token keyword">return</span> dpi20
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+  <span class="token punctuation">}</span>
+  <span class="token comment" spellcheck="true">// 3. ???</span>
+  <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="promise"><a href="#promise" class="headerlink" title="??promise??????"></a>??promise??????</h3><pre class="line-numbers language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">loadImg</span><span class="token punctuation">(</span>url<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token punctuation">(</span>resolve<span class="token punctuation">,</span>reject<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">[</span>
+        <span class="token keyword">let</span> img  <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span>img<span class="token punctuation">)</span>
+
+        img<span class="token punctuation">.</span>onload <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+            <span class="token function">resolve</span><span class="token punctuation">(</span>img<span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+
+        img<span class="token punctuation">.</span>onerror <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+            <span class="token function">reject</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Error</span><span class="token punctuation">(</span><span class="token string">'err'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+        img<span class="token punctuation">.</span>src <span class="token operator">=</span> url<span class="token punctuation">;</span>
+    <span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment" spellcheck="true">// ??</span>
+<span class="token keyword">const</span> url1 <span class="token operator">=</span> <span class="token string">''</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> url2 <span class="token operator">=</span> <span class="token string">''</span><span class="token punctuation">;</span>
+ <span class="token function">loadImg</span><span class="token punctuation">(</span>url1<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>img1 <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+     console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>img1<span class="token punctuation">.</span>width<span class="token punctuation">)</span>
+     <span class="token keyword">return</span> img1 <span class="token comment" spellcheck="true">// ????</span>
+ <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>img1 <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+     console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>img1<span class="token punctuation">.</span>height<span class="token punctuation">)</span>
+     <span class="token keyword">return</span> <span class="token function">loadImg</span><span class="token punctuation">(</span>url2<span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// promise ??</span>
+ <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>img2 <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+     console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>img2<span class="token punctuation">.</span>width<span class="token punctuation">)</span>
+     <span class="token keyword">return</span> img2
+ <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>img2 <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+     console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>img2<span class="token punctuation">.</span>height<span class="token punctuation">)</span>
+ <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token keyword">catch</span><span class="token punctuation">(</span>ex <span class="token operator">=</span><span class="token operator">></span> console<span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span>ex<span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="10-a"><a href="#10-a" class="headerlink" title="??10?a??? ?????????"></a>??10?a??? ?????????</h3><pre class="line-numbers language-js"><code class="language-js"><span class="token keyword">let</span> i <span class="token punctuation">,</span> a<span class="token punctuation">;</span>
+<span class="token keyword">for</span><span class="token punctuation">(</span>i <span class="token operator">=</span> <span class="token number">0</span> <span class="token punctuation">;</span>i <span class="token operator">&lt;</span> <span class="token number">10</span><span class="token punctuation">;</span> i<span class="token operator">++</span> <span class="token punctuation">)</span><span class="token punctuation">{</span>
+    a <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span><span class="token string">'a'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    a<span class="token punctuation">.</span>innerHTML <span class="token operator">=</span> i <span class="token operator">+</span> <span class="token string">'&lt;br />'</span><span class="token punctuation">;</span>
+    a<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'click'</span><span class="token punctuation">,</span> e <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+        e<span class="token punctuation">.</span><span class="token function">preventDefault</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">alert</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    document<span class="token punctuation">.</span>body<span class="token punctuation">.</span><span class="token function">appendChild</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="bind"><a href="#bind" class="headerlink" title="??bind"></a>??bind</h3><pre class="line-numbers language-js"><code class="language-js">Function<span class="token punctuation">.</span>prototype<span class="token punctuation">.</span>mybind <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">const</span> args <span class="token operator">=</span> Array<span class="token punctuation">.</span>prototype<span class="token punctuation">.</span>slice<span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span>arguments<span class="token punctuation">)</span>
+    <span class="token keyword">const</span> t <span class="token operator">=</span> args<span class="token punctuation">.</span><span class="token function">shift</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+    <span class="token keyword">const</span> self <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">return</span> self<span class="token punctuation">.</span><span class="token function">apply</span><span class="token punctuation">(</span>t<span class="token punctuation">,</span>args<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment" spellcheck="true">// ??</span>
+<span class="token keyword">function</span> <span class="token function">fn1</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">,</span> c<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'this'</span><span class="token punctuation">,</span> <span class="token keyword">this</span><span class="token punctuation">)</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">,</span> c<span class="token punctuation">)</span>
+    <span class="token keyword">return</span> <span class="token string">'this is fn1'</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">const</span> fn2 <span class="token operator">=</span> fn1<span class="token punctuation">.</span><span class="token function">bind1</span><span class="token punctuation">(</span><span class="token punctuation">{</span>x<span class="token punctuation">:</span> <span class="token number">100</span><span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">20</span><span class="token punctuation">,</span> <span class="token number">30</span><span class="token punctuation">)</span>
+<span class="token keyword">const</span> res <span class="token operator">=</span> <span class="token function">fn2</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>res<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="ajax"><a href="#ajax" class="headerlink" title="????ajax"></a>????ajax</h3><pre class="line-numbers language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">ajax</span><span class="token punctuation">(</span>url<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token punctuation">(</span>resolve<span class="token punctuation">,</span>reject<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+        <span class="token keyword">let</span> xhr <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">XMLHttpRequest</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        xhr<span class="token punctuation">.</span><span class="token function">open</span><span class="token punctuation">(</span><span class="token string">'get'</span><span class="token punctuation">,</span>url<span class="token punctuation">,</span><span class="token boolean">true</span><span class="token punctuation">)</span>
+        xhr<span class="token punctuation">.</span>onreadystatechange<span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">if</span><span class="token punctuation">(</span>xhr<span class="token punctuation">.</span>readystate <span class="token operator">===</span> <span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+                <span class="token keyword">if</span><span class="token punctuation">(</span>xhr<span class="token punctuation">.</span>status <span class="token operator">===</span> <span class="token number">200</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+                    <span class="token function">resolve</span><span class="token punctuation">(</span>xhr<span class="token punctuation">.</span>responseText<span class="token punctuation">)</span>
+                <span class="token punctuation">}</span><span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span>xhr<span class="token punctuation">.</span>status <span class="token operator">===</span> <span class="token number">400</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+                    <span class="token function">reject</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Error</span><span class="token punctuation">(</span><span class="token string">'404'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment" spellcheck="true">// ??</span>
+<span class="token function">ajax</span><span class="token punctuation">(</span>url<span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token function">then</span><span class="token punctuation">(</span>res <span class="token operator">=</span><span class="token operator">></span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>res<span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
             </div>
             <hr />
@@ -739,9 +809,9 @@
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《leetcode-数组-股票买卖最佳时机合集》
+                    《js-手写题》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/2020/05/23/leetcode-shu-zu-gu-piao-mai-mai-zui-jia-shi-ji-he-ji/" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2020/06/13/js-shou-xie-ti/" property="cc:attributionName"
                rel="cc:attributionURL">
                 朝飞
             </a> 采用
@@ -782,7 +852,7 @@
         repo: 'liangchaofei.github.io',
         owner: 'liangchaofei',
         admin: "liangchaofei",
-        id: '2020/05/23/leetcode-shu-zu-gu-piao-mai-mai-zui-jia-shi-ji-he-ji/',
+        id: '2020/06/13/js-shou-xie-ti/',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -1065,58 +1135,47 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2020/05/23/leetcode-shu-zu-283-yi-dong-ling/">
+                <a href="/2020/06/13/js-shou-xie-ti/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="leetcode-数组-283-移动零">
+                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="js-手写题">
                         
-                        <span class="card-title">leetcode-数组-283-移动零</span>
+                        <span class="card-title">js-手写题</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            283. 移动零题目描述（难度：简单）
-给定一个数组 nums，编写一个函数将所有 0 移动到数组的末尾，同时保持非零元素的相对顺序。说明:
-
-
-必须在原数组上操作，不能拷贝额外的数组。
-尽量减少操作次数。
-
-示例:
-
-Input: [0,
+                            ??function debounce(fn,delay){
+    let timer = null;
+    return function(){
+        if(timer){
+            clearTimeout(
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2020-05-23
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-06-13
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/算法/" class="post-category" target="_blank">
-                                    算法
+                            <a href="/categories/js/" class="post-category" target="_blank">
+                                    js
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/数组/" target="_blank">
-                        <span class="chip bg-color">数组</span>
-                    </a>
-                    
-                </div>
+
                 
             </div>
         </div>
@@ -1127,38 +1186,34 @@ Input: [0,
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/05/20/leetcode-shu-zu-48-xuan-zhuan-tu-xiang/">
+                <a href="/2020/06/02/js-shi-xian-promise/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="leetcode-数组-48-旋转图像">
+                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="js实现promise">
                         
-                        <span class="card-title">leetcode-数组-48-旋转图像</span>
+                        <span class="card-title">js实现promise</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            48. 旋转图像描述
-给定一个 n × n 的二维矩阵表示一个图像。
-将图像顺时针旋转 90 度。
-你必须在原地旋转图像，这意味着你需要直接修改输入的二维矩阵。请不要使用另一个矩阵来旋转图像
-
-示例 1给定 matrix = 
-[
-  [1
+                            ??new Promise((resolve, reject) =&gt; {
+    //??????resolve?????reject
+}).then((res) =&gt; {
+    //resolve???????????   
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-05-20
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-06-02
                             </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/算法/" class="post-category" target="_blank">
-                                    算法
+                            <a href="/categories/js/" class="post-category" target="_blank">
+                                    js
                                 </a>
                             
                             
@@ -1168,8 +1223,8 @@ Input: [0,
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/数组/" target="_blank">
-                        <span class="chip bg-color">数组</span>
+                    <a href="/tags/promise/" target="_blank">
+                        <span class="chip bg-color">promise</span>
                     </a>
                     
                 </div>

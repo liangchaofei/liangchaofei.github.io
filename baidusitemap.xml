@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://liangchaofei.github.io/2020/05/11/js-ji-chu-zhi-shi-dian-ji-chang-kao-mian-shi-ti/</loc>
+    <lastmod>2020-06-13</lastmod>
+  </url>  <url>
+    <loc>https://liangchaofei.github.io/2020/06/13/js-shou-xie-ti/</loc>
+    <lastmod>2020-06-13</lastmod>
+  </url>  <url>
     <loc>https://liangchaofei.github.io/2020/05/16/interview-js/</loc>
     <lastmod>2020-06-03</lastmod>
   </url>  <url>
@@ -108,9 +114,6 @@
   </url>  <url>
     <loc>https://liangchaofei.github.io/2020/02/19/promise-all-bing-fa-xian-zhi/</loc>
     <lastmod>2020-05-14</lastmod>
-  </url>  <url>
-    <loc>https://liangchaofei.github.io/2020/05/11/js-ji-chu-zhi-shi-dian-ji-chang-kao-mian-shi-ti/</loc>
-    <lastmod>2020-05-13</lastmod>
   </url>  <url>
     <loc>https://liangchaofei.github.io/2020/05/07/git/</loc>
     <lastmod>2020-05-07</lastmod>
