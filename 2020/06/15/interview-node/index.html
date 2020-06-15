@@ -4,14 +4,11 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="leetcode-数组-27-移除元素, 前端">
+    <meta name="keywords" content="interview-node, 前端">
     <meta name="baidu-site-verification" content>
     <meta name="google-site-verification" content>
     <meta name="360-site-verification" content>
-    <meta name="description" content="移除元素描述
-给定一个数组 nums 和一个值 val，你需要原地移除所有数值等于 val 的元素，返回移除后数组的新长度。
-不要使用额外的数组空间，你必须在原地修改输入数组并在使用 O(1) 额外空间的条件下完成。
-元素的顺序可以改变。你">
+    <meta name="description" content="node 相关">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -19,7 +16,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>leetcode-数组-27-移除元素 | 朝飞的博客</title>
+    <title>interview-node | 朝飞的博客</title>
     <link rel="icon" type="image/jpeg" href="/kb.jpg">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -293,13 +290,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/17.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        leetcode-数组-27-移除元素
+                        interview-node
                     </div>
                 </div>
             </div>
@@ -410,8 +407,8 @@
                     
                     <div class="article-tag">
                         
-                        <a href="/tags/leetcode/" target="_blank">
-                            <span class="chip bg-color">leetcode</span>
+                        <a href="/tags/js/" target="_blank">
+                            <span class="chip bg-color">js</span>
                         </a>
                         
                     </div>
@@ -422,8 +419,8 @@
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                        <a href="/categories/算法/" class="post-category" target="_blank">
-                            算法
+                        <a href="/categories/node/" class="post-category" target="_blank">
+                            node
                         </a>
                         
                     </div>
@@ -434,7 +431,7 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-02-20
+                    2020-06-15
                 </div>
 
                 <div class="post-author info-break-policy">
@@ -448,7 +445,7 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    470
+                    3
                 </div>
                 
 
@@ -471,67 +468,7 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="移除元素"><a href="#移除元素" class="headerlink" title="移除元素"></a>移除元素</h2><h3 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h3><ul>
-<li>给定一个数组 nums 和一个值 val，你需要原地移除所有数值等于 val 的元素，返回移除后数组的新长度。</li>
-<li>不要使用额外的数组空间，你必须在原地修改输入数组并在使用 O(1) 额外空间的条件下完成。</li>
-<li>元素的顺序可以改变。你不需要考虑数组中超出新长度后面的元素。</li>
-</ul>
-<h3 id="示例1"><a href="#示例1" class="headerlink" title="示例1"></a>示例1</h3><pre><code>    给定 nums = [3,2,2,3], val = 3,
-
-    函数应该返回新的长度 2, 并且 nums 中的前两个元素均为 2。
-
-    你不需要考虑数组中超出新长度后面的元素。</code></pre><h3 id="示例2"><a href="#示例2" class="headerlink" title="示例2"></a>示例2</h3><pre><code>    给定 nums = [0,1,2,2,3,0,4,2], val = 2,
-
-    函数应该返回新的长度 5, 并且 nums 中的前五个元素为 0, 1, 3, 0, 4。
-
-    注意这五个元素可为任意顺序。
-
-    你不需要考虑数组中超出新长度后面的元素。
-</code></pre><h3 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h3><ul>
-<li>1.暴力法：判断元素是否等于目标值，如果是，则用JavaScript内置函数splice删除该元素，最后返回数组长度</li>
-<li>2.迁移法：从前往后遍历，建立一个索引值，将不等于目标值的元素按新索引值赋予给数组，返回新索引值</li>
-</ul>
-<h4 id="暴力法"><a href="#暴力法" class="headerlink" title="暴力法"></a>暴力法</h4><pre class="line-numbers language-js"><code class="language-js">    <span class="token comment" spellcheck="true">/**
-     * JavaScript暴力法
-     * @param {number[]} nums
-     * @param {number} val
-     * @return {number}
-     */</span>
-    <span class="token comment" spellcheck="true">// 数组从后向前遍历</span>
-    <span class="token keyword">var</span> removeElement <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span>nums<span class="token punctuation">,</span> val<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token comment" spellcheck="true">// 思考：为什么从后往前移动</span>
-        <span class="token comment" spellcheck="true">// 提示：数组的变化</span>
-        <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> nums<span class="token punctuation">.</span>length <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">>=</span> <span class="token number">0</span><span class="token punctuation">;</span> i<span class="token operator">--</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            <span class="token keyword">if</span> <span class="token punctuation">(</span>nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">===</span> val<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-                <span class="token comment" spellcheck="true">// 删除原数组元素</span>
-                nums<span class="token punctuation">.</span><span class="token function">splice</span><span class="token punctuation">(</span>i<span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span>
-            <span class="token punctuation">}</span>
-        <span class="token punctuation">}</span>
-        <span class="token keyword">return</span> nums<span class="token punctuation">.</span>length<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span><span class="token punctuation">;</span>
-
-    <span class="token comment" spellcheck="true">// 数组从前向后遍历</span>
-    <span class="token keyword">var</span> removeElement <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span>nums<span class="token punctuation">,</span> val<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i<span class="token operator">&lt;</span>nums<span class="token punctuation">.</span>length<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            <span class="token keyword">if</span> <span class="token punctuation">(</span>nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">===</span> val<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-                <span class="token comment" spellcheck="true">// 删除原数组元素</span>
-                nums<span class="token punctuation">.</span><span class="token function">splice</span><span class="token punctuation">(</span>i<span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span>
-                i<span class="token operator">--</span>
-            <span class="token punctuation">}</span>
-        <span class="token punctuation">}</span>
-        <span class="token keyword">return</span> nums<span class="token punctuation">.</span>length<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h4 id="迁移法"><a href="#迁移法" class="headerlink" title="迁移法"></a>迁移法</h4><pre class="line-numbers language-js"><code class="language-js">    <span class="token keyword">var</span> removeElement <span class="token operator">=</span> <span class="token punctuation">(</span>nums<span class="token punctuation">,</span>val<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
-        <span class="token keyword">let</span> index <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
-        <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>nums<span class="token punctuation">.</span>length<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-            <span class="token keyword">if</span><span class="token punctuation">(</span>nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">!==</span> val<span class="token punctuation">)</span><span class="token punctuation">{</span>
-                nums<span class="token punctuation">[</span>index<span class="token punctuation">]</span> <span class="token operator">=</span> nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span>
-                index<span class="token operator">++</span>
-            <span class="token punctuation">}</span>
-        <span class="token punctuation">}</span>
-        <span class="token keyword">return</span> index<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
+                <h3 id="node-相关"><a href="#node-相关" class="headerlink" title="node 相关"></a>node 相关</h3>
             </div>
             <hr />
 
@@ -689,9 +626,9 @@
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《leetcode-数组-27-移除元素》
+                    《interview-node》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/2020/02/20/leetcode-shu-zu-27-yi-chu-yuan-su/" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2020/06/15/interview-node/" property="cc:attributionName"
                rel="cc:attributionURL">
                 朝飞
             </a> 采用
@@ -732,7 +669,7 @@
         repo: 'liangchaofei.github.io',
         owner: 'liangchaofei',
         admin: "liangchaofei",
-        id: '2020/02/20/leetcode-shu-zu-27-yi-chu-yuan-su/',
+        id: '2020/06/15/interview-node/',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -1015,52 +952,48 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2020/02/21/leetcode-shu-zu-35-sou-suo-cha-ru-wei-zhi/">
+                <a href="/2020/06/15/interview-node/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="leetcode-数组-35-搜索插入位置">
+                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="interview-node">
                         
-                        <span class="card-title">leetcode-数组-35-搜索插入位置</span>
+                        <span class="card-title">interview-node</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            搜索插入位置题目描述（难度：简单）
-给定一个排序数组和一个目标值，在数组中找到目标值，并返回其索引。如果目标值不存在于数组中，返回它将会被按顺序插入的位置。
-
-你可以假设数组中无重复元素。
-
-
-示例 1:    输入: [1,3,5,6],
+                            node 相关
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2020-02-21
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-06-15
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/算法/" class="post-category" target="_blank">
-                                    算法
+                            <a href="/categories/node/" class="post-category" target="_blank">
+                                    node
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/leetcode/" target="_blank">
-                        <span class="chip bg-color">leetcode</span>
+                    <a href="/tags/js/" target="_blank">
+                        <span class="chip bg-color">js</span>
                     </a>
                     
                 </div>
@@ -1074,35 +1007,35 @@
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/02/20/leetcode-shu-zu-26-shan-chu-pai-xu-shu-zu-zhong-de-chong-fu-xiang/">
+                <a href="/2020/06/13/js-shou-xie-ti/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="leetcode-数组-26-删除排序数组中的重复项">
+                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="js-basic">
                         
-                        <span class="card-title">leetcode-数组-26-删除排序数组中的重复项</span>
+                        <span class="card-title">js-basic</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            26. 删除排序数组中的重复项描述
-给定一个排序数组，你需要在 原地 删除重复出现的元素，使得每个元素只出现一次，返回移除后数组的新长度。
-不要使用额外的数组空间，你必须在 原地 修改输入数组 并在使用 O(1) 额外空间的条件下完成。
-
-
+                            ??function debounce(fn,delay){
+    let timer = null;
+    return function(){
+        if(timer){
+            clearTimeout(
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-02-20
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-06-13
                             </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/算法/" class="post-category" target="_blank">
-                                    算法
+                            <a href="/categories/js/" class="post-category" target="_blank">
+                                    js
                                 </a>
                             
                             
@@ -1112,8 +1045,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/数组/" target="_blank">
-                        <span class="chip bg-color">数组</span>
+                    <a href="/tags/js/" target="_blank">
+                        <span class="chip bg-color">js</span>
                     </a>
                     
                 </div>
