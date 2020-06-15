@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://liangchaofei.github.io/2020/05/17/interview-react/</loc>
+    
+    <lastmod>2020-06-15T13:35:56.323Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://liangchaofei.github.io/2020/06/15/interview-node/</loc>
     
     <lastmod>2020-06-15T10:41:07.564Z</lastmod>
@@ -26,13 +33,6 @@
     <loc>https://liangchaofei.github.io/2020/05/17/interview-webpack/</loc>
     
     <lastmod>2020-06-13T10:45:49.659Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liangchaofei.github.io/2020/05/17/interview-react/</loc>
-    
-    <lastmod>2020-06-13T10:45:02.662Z</lastmod>
     
   </url>
   
