@@ -13,6 +13,7 @@
 this.handle = this.handle.bind(this)
 
 
+
 aaa
 
 handle(){}
@@ -20,8 +21,7 @@ handle(){}
 aaa
 
 handle = () =&amp;gt; {}
-+ event
-">
++ event">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -482,9 +482,10 @@ handle = () =&amp;gt; {}
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h2 id="react相关知识点"><a href="#react相关知识点" class="headerlink" title="react相关知识点"></a>react相关知识点</h2><h3 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h3><ul>
-<li>事件绑定<pre><code>// 第一种
-this.handle = this.handle.bind(this)
-</code></pre></li>
+<li>事件绑定<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">// 第一种</span>
+<span class="token keyword">this</span><span class="token punctuation">.</span>handle <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>handle<span class="token punctuation">.</span><span class="token function">bind</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+</li>
 </ul>
 <p onclick="{this.handle}">aaa</p>
 
@@ -515,7 +516,7 @@ clickHandler = (event) =&gt; {
         // 3. 所有的事件，都被挂载到 document 上
         // 4. 和 DOM 事件不一样，和 Vue 事件也不一样
     }</code></pre><ul>
-<li><p>合成事件：<br><img src="./react-interview/and_event.png" alt></p>
+<li><p>合成事件：<br><img src="/react-interview/and_event.png" alt></p>
 </li>
 <li><p>为什么要合成事件机制？</p>
 </li>
