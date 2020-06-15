@@ -8,20 +8,14 @@
     <meta name="baidu-site-verification" content>
     <meta name="google-site-verification" content>
     <meta name="360-site-verification" content>
-    <meta name="description" content="react相关知识点事件
-事件绑定// 第一种
+    <meta name="description" content="react相关知识点事件事件绑定// 第一种
 this.handle = this.handle.bind(this)
 
-
-
-aaa
+// &amp;lt;p onClick={this.handle}&gt;aaa&amp;lt;/p&gt;
 
 handle(){}
-// 第二种
-aaa
 
-handle = () =&amp;gt; {}
-+ event">
+// 第">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -458,7 +452,7 @@ handle = () =&amp;gt; {}
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    346
+                    342
                 </div>
                 
 
@@ -481,45 +475,40 @@ handle = () =&amp;gt; {}
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="react相关知识点"><a href="#react相关知识点" class="headerlink" title="react相关知识点"></a>react相关知识点</h2><h3 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h3><ul>
-<li>事件绑定<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">// 第一种</span>
+                <h2 id="react相关知识点"><a href="#react相关知识点" class="headerlink" title="react相关知识点"></a>react相关知识点</h2><h3 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h3><h4 id="事件绑定"><a href="#事件绑定" class="headerlink" title="事件绑定"></a>事件绑定</h4><pre class="line-numbers language-js"><code class="language-js"><span class="token comment" spellcheck="true">// 第一种</span>
 <span class="token keyword">this</span><span class="token punctuation">.</span>handle <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>handle<span class="token punctuation">.</span><span class="token function">bind</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-</li>
-</ul>
-<p onclick="{this.handle}">aaa</p>
 
-<p>handle(){}</p>
-<p>// 第二种</p>
-<p onclick="{this.handle}">aaa</p>
+<span class="token comment" spellcheck="true">// &lt;p onClick={this.handle}>aaa&lt;/p></span>
 
-<p>handle = () =&gt; {}</p>
-<pre><code>+ event
-```js
-clickHandler = (event) =&gt; {
-        event.preventDefault() // 阻止默认行为
-        event.stopPropagation() // 阻止冒泡
-        console.log(&#39;target&#39;, event.target) // 指向当前元素，即当前元素触发
-        console.log(&#39;current target&#39;, event.currentTarget) // 指向当前元素，假象！！！
+<span class="token function">handle</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span>
 
-        // 注意，event 其实是 React 封装的。可以看 __proto__.constructor 是 SyntheticEvent 组合事件
-        console.log(&#39;event&#39;, event) // 不是原生的 Event ，原生的 MouseEvent
-        console.log(&#39;event.__proto__.constructor&#39;, event.__proto__.constructor)
+<span class="token comment" spellcheck="true">// 第二种</span>
+<span class="token comment" spellcheck="true">// &lt;p onClick={this.handle}>aaa&lt;/p> </span>
 
-        // 原生 event 如下。其 __proto__.constructor 是 MouseEvent
-        console.log(&#39;nativeEvent&#39;, event.nativeEvent)
-        console.log(&#39;nativeEvent target&#39;, event.nativeEvent.target)  // 指向当前元素，即当前元素触发
-        console.log(&#39;nativeEvent current target&#39;, event.nativeEvent.currentTarget) // 指向 document ！！！
+handle <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="event"><a href="#event" class="headerlink" title="event"></a>event</h4><pre class="line-numbers language-js"><code class="language-js">clickHandler <span class="token operator">=</span> <span class="token punctuation">(</span>event<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+        event<span class="token punctuation">.</span><span class="token function">preventDefault</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// 阻止默认行为</span>
+        event<span class="token punctuation">.</span><span class="token function">stopPropagation</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// 阻止冒泡</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'target'</span><span class="token punctuation">,</span> event<span class="token punctuation">.</span>target<span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// 指向当前元素，即当前元素触发</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'current target'</span><span class="token punctuation">,</span> event<span class="token punctuation">.</span>currentTarget<span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// 指向当前元素，假象！！！</span>
 
-        // 1. event 是 SyntheticEvent ，模拟出来 DOM 事件所有能力
-        // 2. event.nativeEvent 是原生事件对象
-        // 3. 所有的事件，都被挂载到 document 上
-        // 4. 和 DOM 事件不一样，和 Vue 事件也不一样
-    }</code></pre><ul>
-<li><p>合成事件：<br><img src="/react-interview/and_event.png" alt></p>
-</li>
-<li><p>为什么要合成事件机制？</p>
-</li>
+        <span class="token comment" spellcheck="true">// 注意，event 其实是 React 封装的。可以看 __proto__.constructor 是 SyntheticEvent 组合事件</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'event'</span><span class="token punctuation">,</span> event<span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// 不是原生的 Event ，原生的 MouseEvent</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'event.__proto__.constructor'</span><span class="token punctuation">,</span> event<span class="token punctuation">.</span>__proto__<span class="token punctuation">.</span>constructor<span class="token punctuation">)</span>
+
+        <span class="token comment" spellcheck="true">// 原生 event 如下。其 __proto__.constructor 是 MouseEvent</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'nativeEvent'</span><span class="token punctuation">,</span> event<span class="token punctuation">.</span>nativeEvent<span class="token punctuation">)</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'nativeEvent target'</span><span class="token punctuation">,</span> event<span class="token punctuation">.</span>nativeEvent<span class="token punctuation">.</span>target<span class="token punctuation">)</span>  <span class="token comment" spellcheck="true">// 指向当前元素，即当前元素触发</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'nativeEvent current target'</span><span class="token punctuation">,</span> event<span class="token punctuation">.</span>nativeEvent<span class="token punctuation">.</span>currentTarget<span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// 指向 document ！！！</span>
+
+        <span class="token comment" spellcheck="true">// 1. event 是 SyntheticEvent ，模拟出来 DOM 事件所有能力</span>
+        <span class="token comment" spellcheck="true">// 2. event.nativeEvent 是原生事件对象</span>
+        <span class="token comment" spellcheck="true">// 3. 所有的事件，都被挂载到 document 上</span>
+        <span class="token comment" spellcheck="true">// 4. 和 DOM 事件不一样，和 Vue 事件也不一样</span>
+    <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="合成事件："><a href="#合成事件：" class="headerlink" title="合成事件："></a>合成事件：</h4><p><img src="/medias/and_event.png" alt></p>
+<ul>
+<li>为什么要合成事件机制？</li>
 </ul>
 <p>1.更好的兼容性和跨平台</p>
 <p>2.载到document,减少内存消耗，避免频繁解绑</p>
