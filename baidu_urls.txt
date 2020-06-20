@@ -1,3 +1,4 @@
+https://liangchaofei.github.io/2020/06/20/promise-async-await/
 https://liangchaofei.github.io/2020/06/20/redux-react-redux/
 https://liangchaofei.github.io/2020/06/15/interview-node/
 https://liangchaofei.github.io/2020/06/13/js-shou-xie-ti/

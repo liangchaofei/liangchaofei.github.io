@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://liangchaofei.github.io/"/>
-  <updated>2020-06-20T06:53:13.953Z</updated>
+  <updated>2020-06-20T07:11:34.172Z</updated>
   <id>https://liangchaofei.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>promise-async-await</title>
+    <link href="https://liangchaofei.github.io/2020/06/20/promise-async-await/"/>
+    <id>https://liangchaofei.github.io/2020/06/20/promise-async-await/</id>
+    <published>2020-06-20T07:11:16.000Z</published>
+    <updated>2020-06-20T07:11:34.172Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;笔者刚接触&lt;code&gt;async/await&lt;/code&gt;时，就被其暂停执行的特性吸引了，心想在没有原生API支持的情况下，await居然能挂起当前方法，实现暂停执行，我感到十分好奇。好奇心驱使我一层一层剥开有关JS异步编程的一切。阅读完本文，读者应该能够了解：&lt;/p&gt;
+&lt;
+        
+      
+    
+    </summary>
+    
+      <category term="js" scheme="https://liangchaofei.github.io/categories/js/"/>
+    
+    
+      <category term="promise" scheme="https://liangchaofei.github.io/tags/promise/"/>
+    
+  </entry>
   
   <entry>
     <title>redux/react-redux</title>
@@ -506,32 +533,6 @@
     
     
       <category term="安全" scheme="https://liangchaofei.github.io/tags/%E5%AE%89%E5%85%A8/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>http-interview</title>
-    <link href="https://liangchaofei.github.io/2020/05/17/interview-http/"/>
-    <id>https://liangchaofei.github.io/2020/05/17/interview-http/</id>
-    <published>2020-05-17T08:30:55.000Z</published>
-    <updated>2020-06-20T02:42:40.365Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;HTTP和TCP的不同&quot;&gt;&lt;a href=&quot;#HTTP和TCP的不同&quot; class=&quot;headerlink&quot; title=&quot;HTTP和TCP的不同&quot;&gt;&lt;/a&gt;HTTP和TCP的不同&lt;/h3&gt;&lt;h3 id=&quot;TCP和UDP的区别&quot;&gt;&lt;a
-        
-      
-    
-    </summary>
-    
-      <category term="网络" scheme="https://liangchaofei.github.io/categories/%E7%BD%91%E7%BB%9C/"/>
-    
-    
-      <category term="HTTP" scheme="https://liangchaofei.github.io/tags/HTTP/"/>
     
   </entry>
   
