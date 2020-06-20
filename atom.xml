@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://liangchaofei.github.io/"/>
-  <updated>2020-06-15T10:41:07.564Z</updated>
+  <updated>2020-06-20T06:53:13.953Z</updated>
   <id>https://liangchaofei.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>redux/react-redux</title>
+    <link href="https://liangchaofei.github.io/2020/06/20/redux-react-redux/"/>
+    <id>https://liangchaofei.github.io/2020/06/20/redux-react-redux/</id>
+    <published>2020-06-20T06:52:46.000Z</published>
+    <updated>2020-06-20T06:53:13.953Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;其实笔者本来没有redux相关的行文计划，不过公司内部最近有同事作了redux相关的技术分享,而笔者承担了一部分文章评审的任务，在评审的过程中，笔者花了相当的精力时间来查阅资料和实现代码，前后积攒了几千字的笔记，对redux也有了一份心得见解，于是顺手写就本文，希望能给大家
+        
+      
+    
+    </summary>
+    
+      <category term="react" scheme="https://liangchaofei.github.io/categories/react/"/>
+    
+    
+      <category term="框架" scheme="https://liangchaofei.github.io/tags/%E6%A1%86%E6%9E%B6/"/>
+    
+  </entry>
   
   <entry>
     <title>interview-node</title>
@@ -488,7 +514,7 @@
     <link href="https://liangchaofei.github.io/2020/05/17/interview-http/"/>
     <id>https://liangchaofei.github.io/2020/05/17/interview-http/</id>
     <published>2020-05-17T08:30:55.000Z</published>
-    <updated>2020-05-19T15:46:13.720Z</updated>
+    <updated>2020-06-20T02:42:40.365Z</updated>
     
     <summary type="html">
     
@@ -506,32 +532,6 @@
     
     
       <category term="HTTP" scheme="https://liangchaofei.github.io/tags/HTTP/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>webpack-interview</title>
-    <link href="https://liangchaofei.github.io/2020/05/17/interview-webpack/"/>
-    <id>https://liangchaofei.github.io/2020/05/17/interview-webpack/</id>
-    <published>2020-05-17T08:28:50.000Z</published>
-    <updated>2020-06-13T10:45:49.659Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;webpack中的loader和plugin有什么区别&quot;&gt;&lt;a href=&quot;#webpack中的loader和plugin有什么区别&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="基础工程" scheme="https://liangchaofei.github.io/categories/%E5%9F%BA%E7%A1%80%E5%B7%A5%E7%A8%8B/"/>
-    
-    
-      <category term="webpack" scheme="https://liangchaofei.github.io/tags/webpack/"/>
     
   </entry>
   
