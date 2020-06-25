@@ -297,7 +297,7 @@ handle(){}
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/16.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/19.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -829,36 +829,18 @@ count<span class="token punctuation">:</span><span class="token keyword">this</s
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 </li>
 </ul>
-<p>// 传入函数，不会被合并。执行结果是3<br>this.setState((prevState,props) =&gt; {<br>  return {<br>    count:prevState + 1<br>  }<br>})<br>this.setState((prevState,props) =&gt; {<br>  return {<br>    count:prevState + 1<br>  }<br>})<br>this.setState((prevState,props) =&gt; {<br>  return {<br>    count:prevState + 1<br>  }<br>})</p>
-<pre><code>
-#### setstate到底是异步还是同步
-1.setstate无所谓是同步还是异步
+<p>// 传入函数，不会被合并。执行结果是3<br>this.setState((prevState,props) =&gt; {<br>  return {<br>    count:prevState + 1<br>  }<br>})<br>this.setState((prevState,props) =&gt; {<br>  return {<br>    count:prevState + 1<br>  }<br>})<br>this.setState((prevState,props) =&gt; {<br>  return {<br>    count:prevState + 1<br>  }<br>})<br>```</p>
+<h4 id="setstate到底是异步还是同步"><a href="#setstate到底是异步还是同步" class="headerlink" title="setstate到底是异步还是同步"></a>setstate到底是异步还是同步</h4><p>1.setstate无所谓是同步还是异步</p>
+<p>2.看是否能命中batchUpdate机制</p>
+<p>3.判断isBatchingUpdates</p>
+<p>哪些不能名字batchupdate机制</p>
+<p>1.setTimeout</p>
+<p>2.自定义的dom事件</p>
+<h3 id="vdom和diff"><a href="#vdom和diff" class="headerlink" title="vdom和diff"></a>vdom和diff</h3><p>只比较同一层级，不跨级比较</p>
+<p>tag不相同，则直接删除重建，不再深度比较</p>
+<p>tag和key相同，则一样</p>
+<h3 id="基于react设计一个todolist-组件结构，redux-state-数据结构"><a href="#基于react设计一个todolist-组件结构，redux-state-数据结构" class="headerlink" title="基于react设计一个todolist(组件结构，redux state 数据结构)"></a>基于react设计一个todolist(组件结构，redux state 数据结构)</h3><h3 id="jsx如何渲染页面"><a href="#jsx如何渲染页面" class="headerlink" title="jsx如何渲染页面"></a>jsx如何渲染页面</h3><h3 id="setstate之后如何更新页面"><a href="#setstate之后如何更新页面" class="headerlink" title="setstate之后如何更新页面"></a>setstate之后如何更新页面</h3><h3 id="react源码解析"><a href="#react源码解析" class="headerlink" title="react源码解析"></a>react源码解析</h3><p><a href="https://react.iamkasong.com/#%E7%AB%A0%E8%8A%82%E5%88%97%E8%A1%A8" target="_blank" rel="noopener">react源码解析</a></p>
 
-2.看是否能命中batchUpdate机制
-
-3.判断isBatchingUpdates
-
-
-
-哪些不能名字batchupdate机制
-
-1.setTimeout
-
-2.自定义的dom事件
-
-
-### vdom和diff
-
-只比较同一层级，不跨级比较
-
-tag不相同，则直接删除重建，不再深度比较
-
-tag和key相同，则一样
-
-### 基于react设计一个todolist(组件结构，redux state 数据结构)
-### jsx如何渲染页面
-### setstate之后如何更新页面
-</code></pre>
             </div>
             <hr />
 
@@ -1350,7 +1332,7 @@ tag和key相同，则一样
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="leetcode-字符串-28-实现strStr()">
+                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="leetcode-字符串-28-实现strStr()">
                         
                         <span class="card-title">leetcode-字符串-28-实现strStr()</span>
                     </div>
@@ -1401,7 +1383,7 @@ tag和key相同，则一样
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="sec-interview">
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="sec-interview">
                         
                         <span class="card-title">sec-interview</span>
                     </div>
@@ -1602,7 +1584,7 @@ tag和key相同，则一样
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">49.6k</span>
+            <span class="white-color">51.3k</span>
             
 
             <br>

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://liangchaofei.github.io/"/>
-  <updated>2020-06-20T07:11:34.172Z</updated>
+  <updated>2020-06-25T10:39:57.585Z</updated>
   <id>https://liangchaofei.github.io/</id>
   
   <author>
@@ -15,6 +15,58 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>mk_http</title>
+    <link href="https://liangchaofei.github.io/2020/06/25/mk-http/"/>
+    <id>https://liangchaofei.github.io/2020/06/25/mk-http/</id>
+    <published>2020-06-25T10:39:39.000Z</published>
+    <updated>2020-06-25T10:39:57.585Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;五层模型&quot;&gt;&lt;a href=&quot;#五层模型&quot; class=&quot;headerlink&quot; title=&quot;五层模型&quot;&gt;&lt;/a&gt;五层模型&lt;/h2&gt;&lt;p&gt;&lt;img
+        
+      
+    
+    </summary>
+    
+      <category term="http" scheme="https://liangchaofei.github.io/categories/http/"/>
+    
+    
+      <category term="http" scheme="https://liangchaofei.github.io/tags/http/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>interview-big-company</title>
+    <link href="https://liangchaofei.github.io/2020/06/22/interview-big-company/"/>
+    <id>https://liangchaofei.github.io/2020/06/22/interview-big-company/</id>
+    <published>2020-06-22T13:42:48.000Z</published>
+    <updated>2020-06-22T13:47:45.743Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;蚂蚁、字节、滴滴面试经历总结&quot;&gt;&lt;a href=&quot;#蚂蚁、字节、滴滴面试经历总结&quot; class=&quot;headerlink&quot; title=&quot;蚂蚁、字节、滴滴面试经历总结&quot;&gt;&lt;/a&gt;蚂蚁、字节、滴滴面试经历总结&lt;/h3&gt;&lt;p&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="面试题" scheme="https://liangchaofei.github.io/categories/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    
+    
+      <category term="大厂" scheme="https://liangchaofei.github.io/tags/%E5%A4%A7%E5%8E%82/"/>
+    
+  </entry>
   
   <entry>
     <title>promise-async-await</title>
@@ -489,50 +541,6 @@
     
     
       <category term="字符串" scheme="https://liangchaofei.github.io/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>react-interview</title>
-    <link href="https://liangchaofei.github.io/2020/05/17/interview-react/"/>
-    <id>https://liangchaofei.github.io/2020/05/17/interview-react/</id>
-    <published>2020-05-17T08:32:06.000Z</published>
-    <updated>2020-06-15T14:01:23.895Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;react相关知识点&quot;&gt;&lt;a href=&quot;#react相关知识点&quot; class=&quot;headerlink&quot; title=&quot;react相关知识点&quot;&gt;&lt;/a&gt;react相关知识点&lt;/h2&gt;&lt;h3 id=&quot;事件&quot;&gt;&lt;a href=&quot;#事件&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="框架" scheme="https://liangchaofei.github.io/categories/%E6%A1%86%E6%9E%B6/"/>
-    
-    
-      <category term="react" scheme="https://liangchaofei.github.io/tags/react/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>sec-interview</title>
-    <link href="https://liangchaofei.github.io/2020/05/17/interview-sec/"/>
-    <id>https://liangchaofei.github.io/2020/05/17/interview-sec/</id>
-    <published>2020-05-17T08:31:23.000Z</published>
-    <updated>2020-05-17T09:03:15.348Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-      <category term="安全" scheme="https://liangchaofei.github.io/categories/%E5%AE%89%E5%85%A8/"/>
-    
-    
-      <category term="安全" scheme="https://liangchaofei.github.io/tags/%E5%AE%89%E5%85%A8/"/>
     
   </entry>
   
