@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://liangchaofei.github.io/2020/05/17/interview-http/</loc>
+    
+    <lastmod>2020-07-14T00:54:59.712Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://liangchaofei.github.io/2020/06/13/js-shou-xie-ti/</loc>
     
     <lastmod>2020-07-02T14:53:36.761Z</lastmod>
@@ -26,13 +33,6 @@
     <loc>https://liangchaofei.github.io/2020/05/17/interview-react/</loc>
     
     <lastmod>2020-06-28T15:58:37.039Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liangchaofei.github.io/2020/05/17/interview-http/</loc>
-    
-    <lastmod>2020-06-28T14:32:23.124Z</lastmod>
     
   </url>
   
